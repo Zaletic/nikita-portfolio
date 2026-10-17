@@ -16,6 +16,7 @@ const projects = [
     slug: "streetly",
     fig: "streetly",
     homeImg: "/img/streetly-card.webp",
+    homeTitle: "STREETLY - UI/UX Design",
     title: "Streetly",
     cover: "/img/streetly-cover.webp",
     pos: "left center",
@@ -193,7 +194,7 @@ const home = page({
       (p, i) => `
   <a class="card scatter s${i + 1}" href="/projects/${p.slug}" data-grow>
     <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
-    <span class="card-title">${p.title}</span>
+    <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
     )
     .join("")}
