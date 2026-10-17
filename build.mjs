@@ -14,6 +14,8 @@ const SITE = {
 const projects = [
   {
     slug: "streetly",
+    fig: "streetly",
+    homeImg: "/img/streetly-card.webp",
     title: "Streetly",
     cover: "/img/streetly-cover.webp",
     pos: "left center",
@@ -48,6 +50,7 @@ const projects = [
   },
   {
     slug: "railway-network",
+    fig: "railway",
     title: "Railway Network",
     cover: "/img/railway-cover.webp",
     pos: "center",
@@ -64,6 +67,7 @@ const projects = [
   },
   {
     slug: "bridging-the-trust-gap",
+    fig: "tap",
     title: "Bridging the Trust Gap",
     cover: "/img/trust-cover.webp",
     pos: "center",
@@ -129,7 +133,7 @@ const favicon = `data:image/svg+xml,${encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#F7F2E6"/><circle cx="32" cy="32" r="21" fill="none" stroke="#F21317" stroke-width="4"/><path d="M23 35c2 5 16 5 18 0" fill="none" stroke="#F21317" stroke-width="4" stroke-linecap="round"/><circle cx="25" cy="27" r="2.6" fill="#F21317"/><circle cx="39" cy="27" r="2.6" fill="#F21317"/></svg>`
 )}`;
 
-const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-cover.webp", bodyStyle = "", themeColor = "#F7F2E6" }) => `<!doctype html>
+const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-cover.webp", bodyStyle = "", themeColor = "#F7F2E6", figs = false }) => `<!doctype html>
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8" />
@@ -154,7 +158,10 @@ ${nav(active)}
 ${body}
 </main>
 ${footer}
-<script src="/js/main.js" defer></script>
+${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
+<script src="/js/hairline-kernel.js" defer></script>
+${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
+` : ""}<script src="/js/main.js" defer></script>
 </body>
 </html>
 `;
@@ -185,7 +192,7 @@ const home = page({
     .map(
       (p, i) => `
   <a class="card scatter s${i + 1}" href="/projects/${p.slug}" data-grow>
-    <span class="card-img"><img src="${p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
+    <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
     <span class="card-title">${p.title}</span>
   </a>`
     )

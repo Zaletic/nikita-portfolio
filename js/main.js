@@ -107,6 +107,23 @@
     chip.addEventListener("mouseenter", tick);
   });
 
+  /* ---------- hairline figures in the project cards ---------- */
+  if (window.HL && window.__figs) {
+    HL.inject(document);
+    $$("[data-fig]").forEach((host) => {
+      const f = window.__figs[host.dataset.fig];
+      if (!f) return;
+      host.setAttribute("data-hairline", f.name);
+      host.setAttribute("role", "img");
+      host.setAttribute("aria-label", f.means);
+      const svg = HL.mk("svg", { viewBox: "0 0 400 320", "aria-hidden": "true" }, host);
+      const out = host.parentElement.querySelector(".fig-read");
+      let text = "";
+      const read = { get textContent() { return text; }, set textContent(v) { text = v == null ? "" : String(v); if (out) out.textContent = text === "rest" ? "" : text; } };
+      f.mount({ stage: host, svg, read }, f.range[1]);
+    });
+  }
+
   /* ---------- scroll-linked card grow + scrub (single rAF loop) ---------- */
   // Project cards start at 70% size and grow to 100% as they travel up the screen
   // (measured from the original: progress runs from card-centre at 1.42 x viewport height to 0.39 x).

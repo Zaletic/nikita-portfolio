@@ -5,3 +5,6 @@ serve.mjs
 preview-shots
 _options.html
 _options.mjs
+hairline/*.html
+hairline/*.png
+preview-shots
