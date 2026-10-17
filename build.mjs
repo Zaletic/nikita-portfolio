@@ -1,5 +1,6 @@
 // Static site generator: `node build.mjs` writes every page next to this file.
 import { writeFileSync, mkdirSync } from "node:fs";
+import { streetlyBody } from "./streetly.mjs";
 
 const SITE = {
   name: "Nikita Bangia",
@@ -17,8 +18,9 @@ const projects = [
     cover: "/img/streetly-cover.webp",
     pos: "left center",
     blurb:
-      "Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a new kind of commute feel simple and trustworthy.",
-    meta: { Client: "Streetly (concept)", Timeline: "Case study", Role: "UI/UX Designer", Skills: ["Product Design", "UX Research"] },
+      "Streetly is a mobile app that brings multiple e-bike rental providers onto a single platform, so people can discover nearby bikes, compare options and book the right ride in a few taps.",
+    meta: { Role: "UI/UX Designer", Duration: "2-3 Weeks", Timeline: "May 2026", "Project Type": "Concept Project", Skills: ["Product Design", "UX Research"] },
+    prototype: "https://www.figma.com/proto/rvhsfg03eP5YToJJdNV4sP/main-E-Bike-rental---Streetly?node-id=46-1085&viewport=199%2C220%2C0.16&t=Y48qt2iz9rvZYHWS-1&scaling=scale-down&content-scaling=fixed&page-id=46%3A1084",
     gallery: [
       ["full", "streetly-01"],
       ["pair", "streetly-02", "streetly-05"],
@@ -117,7 +119,7 @@ const favicon = `data:image/svg+xml,${encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#F7F2E6"/><circle cx="32" cy="32" r="21" fill="none" stroke="#F21317" stroke-width="4"/><path d="M23 35c2 5 16 5 18 0" fill="none" stroke="#F21317" stroke-width="4" stroke-linecap="round"/><circle cx="25" cy="27" r="2.6" fill="#F21317"/><circle cx="39" cy="27" r="2.6" fill="#F21317"/></svg>`
 )}`;
 
-const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-cover.webp" }) => `<!doctype html>
+const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-cover.webp", head = "" }) => `<!doctype html>
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8" />
@@ -135,7 +137,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/style.css" />
-</head>
+${head}</head>
 <body class="${bodyClass}">
 ${nav(active)}
 <main>
@@ -300,7 +302,10 @@ const projectPage = (p) =>
     active: "work",
     bodyClass: "project-page",
     og: p.cover,
-    body: `
+    head: p.slug === "streetly" ? `<link rel="stylesheet" href="/css/streetly.css" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+` : "",
+    body: p.slug === "streetly" ? streetlyBody(p) : `
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>${p.title}</h1>

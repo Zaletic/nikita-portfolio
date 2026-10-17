@@ -5,10 +5,10 @@
 <script>document.documentElement.className="js"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Streetly — Nikita Bangia</title>
-<meta name="description" content="Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a n" />
+<meta name="description" content="Streetly is a mobile app that brings multiple e-bike rental providers onto a single platform, so people can discover nearby bikes, compare options and" />
 <meta name="theme-color" content="#F7F2E6" />
 <meta property="og:title" content="Streetly — Nikita Bangia" />
-<meta property="og:description" content="Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a n" />
+<meta property="og:description" content="Streetly is a mobile app that brings multiple e-bike rental providers onto a single platform, so people can discover nearby bikes, compare options and" />
 <meta property="og:image" content="/img/streetly-cover.webp" />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23F7F2E6%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2221%22%20fill%3D%22none%22%20stroke%3D%22%23F21317%22%20stroke-width%3D%224%22%2F%3E%3Cpath%20d%3D%22M23%2035c2%205%2016%205%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23F21317%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2227%22%20r%3D%222.6%22%20fill%3D%22%23F21317%22%2F%3E%3Ccircle%20cx%3D%2239%22%20cy%3D%2227%22%20r%3D%222.6%22%20fill%3D%22%23F21317%22%2F%3E%3C%2Fsvg%3E" />
@@ -16,6 +16,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/streetly.css" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body class="project-page">
 
@@ -32,15 +34,325 @@
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>Streetly</h1>
-    <p class="proj-desc" data-reveal>Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a new kind of commute feel simple and trustworthy.</p>
+    <p class="proj-desc" data-reveal>Streetly is a mobile app that brings multiple e-bike rental providers onto a single platform, so people can discover nearby bikes, compare options and book the right ride in a few taps.</p>
   </div>
   <dl class="proj-meta" data-reveal>
-    <div><dt>Client</dt><dd><span>Streetly (concept)</span></dd></div><div><dt>Timeline</dt><dd><span>Case study</span></dd></div><div><dt>Role</dt><dd><span>UI/UX Designer</span></dd></div><div><dt>Skills</dt><dd><span>Product Design</span><span>UX Research</span></dd></div>
+    <div><dt>Role</dt><dd><span>UI/UX Designer</span></dd></div><div><dt>Duration</dt><dd><span>2-3 Weeks</span></dd></div><div><dt>Timeline</dt><dd><span>May 2026</span></dd></div><div><dt>Project Type</dt><dd><span>Concept Project</span></dd></div><div><dt>Skills</dt><dd><span>Product Design</span><span>UX Research</span></dd></div>
   </dl>
 </section>
-<section class="gallery">
-  <figure class="g-full" data-reveal="scale"><img src="/img/streetly-01.webp" alt="Streetly" loading="lazy" /></figure><div class="g-pair"><figure data-reveal="scale"><img src="/img/streetly-02.webp" alt="Streetly" loading="lazy" /></figure><figure data-reveal="scale"><img src="/img/streetly-05.webp" alt="Streetly" loading="lazy" /></figure></div><figure class="g-full" data-reveal="scale"><img src="/img/streetly-07.webp" alt="Streetly" loading="lazy" /></figure><figure class="g-full" data-reveal="scale"><img src="/img/streetly-11.webp" alt="Streetly" loading="lazy" /></figure><div class="g-pair"><figure data-reveal="scale"><img src="/img/streetly-13.webp" alt="Streetly" loading="lazy" /></figure><figure data-reveal="scale"><img src="/img/streetly-14.webp" alt="Streetly" loading="lazy" /></figure></div><div class="g-pair"><figure data-reveal="scale"><img src="/img/streetly-15.webp" alt="Streetly" loading="lazy" /></figure><figure data-reveal="scale"><img src="/img/streetly-16.webp" alt="Streetly" loading="lazy" /></figure></div>
+
+<div class="cs">
+
+<div class="cs-hero" data-reveal="scale">
+  <img class="cs-hero-map" src="/img/streetly/map.webp" alt="" />
+  <div class="cs-hero-copy">
+    <p class="cs-hero-small">Streetly helps you</p>
+    <p class="cs-hero-big">Compare.<br />Choose.<br />Ride.</p>
+  </div>
+  <img class="cs-hero-phone" src="/img/streetly/cover-phone.webp" alt="The Streetly app on a phone" data-speed="0.05" />
+</div>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">01</span>
+    <h2 class="cs-title" data-lines>Overview</h2>
+  </div>
+  
+<div class="cs-split">
+  <div class="cs-text">
+    <p class="cs-lead scrub" data-scrub>Streetly is a mobile application that simplifies the process of renting e-bikes by bringing multiple rental providers onto a single platform.</p>
+    <p class="cs-p" data-reveal>Instead of downloading and comparing several provider-specific apps and websites, users can discover nearby bikes, compare availability, pricing, battery levels and features, and book the option that best suits their needs.</p>
+  </div>
+  <div class="cs-aside ph-wrap"><div class="ph" data-reveal><img src="/img/streetly/overview-phone.webp" alt="Streetly explore screen" loading="lazy" data-speed="0.04" /></div></div>
+</div>
 </section>
+
+
+<section class="cs-sec cs-road">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">02</span>
+    <h2 class="cs-title" data-lines>Project Roadmap</h2>
+  </div>
+  
+<div class="road" data-reveal="fade">
+  <svg class="road-line" viewBox="0 0 1660 480" preserveAspectRatio="none" aria-hidden="true"><path d="M110 60 C212.85000000000002 60 194.14999999999998 333 297 333 C433.4 333 408.6 59 545 59 C648.4 59 629.6 412 733 412 C847.95 412 827.05 103 942 103 C1056.4 103 1035.6 355 1150 355 C1264.4 355 1243.6 75 1358 75 C1463.05 75 1443.95 297 1549 297" pathLength="1" /></svg>
+  <ol class="road-list">
+    <li class="road-pill" style="left:6.63%;top:12.50%;--i:0"><span class="road-n">01</span>Problem Discovery</li><li class="road-pill" style="left:17.89%;top:69.38%;--i:1"><span class="road-n">02</span>Research & Insights</li><li class="road-pill" style="left:32.83%;top:12.29%;--i:2"><span class="road-n">03</span>Empathy Mapping</li><li class="road-pill" style="left:44.16%;top:85.83%;--i:3"><span class="road-n">04</span>Information Architecture</li><li class="road-pill" style="left:56.75%;top:21.46%;--i:4"><span class="road-n">05</span>User Flow</li><li class="road-pill" style="left:69.28%;top:73.96%;--i:5"><span class="road-n">06</span>Lo-Fi Wireframes</li><li class="road-pill" style="left:81.81%;top:15.63%;--i:6"><span class="road-n">07</span>Visual Design</li><li class="road-pill" style="left:93.31%;top:61.88%;--i:7"><span class="road-n">08</span>Prototype</li>
+  </ol>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">03</span>
+    <h2 class="cs-title" data-lines>Problem Statement</h2>
+  </div>
+  
+<div class="cs-offset">
+  <p class="cs-lead scrub" data-scrub>Urban commuters increasingly rely on e-bike rentals for short-distance travel, but existing services are fragmented and provider-specific.</p>
+  <p class="cs-p" data-reveal>Users struggle to find available bikes, compare options, and understand pricing across different platforms. This fragmented experience creates unnecessary friction, making rentals less efficient and more time-consuming.</p>
+  <ul class="cs-rows">
+    <li data-reveal><span>01</span><p>Existing platforms are fragmented</p></li>
+    <li data-reveal><span>02</span><p>Users face challenges locating and comparing rental services around</p></li>
+    <li data-reveal><span>03</span><p>Limited flexibility in booking</p></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">04</span>
+    <h2 class="cs-title" data-lines>Understanding the Commuter</h2>
+  </div>
+  
+<div class="cs-split cs-split-rev">
+  <figure class="cs-board" data-reveal="scale"><img src="/img/streetly/storyboard.webp" alt="Storyboard of a commuter, Riya, searching across rental apps and wishing for one platform" loading="lazy" /></figure>
+  <div class="cs-text">
+    <p class="cs-p" data-reveal>Before designing Streetly, I explored how people navigate short-distance travel, what influences their choice of transport, and what they need to know before renting an e-bike.</p>
+    <p class="cs-p" data-reveal>Through interviews, surveys, and secondary research, I explored the challenges around discovering rental options, evaluating costs, and making quick, informed travel decisions.</p>
+    <p class="cs-p" data-reveal>The research helped frame the opportunity for Streetly: making e-bike rental options easier to discover, compare, and book.</p>
+  </div>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">05</span>
+    <h2 class="cs-title" data-lines>Insights</h2>
+  </div>
+  
+<div class="cs-offset">
+  <p class="cs-p cs-intro" data-reveal>To understand commuting habits, transport preferences, and expectations around e-bike rentals. The research explored travel frequency, rental discovery, pricing preferences, and the information users need before booking a ride.</p>
+  <div class="cs-facts" data-reveal><p><b>60</b> Survey respondents</p><p><b>8-10</b> Interview participants</p></div>
+</div>
+<div class="cs-cols">
+  
+  <article class="cs-col" data-reveal>
+    <h3>Know before you ride</h3><p>Users need to assess whether a bike has sufficient battery for their intended journey before booking.</p>
+    <h4>Design implication</h4><p>Display battery status and estimated riding range on the bike details screen, before users commit to a booking.</p>
+  </article>
+  <article class="cs-col" data-reveal>
+    <h3>Compare without switching</h3><p>Finding and comparing rental options across separate provider platforms adds friction to the discovery process.</p>
+    <h4>Design implication</h4><p>Bring multiple providers into one discovery experience, making availability, pricing, and range easier to compare.</p>
+  </article>
+  <article class="cs-col" data-reveal>
+    <h3>Know what you’ll pay</h3><p>Users need clarity on ride costs and available payment options to make informed booking decisions.</p>
+    <h4>Design implication</h4><p>Showing a transparent fare breakdown, including the selected ride duration and applicable charges, before payment.</p>
+  </article>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">06</span>
+    <h2 class="cs-title" data-lines>Empathy Mapping</h2>
+  </div>
+  
+<div class="cs-offset"><p class="cs-p cs-intro" data-reveal>Understanding users’ thoughts, behaviors, and emotions to identify opportunities for a more seamless rental experience.</p></div>
+<div class="emp">
+  
+  <div class="emp-q" style="--dot:#A8CDA9">
+    <h3 class="emp-h" data-reveal>Says</h3>
+    <div class="emp-cards">
+      <article class="emp-card" data-reveal><h4>Borrowing Pressure</h4><p>“I would have to think about other person’s schedule first, I’ll have to come back fast”</p></article><article class="emp-card" data-reveal><h4>Time Wastage</h4><p>“I don’t want to waste time at petrol pumps; I just want to sit my bike and leave”</p></article><article class="emp-card" data-reveal><h4>Flexible Payment</h4><p>“Preference for ‘pay per ride’ or paying strictly for time used”</p></article><article class="emp-card" data-reveal><h4>Information Needs</h4><p>“Must see battery levels and estimated run-time before renting”</p></article>
+    </div>
+  </div>
+  <div class="emp-q" style="--dot:#D9B8EE">
+    <h3 class="emp-h" data-reveal>Does</h3>
+    <div class="emp-cards">
+      <article class="emp-card" data-reveal><h4>Travel Frequency</h4><p>Daily or 2-3 times weekly for college, PG or errands</p></article><article class="emp-card" data-reveal><h4>Mode of Transport</h4><p>Relies on Rapido, Uber, Shuttles, personal vehicle or walking</p></article><article class="emp-card" data-reveal><h4>App Trials</h4><p>Downloads rental apps during campus events but often deletes them if they are “not that helpful”</p></article>
+    </div>
+  </div>
+  <div class="emp-q" style="--dot:#BCD8ED">
+    <h3 class="emp-h" data-reveal>Thinks</h3>
+    <div class="emp-cards">
+      <article class="emp-card" data-reveal><h4>Independence</h4><p>Desires freedom from relying on Rapido / Ola / Uber</p></article><article class="emp-card" data-reveal><h4>Cost Effective</h4><p>E-bikes are a “cost cutting” alternative to petrol</p></article><article class="emp-card" data-reveal><h4>Efficiency</h4><p>Transport must save time and avoid traffic or petrol pump queue</p></article><article class="emp-card" data-reveal><h4>Trial Period</h4><p>Believes they should get a “free trial” or “one kilometer free” before committing to a subscription</p></article>
+    </div>
+  </div>
+  <div class="emp-q" style="--dot:#F4DC8A">
+    <h3 class="emp-h" data-reveal>Feels</h3>
+    <div class="emp-cards">
+      <article class="emp-card" data-reveal><h4>Unaware</h4><p>Feels a “lack of awareness” about available rental options in the area</p></article><article class="emp-card" data-reveal><h4>Anxious</h4><p>Concerned about traffic, safety and time constraints</p></article><article class="emp-card" data-reveal><h4>Pressured</h4><p>Feeling rushed to return borrowed vehicles to friends</p></article><article class="emp-card" data-reveal><h4>Hesitant</h4><p>Unwilling to use services if awareness is low or apps are unhelpful</p></article>
+    </div>
+  </div>
+</div>
+<div class="emp-ins">
+  <p class="emp-ins-t" data-reveal>Insights</p>
+  <p data-reveal><b>Users need transparent information</b> (battery, pricing, availability) before booking.</p>
+  <p data-reveal><b>Switching between multiple rental apps</b> creates unnecessary friction.</p>
+  <p data-reveal><b>Speed and flexibility</b> matter more than brand loyalty.</p>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">07</span>
+    <h2 class="cs-title" data-lines>Information Architecture</h2>
+  </div>
+  
+<div class="cs-offset"><p class="cs-p cs-intro" data-reveal>A clear structure designed to simplify navigation and streamline the booking experience.</p></div>
+<figure class="cs-diagram" data-reveal="scale"><img src="/img/streetly/ia.webp" alt="Information architecture: Home branches into Profile, Explore, Bookings and Wallet" loading="lazy" /></figure>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">08</span>
+    <h2 class="cs-title" data-lines>User Flow</h2>
+  </div>
+  
+<div class="cs-offset"><p class="cs-p cs-intro" data-reveal>This user flow maps the primary booking journey, illustrating each step from discovering nearby bikes to starting a ride.</p></div>
+<figure class="cs-diagram cs-diagram-tall" data-reveal="scale"><img src="/img/streetly/user-flow.webp" alt="User flow for booking a ride, from the live map to ride started" loading="lazy" /></figure>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">09</span>
+    <h2 class="cs-title" data-lines>Moodboard</h2>
+  </div>
+  
+<div class="mood" data-reveal>
+  <div class="mood-col mc1">
+    <figure style="aspect-ratio:262/329"><img src="/img/streetly/mood-phone.webp" alt="" loading="lazy" /></figure>
+    <figure style="aspect-ratio:276/581"><img src="/img/streetly/mood-app.webp" alt="" loading="lazy" /></figure>
+  </div>
+  <div class="mood-col mc2">
+    <figure style="aspect-ratio:603/706"><img src="/img/streetly/mood-train.webp" alt="" loading="lazy" /></figure>
+    <figure style="aspect-ratio:580/561"><img src="/img/streetly/mood-map.webp" alt="" loading="lazy" /></figure>
+  </div>
+  <div class="mood-col mc3">
+    <figure style="aspect-ratio:574/526"><img src="/img/streetly/mood-coffee.webp" alt="" loading="lazy" /></figure>
+    <figure style="aspect-ratio:589/734"><img src="/img/streetly/mood-building.webp" alt="" loading="lazy" /></figure>
+  </div>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">10</span>
+    <h2 class="cs-title" data-lines>Typography &amp; Color</h2>
+  </div>
+  
+<div class="ds">
+  <div class="ds-type" data-reveal>
+    <p class="ds-name">Manrope</p>
+    <p class="ds-note">It was chosen for its clean geometry, excellent readability, and modern character. Its balanced letterforms ensure clarity across the interface while complementing Streetly’s simple and user-friendly experience.</p>
+  </div>
+  <div class="ds-spec" data-reveal>
+    <p class="ds-aa">Aa</p>
+    <ul class="ds-weights">
+      <li style="font-weight:300">Manrope Light</li><li style="font-weight:400">Manrope Regular</li><li style="font-weight:500">Manrope Medium</li><li style="font-weight:600">Manrope Semibold</li><li style="font-weight:700">Manrope Bold</li>
+    </ul>
+    <p class="ds-glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />1234567890!@#$%^&amp;*()_+</p>
+  </div>
+  <div class="ds-palette" data-reveal>
+    <div class="sw"><span class="sw-c" style="background:#29471A"></span><p>Forest Green</p><p class="sw-h">#29471A</p></div><div class="sw"><span class="sw-c" style="background:#BCD8ED"></span><p>Light Blue</p><p class="sw-h">#BCD8ED</p></div><div class="sw"><span class="sw-c" style="background:#A8CDA9"></span><p>Mint Green</p><p class="sw-h">#A8CDA9</p></div><div class="sw"><span class="sw-c" style="background:#C6C5C4"></span><p>Grey</p><p class="sw-h">#C6C5C4</p></div><div class="sw"><span class="sw-c" style="background:#F6F0E7"></span><p>Creme</p><p class="sw-h">#F6F0E7</p></div>
+  </div>
+  <div class="ds-comp" data-reveal>
+    <p class="ds-lab">Buttons</p>
+    <div class="ds-btns">
+      <button class="app-btn" type="button">Continue <svg viewBox="0 0 28 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 5h26M22 1l4 4-4 4"/></svg></button>
+      <button class="app-btn app-btn-soft" type="button">Active</button>
+    </div>
+    <p class="ds-lab">Bottom Navigation</p>
+    <div class="app-nav" role="tablist">
+      <button type="button" class="app-tab on" role="tab" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M3 6.5l6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg><span>Explore</span></button><button type="button" class="app-tab" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16.5" r="3"/><circle cx="18" cy="16.5" r="3"/><path d="M6 16.5l3.5-6h5l3.5 6M9.5 10.5L8.5 8H7M14.5 10.5l-1-3.5H15"/></svg><span>Bookings</span></button><button type="button" class="app-tab" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M4 7.5A2.5 2.5 0 016.5 5H18v3"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M16 13.5h4.5v3H16a1.5 1.5 0 010-3z"/></svg><span>Wallet</span></button><button type="button" class="app-tab" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c1.5-2.5 3.2-3.5 5.5-3.5s4 1 5.5 3.5"/></svg><span>Profile</span></button>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">11</span>
+    <h2 class="cs-title" data-lines>Design Evolution</h2>
+  </div>
+  
+<div class="cs-offset"><p class="cs-p cs-intro" data-reveal>Low-fi wireframes.</p></div>
+<figure class="cs-diagram" data-reveal="scale"><img src="/img/streetly/wireframes.webp" alt="Eight hand-drawn low-fidelity wireframes of the Streetly screens" loading="lazy" /></figure>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">12</span>
+    <h2 class="cs-title" data-lines>The Solution</h2>
+  </div>
+  
+<div class="cs-split">
+  <div class="ph-wrap ph-hand"><div class="ph" data-reveal><img src="/img/streetly/hand-phone.webp" alt="Hand holding a phone showing the Streetly provider details screen" loading="lazy" data-speed="0.04" /></div></div>
+  <div class="cs-text">
+    <p class="cs-lead scrub" data-scrub>A unified e-bike rental platform that brings multiple service providers into one seamless experience.</p>
+    <p class="cs-p" data-reveal>Users can easily discover nearby bikes, compare pricing, availability, and battery levels, and book the most suitable ride without switching between multiple apps.</p>
+    <ul class="cs-rows">
+      <li data-reveal><span>01</span><p>Compare multiple rental providers in one app.</p></li>
+      <li data-reveal><span>02</span><p>View live bike availability, battery levels, and pricing before booking.</p></li>
+      <li data-reveal><span>03</span><p>Book the best ride in just a few taps with a seamless rental experience.</p></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">13</span>
+    <h2 class="cs-title" data-lines>Explore &amp; Compare</h2>
+  </div>
+  
+<div class="scr scr-2">
+  <p class="scr-cap scr-l" data-reveal><b>The Explore screen</b> provides a live map of nearby e-bike providers, enabling users to quickly discover and compare available options.</p>
+  <div class="ph" data-reveal><img src="/img/streetly/s-explore.webp" alt="Streetly explore screen with a live map of nearby providers" loading="lazy"  /></div>
+  <div class="ph" data-reveal><img src="/img/streetly/s-provider.webp" alt="Streetly provider details screen for Rhyno Rides" loading="lazy"  /></div>
+  <p class="scr-cap scr-r" data-reveal><b>Provider Details screen</b> presents key information such as availability, amenities, battery status, and bike models to support informed booking decisions.</p>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">14</span>
+    <h2 class="cs-title" data-lines>Choose &amp; Schedule</h2>
+  </div>
+  
+<div class="scr scr-2">
+  <p class="scr-cap scr-l" data-reveal><b>The booking screen</b> allows users to select their preferred bike, ride duration, and reservation time with a simple and flexible interface.</p>
+  <div class="ph" data-reveal><img src="/img/streetly/s-booking.webp" alt="Streetly booking details screen" loading="lazy"  /></div>
+  <div class="ph" data-reveal><img src="/img/streetly/s-payment.webp" alt="Streetly payment screen with fare breakdown" loading="lazy"  /></div>
+  <p class="scr-cap scr-r" data-reveal><b>The payment screen</b> provides a transparent fare breakdown and multiple payment options, ensuring a smooth and confident booking experience.</p>
+</div>
+</section>
+
+
+<section class="cs-sec ">
+  <div class="cs-head">
+    <span class="cs-no" data-reveal="fade">15</span>
+    <h2 class="cs-title" data-lines>After the Booking</h2>
+  </div>
+  
+<div class="scr scr-4">
+  <div class="scr-i"><div class="ph" data-reveal><img src="/img/streetly/s-confirmed.webp" alt="Streetly booking confirmed screen" loading="lazy"  /></div><p class="scr-cap" data-reveal>Once the booking is confirmed, users receive a clear <b>reservation summary</b> with pickup details, countdown timer, and quick actions</p></div>
+  <div class="scr-i"><div class="ph" data-reveal><img src="/img/streetly/s-bookings.webp" alt="Streetly active bookings screen" loading="lazy"  /></div><p class="scr-cap" data-reveal><b>The Bookings screen</b> provides easy access to active and past reservations, allowing users to track and manage their rides effortlessly.</p></div>
+  <div class="scr-i"><div class="ph" data-reveal><img src="/img/streetly/s-past.webp" alt="Streetly past bookings screen" loading="lazy"  /></div><p class="scr-cap" data-reveal><b>The Past Bookings screen</b> allows users to revisit previous rides, view booking history, and quickly rebook frequent trips</p></div>
+  <div class="scr-i"><div class="ph" data-reveal><img src="/img/streetly/s-profile.webp" alt="Streetly profile screen" loading="lazy"  /></div><p class="scr-cap" data-reveal><b>The Profile screen</b> centralizes personal information, verified documents, emergency contacts, and support services for a secure and personalized experience.</p></div>
+</div>
+</section>
+
+<div class="cs-end" data-reveal>
+  <p class="cs-end-t">See it in motion.</p>
+  <a class="pill pill-lg" href="https://www.figma.com/proto/rvhsfg03eP5YToJJdNV4sP/main-E-Bike-rental---Streetly?node-id=46-1085&viewport=199%2C220%2C0.16&t=Y48qt2iz9rvZYHWS-1&scaling=scale-down&content-scaling=fixed&page-id=46%3A1084" target="_blank" rel="noopener">View the prototype</a>
+</div>
+
+</div>
 </main>
 
 <footer class="footer">
