@@ -1,6 +1,6 @@
 // Static site generator: `node build.mjs` writes every page next to this file.
-import { writeFileSync, mkdirSync } from "node:fs";
-import { streetlyBody } from "./streetly.mjs";
+import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
+const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.meta.url), "utf8"));
 
 const SITE = {
   name: "Nikita Bangia",
@@ -18,17 +18,33 @@ const projects = [
     cover: "/img/streetly-cover.webp",
     pos: "left center",
     blurb:
-      "Streetly is a mobile app that brings multiple e-bike rental providers onto a single platform, so people can discover nearby bikes, compare options and book the right ride in a few taps.",
-    meta: { Role: "UI/UX Designer", Duration: "2-3 Weeks", Timeline: "May 2026", "Project Type": "Concept Project", Skills: ["Product Design", "UX Research"] },
-    prototype: "https://www.figma.com/proto/rvhsfg03eP5YToJJdNV4sP/main-E-Bike-rental---Streetly?node-id=46-1085&viewport=199%2C220%2C0.16&t=Y48qt2iz9rvZYHWS-1&scaling=scale-down&content-scaling=fixed&page-id=46%3A1084",
+      "Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a new kind of commute feel simple and trustworthy.",
+    meta: { Client: "Streetly (concept)", Timeline: "Case study", Role: "UI/UX Designer", Skills: ["Product Design", "UX Research"] },
+    tight: true,
     gallery: [
-      ["full", "streetly-01"],
-      ["pair", "streetly-02", "streetly-05"],
-      ["full", "streetly-07"],
-      ["full", "streetly-11"],
-      ["pair", "streetly-13", "streetly-14"],
-      ["pair", "streetly-15", "streetly-16"],
+      ["full", "streetly-pdf/page-01"],
+      ["full", "streetly-pdf/page-02"],
+      ["full", "streetly-pdf/page-03"],
+      ["full", "streetly-pdf/page-04"],
+      ["full", "streetly-pdf/page-05"],
+      ["full", "streetly-pdf/page-06"],
+      ["full", "streetly-pdf/page-07"],
+      ["full", "streetly-pdf/page-08"],
+      ["full", "streetly-pdf/page-09"],
+      ["full", "streetly-pdf/page-10"],
+      ["full", "streetly-pdf/page-11"],
+      ["full", "streetly-pdf/page-12"],
+      ["full", "streetly-pdf/page-13"],
+      ["full", "streetly-pdf/page-14"],
+      ["full", "streetly-pdf/page-15"],
+      ["full", "streetly-pdf/page-16"],
+      ["full", "streetly-pdf/page-17"],
+      ["full", "streetly-pdf/page-18"],
     ],
+    // clickable areas on a page, as % of the page (from the PDF link annotations)
+    links: {
+      "streetly-pdf/page-18": { href: "https://www.figma.com/proto/rvhsfg03eP5YToJJdNV4sP/main-E-Bike-rental---Streetly?node-id=46-1085&viewport=199%2C220%2C0.16&t=Y48qt2iz9rvZYHWS-1&scaling=scale-down&content-scaling=fixed&page-id=46%3A1084", left: 8.69, top: 11.05, width: 25.4, height: 15.84, label: "Open the Streetly interactive prototype" },
+    },
   },
   {
     slug: "railway-network",
@@ -119,7 +135,7 @@ const favicon = `data:image/svg+xml,${encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#F7F2E6"/><circle cx="32" cy="32" r="21" fill="none" stroke="#F21317" stroke-width="4"/><path d="M23 35c2 5 16 5 18 0" fill="none" stroke="#F21317" stroke-width="4" stroke-linecap="round"/><circle cx="25" cy="27" r="2.6" fill="#F21317"/><circle cx="39" cy="27" r="2.6" fill="#F21317"/></svg>`
 )}`;
 
-const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-cover.webp", head = "" }) => `<!doctype html>
+const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-cover.webp", bodyStyle = "", themeColor = "#F7F2E6" }) => `<!doctype html>
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8" />
@@ -127,7 +143,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${title}</title>
 <meta name="description" content="${desc}" />
-<meta name="theme-color" content="#F7F2E6" />
+<meta name="theme-color" content="${themeColor}" />
 <meta property="og:title" content="${title}" />
 <meta property="og:description" content="${desc}" />
 <meta property="og:image" content="${og}" />
@@ -137,8 +153,8 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/style.css" />
-${head}</head>
-<body class="${bodyClass}">
+</head>
+<body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
 <main>
 ${body}
@@ -295,17 +311,30 @@ const contact = page({
 });
 
 // ---------- Project pages ----------
+const THEMES = {
+  streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
+  "railway-network": { bg: "#E8E0D0", ink: "#464646", line: "#C8703A", grid: "rgba(70,70,70,0.10)" },
+  "bridging-the-trust-gap": { bg: "#F4F0EC", ink: "#3B3835", line: "#3B3835", grid: "rgba(59,56,53,0.08)" },
+};
+const hot = (key) =>
+  (HOT[key] || [])
+    .map((h) => {
+      const fw = h.w / 1440, fh = h.h / 810, fl = h.x / 1440, ft = h.y / 810;
+      const px = fw >= 1 ? 0 : (fl / (1 - fw)) * 100, py = fh >= 1 ? 0 : (ft / (1 - fh)) * 100;
+      return `<i class="hot" aria-hidden="true" style="left:${(fl * 100).toFixed(3)}%;top:${(ft * 100).toFixed(3)}%;width:${(fw * 100).toFixed(3)}%;height:${(fh * 100).toFixed(3)}%;--r:${h.r};background-size:${(100 / fw).toFixed(3)}% ${(100 / fh).toFixed(3)}%;background-position:${px.toFixed(3)}% ${py.toFixed(3)}%;background-image:var(--pg)"></i>`;
+    })
+    .join("");
+
 const projectPage = (p) =>
   page({
+    bodyStyle: THEMES[p.slug] ? `--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}` : "",
+    themeColor: THEMES[p.slug]?.bg,
     title: `${p.title} — ${SITE.name}`,
     desc: p.blurb.slice(0, 150),
     active: "work",
     bodyClass: "project-page",
     og: p.cover,
-    head: p.slug === "streetly" ? `<link rel="stylesheet" href="/css/streetly.css" />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-` : "",
-    body: p.slug === "streetly" ? streetlyBody(p) : `
+    body: `
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>${p.title}</h1>
@@ -317,11 +346,15 @@ const projectPage = (p) =>
       .join("")}
   </dl>
 </section>
-<section class="gallery">
+<section class="gallery${p.tight ? " tight" : ""}">
   ${p.gallery
     .map((g) =>
       g[0] === "full"
-        ? `<figure class="g-full" data-reveal="scale"><img src="/img/${g[1]}.webp" alt="${p.title}" loading="lazy" /></figure>`
+        ? `<figure class="g-full${HOT[g[1].split("-").pop()] && p.slug === "streetly" ? " g-hot" : ""}" data-reveal="${p.tight ? "fade" : "scale"}" style="--pg:url(/img/${g[1]}.webp)"><img src="/img/${g[1]}.webp" alt="${p.title}" loading="lazy" />${p.slug === "streetly" ? hot(g[1].split("-").pop()) : ""}${
+            p.links?.[g[1]]
+              ? `<a class="g-link" href="${p.links[g[1]].href.replace(/&/g, "&amp;")}" target="_blank" rel="noopener" aria-label="${p.links[g[1]].label}" style="left:${p.links[g[1]].left}%;top:${p.links[g[1]].top}%;width:${p.links[g[1]].width}%;height:${p.links[g[1]].height}%"></a>`
+              : ""
+          }</figure>`
         : `<div class="g-pair"><figure data-reveal="scale"><img src="/img/${g[1]}.webp" alt="${p.title}" loading="lazy" /></figure><figure data-reveal="scale"><img src="/img/${g[2]}.webp" alt="${p.title}" loading="lazy" /></figure></div>`
     )
     .join("")}
