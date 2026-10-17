@@ -125,12 +125,6 @@ const footer = `
   </div>
 </footer>`;
 
-const eyes = `
-<div class="eyes" aria-hidden="true">
-  <span class="eye"><i class="pupil"></i></span>
-  <span class="eye"><i class="pupil"></i></span>
-</div>`;
-
 const favicon = `data:image/svg+xml,${encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#F7F2E6"/><circle cx="32" cy="32" r="21" fill="none" stroke="#F21317" stroke-width="4"/><path d="M23 35c2 5 16 5 18 0" fill="none" stroke="#F21317" stroke-width="4" stroke-linecap="round"/><circle cx="25" cy="27" r="2.6" fill="#F21317"/><circle cx="39" cy="27" r="2.6" fill="#F21317"/></svg>`
 )}`;
@@ -160,7 +154,6 @@ ${nav(active)}
 ${body}
 </main>
 ${footer}
-${eyes}
 <script src="/js/main.js" defer></script>
 </body>
 </html>

@@ -2,8 +2,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
-  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   /* ---------- text splitting ---------- */
   // Walk text nodes (keeping <em>) and wrap every word/char.
@@ -104,7 +103,7 @@
       k = (k + 1) % imgs.length;
       imgs[k].classList.add("on");
     };
-    setTimeout(() => setInterval(tick, 3800), 2600 + ci * 450);
+    setTimeout(() => setInterval(tick, 1000), 1000 + ci * 300);
     chip.addEventListener("mouseenter", tick);
   });
 
@@ -139,44 +138,6 @@
   }
   scrubs.forEach(({ chars }) => chars.forEach((c) => (c.style.opacity = 0.16)));
   requestAnimationFrame(frame);
-
-  /* ---------- eyes cursor ---------- */
-  const eyes = $(".eyes");
-  if (eyes && fine) {
-    const pupils = $$(".pupil", eyes);
-    let mx = innerWidth / 2, my = innerHeight / 2, x = mx, y = my, vx = 0, vy = 0, seen = false;
-    eyes.style.opacity = 0;
-    addEventListener("pointermove", (e) => {
-      mx = e.clientX; my = e.clientY;
-      if (!seen) { seen = true; x = mx; y = my; eyes.style.opacity = 1; }
-    }, { passive: true });
-    document.addEventListener("pointerleave", () => (eyes.style.opacity = 0));
-    document.addEventListener("pointerenter", () => seen && (eyes.style.opacity = 1));
-    const OX = 14, OY = -16;
-    const loop = () => {
-      // spring toward the pointer, so the eyes trail behind and "look" back at it
-      vx += (mx + OX - x) * 0.085; vy += (my + OY - y) * 0.085;
-      vx *= 0.72; vy *= 0.72;
-      x += vx; y += vy;
-      eyes.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
-      const cx = x + 28, cy = y + 19;
-      const dx = mx - cx, dy = my - cy, d = Math.hypot(dx, dy) || 1;
-      const k = Math.min(1, d / 60);
-      const px = (dx / d) * 5 * k, py = (dy / d) * 8 * k;
-      pupils.forEach((p) => (p.style.transform = `translate(${px.toFixed(1)}px, ${py.toFixed(1)}px)`));
-      requestAnimationFrame(loop);
-    };
-    requestAnimationFrame(loop);
-    // blink now and then
-    const blink = () => {
-      eyes.classList.add("blink");
-      setTimeout(() => eyes.classList.remove("blink"), 140);
-      setTimeout(blink, 2800 + Math.random() * 3600);
-    };
-    setTimeout(blink, 2500);
-    // eyes swell over anything clickable
-    document.addEventListener("pointerover", (e) => eyes.classList.toggle("hot", !!e.target.closest("a, button, input, textarea, select")));
-  }
 
   /* ---------- smooth page transitions ---------- */
   document.addEventListener("click", (e) => {
