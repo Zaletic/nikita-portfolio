@@ -184,7 +184,7 @@ const home = page({
   ${projects
     .map(
       (p, i) => `
-  <a class="card scatter s${i + 1}" href="/projects/${p.slug}" data-speed="${[0.07, 0.12, 0.05][i]}">
+  <a class="card scatter s${i + 1}" href="/projects/${p.slug}" data-grow>
     <span class="card-img"><img src="${p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
     <span class="card-title">${p.title}</span>
   </a>`

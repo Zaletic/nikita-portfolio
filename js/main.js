@@ -107,19 +107,19 @@
     chip.addEventListener("mouseenter", tick);
   });
 
-  /* ---------- parallax + scrub (single rAF loop) ---------- */
-  const par = $$("[data-speed]").map((el) => ({ el, s: parseFloat(el.dataset.speed), y: 0 }));
-  const desktop = () => innerWidth > 809;
+  /* ---------- scroll-linked card grow + scrub (single rAF loop) ---------- */
+  // Project cards start at 70% size and grow to 100% as they travel up the screen
+  // (measured from the original: progress runs from card-centre at 1.42 x viewport height to 0.39 x).
+  const grow = $$("[data-grow]").map((el) => ({ el, k: reduce ? 1 : 0.7 }));
   let lastY = -1;
   function frame() {
     const vh = innerHeight;
-    if (desktop() && !reduce) {
-      par.forEach((p) => {
-        const r = p.el.parentElement.getBoundingClientRect();
-        const mid = r.top + r.height / 2 - vh / 2;
-        const target = clamp(-mid * p.s, -110, 110);
-        p.y += (target - p.y) * 0.1;
-        p.el.style.transform = `translate3d(0, ${p.y.toFixed(2)}px, 0)`;
+    if (!reduce) {
+      grow.forEach((g) => {
+        const r = g.el.getBoundingClientRect();
+        const p = clamp((1.416 * vh - (r.top + r.height / 2)) / (1.028 * vh), 0, 1);
+        g.k += (0.7 + 0.3 * p - g.k) * 0.2;
+        g.el.style.transform = `scale(${g.k.toFixed(4)})`;
       });
     }
     if (scrollY !== lastY) {

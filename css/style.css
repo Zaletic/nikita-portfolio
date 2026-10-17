@@ -103,7 +103,7 @@ em { font-style: italic; }
 
 /* ---------- home: scattered work ---------- */
 .work-scatter { position: relative; height: 98vw; max-width: 100%; margin-top: 4vw; }
-.card { display: block; position: absolute; will-change: transform; }
+.card { display: block; position: absolute; will-change: transform; transform-origin: 50% 50%; }
 .card-img { display: block; overflow: hidden; border-radius: 6px; }
 .card-img img { width: 100%; height: auto; transition: transform 0.9s var(--ease); }
 .card:hover .card-img img { transform: scale(1.05); }
@@ -271,7 +271,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   .hero-title { font-size: 12vw; }
   .hero-title .row { white-space: normal; margin-bottom: 0.06em; }
   .work-scatter { height: auto; margin: 40px 0; display: grid; gap: 40px; padding: 0 var(--pad); }
-  .card.scatter { position: relative; left: auto !important; top: auto !important; width: 100% !important; transform: none !important; }
+  .card.scatter { position: relative; left: auto !important; top: auto !important; width: 100% !important; }
   .process { padding: 60px var(--pad); }
   .steps { grid-template-columns: 1fr; margin-left: 0; }
   .st1, .st2, .st3, .st4 { grid-column: 1; grid-row: auto; min-height: 300px; }

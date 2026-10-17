@@ -3,3 +3,5 @@ node_modules
 .DS_Store
 serve.mjs
 preview-shots
+_options.html
+_options.mjs
