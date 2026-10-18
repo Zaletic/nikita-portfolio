@@ -187,7 +187,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8" />
-<script>document.documentElement.className="js"</script>
+<script>document.documentElement.className="js";try{history.scrollRestoration="manual"}catch(e){}if(!location.hash)addEventListener("pageshow",function(){scrollTo(0,0)});</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${title}</title>
 <meta name="description" content="${desc}" />
