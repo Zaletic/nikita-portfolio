@@ -217,7 +217,7 @@ em { font-style: italic; }
 .form-note { text-align: center; min-height: 22px; }
 
 /* ---------- project page ---------- */
-.proj-head { padding: max(150px, calc(80vh - 15.3vw)) var(--pad) 40px; display: flex; justify-content: space-between; gap: 40px; }
+.proj-head { padding: max(150px, calc(76vh - 15.3vw)) var(--pad) 40px; display: flex; justify-content: space-between; gap: 40px; }
 .proj-left { flex: 0 0 54%; max-width: 724px; }
 .proj-desc { margin-top: 24px; max-width: 724px; }
 .proj-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 27px 24px; width: 556px; max-width: 100%; align-self: flex-end; }

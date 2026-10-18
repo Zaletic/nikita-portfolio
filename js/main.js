@@ -73,7 +73,8 @@
     },
     { threshold: 0.18, rootMargin: "0px 0px -6% 0px" }
   );
-  $$("[data-reveal], [data-chars], [data-lines]").forEach((el) => io.observe(el));
+  $$(".project-page .gallery figure:first-child").forEach((el) => el.classList.add("in"));
+  $$("[data-reveal], [data-chars], [data-lines]").forEach((el) => { if (!el.classList.contains("in")) io.observe(el); });
 
   /* ---------- hero entrance ---------- */
   const hero = $(".hero-title");
