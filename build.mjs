@@ -52,6 +52,7 @@ const projects = [
   {
     slug: "railway-network",
     fig: "railway",
+    homeImg: "/img/railway-card-v2.webp",
     title: "Railway Network",
     cover: "/img/railway-cover.webp",
     pos: "center",
