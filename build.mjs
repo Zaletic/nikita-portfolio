@@ -121,6 +121,42 @@ const projects = [
       ["full", "ridepod-pdf/page-18"],
     ],
   },
+  {
+    slug: "groomcue",
+    fig: "tap",
+    homeImg: "/img/groomcue-card.webp",
+    homeTitle: "GroomCue - Phygital Product Design",
+    title: "GroomCue",
+    cover: "/img/groomcue-card.webp",
+    tight: true,
+    pos: "center",
+    blurb:
+      "A phygital grooming companion for small dogs. GroomCue keeps a dog calm and engaged through light, sound and treats, so the groomer can stay focused on grooming.",
+    meta: { Course: "Phygital Design", Programme: "M.Des IUxD", Team: "Team project of three", Focus: ["Product Design", "Embedded Electronics"] },
+    gallery: [
+      ["full", "groomcue-pdf/page-01"],
+      ["full", "groomcue-pdf/page-02"],
+      ["full", "groomcue-pdf/page-03"],
+      ["full", "groomcue-pdf/page-04"],
+      ["full", "groomcue-pdf/page-05"],
+      ["full", "groomcue-pdf/page-06"],
+      ["full", "groomcue-pdf/page-07"],
+      ["full", "groomcue-pdf/page-08"],
+      ["full", "groomcue-pdf/page-09"],
+      ["full", "groomcue-pdf/page-10"],
+      ["full", "groomcue-pdf/page-11"],
+      ["full", "groomcue-pdf/page-12"],
+      ["full", "groomcue-pdf/page-13"],
+      ["full", "groomcue-pdf/page-14"],
+      ["full", "groomcue-pdf/page-15"],
+      ["full", "groomcue-pdf/page-16"],
+      ["full", "groomcue-pdf/page-17"],
+      ["full", "groomcue-pdf/page-18"],
+      ["full", "groomcue-pdf/page-19"],
+      ["full", "groomcue-pdf/page-20"],
+      ["full", "groomcue-pdf/page-21"],
+    ],
+  },
 ];
 
 const nav = (active) => `
@@ -350,6 +386,7 @@ const THEMES = {
   streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
   "railway-network": { bg: "#F4EBE2", ink: "#1F3A3A", line: "#C8703A", grid: "rgba(31,58,58,0.08)" },
   "dau-ridepod": { bg: "#DCEEF7", ink: "#0B3A57", line: "#0A8FC4", grid: "rgba(11,58,87,0.07)" },
+  groomcue: { bg: "#004B87", ink: "#FFFFFF", accent: "#FFC928", line: "#FFC928", grid: "rgba(255,255,255,0.08)" },
   "bridging-the-trust-gap": { bg: "#F4F0EC", ink: "#3B3835", line: "#3B3835", grid: "rgba(59,56,53,0.08)" },
 };
 const hot = (key) =>
@@ -370,7 +407,7 @@ const projectPage = (p) =>
     bodyClass: "project-page",
     og: p.cover,
     body: `
-${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}}</style>` : ""}
+${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].accent || THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}}</style>` : ""}
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>${p.title}</h1>
