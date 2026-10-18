@@ -5,10 +5,10 @@ const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.m
 const SITE = {
   name: "Nikita Bangia",
   role: "UI/UX Designer",
-  // TODO: replace with the real address / profile links
-  email: "hello@nikitabangia.com",
-  linkedin: "https://www.linkedin.com/",
-  instagram: "https://www.instagram.com/",
+  email: "bangia.nikita@gmail.com",
+  linkedin: "https://www.linkedin.com/in/nikitabangia",
+  instagram: "https://www.instagram.com/kitta.ni.kitta/",
+  resume: "/resume.pdf",
 };
 
 const projects = [
@@ -22,7 +22,7 @@ const projects = [
     pos: "left center",
     blurb:
       "Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a new kind of commute feel simple and trustworthy.",
-    meta: { Client: "Streetly (concept)", Timeline: "Case study", Role: "UI/UX Designer", Skills: ["Product Design", "UX Research"] },
+    meta: { Duration: "2-3 weeks", Timeline: "May 2026", Role: "UI/UX Designer", Skills: ["Product Design", "UX Research"] },
     tight: true,
     gallery: [
       ["full", "streetly-pdf/page-01"],
@@ -60,7 +60,7 @@ const projects = [
     pos: "center",
     blurb:
       "A visual and interactive exploration of the Central Indian railway network, mapping zones, history, divisions and routes through information design so a complex system becomes easy to understand.",
-    meta: { Client: "Academic project", Timeline: "March 2026", Role: "Information Designer", Skills: ["Information Design", "Research"] },
+    meta: { Duration: "2 weeks", Timeline: "March 2026", Role: ["Information Designer", "UI Designer"], "Tools Used": "Figma and Framer" },
     gallery: [
       ["full", "railway-pdf/page-01"],
       ["full", "railway-pdf/page-02"],
@@ -125,12 +125,7 @@ const footer = `
       <p class="label">Social</p>
       <a class="serif-link" href="${SITE.instagram}" target="_blank" rel="noopener">Instagram</a>
       <a class="serif-link" href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-    <div>
-      <p class="label">Legal</p>
-      <a class="serif-link" href="/legal/privacy-policy">Privacy Policy</a>
-      <a class="serif-link" href="/legal/terms-of-use">Terms of Use</a>
-      <a class="serif-link" href="/legal/cookie-policy">Cookie Policy</a>
+      <a class="serif-link" href="${SITE.resume}" target="_blank" rel="noopener">Resume</a>
     </div>
   </div>
 </footer>`;
@@ -277,6 +272,7 @@ const about = page({
 <section class="about-text">
   <h3 class="h-l scrub" data-scrub>I approach design with a sense of quiet intention. My work lives at the intersection of structure and softness, where clarity is not forced but carefully shaped. I’m interested in how ideas take form, how vision becomes language through systems, visuals and thoughtful decisions that feel considered rather than ornamental.</h3>
 </section>
+<div class="about-resume" data-reveal><a class="pill pill-lg" href="${SITE.resume}" target="_blank" rel="noopener">View resume</a></div>
 <section class="experience">
   <div class="exp-inner">
     <h2 class="h-xl" data-lines>Experience</h2>
@@ -367,40 +363,14 @@ ${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THE
 </section>`,
   });
 
-// ---------- Legal ----------
-const legal = (slug, title, text) =>
-  page({
-    title: `${title} — ${SITE.name}`,
-    desc: `${title} for ${SITE.name}'s portfolio.`,
-    active: "",
-    bodyClass: "legal-page",
-    body: `<section class="legal"><h1 class="h-xxl" data-chars>${title}</h1><div class="legal-body" data-reveal>${text}</div></section>`,
-  });
-
 const out = {
   "index.html": home,
   "projects.html": projectsPage,
   "about.html": about,
   "contact.html": contact,
-  "legal/privacy-policy.html": legal(
-    "privacy-policy",
-    "Privacy Policy",
-    `<p>This portfolio is a personal website. It does not use accounts and does not sell or share personal data.</p><p>If you send a message through the contact form, your email app opens with the message prepared; nothing is stored on this site. Basic, anonymous hosting logs may be kept by the hosting provider.</p><p>Questions? Write to <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>`
-  ),
-  "legal/terms-of-use.html": legal(
-    "terms-of-use",
-    "Terms of Use",
-    `<p>All case studies, images and written content on this site are the work of ${SITE.name} unless stated otherwise, and may not be reused without permission.</p><p>The site is provided as is, for information about ${SITE.name}'s design work.</p>`
-  ),
-  "legal/cookie-policy.html": legal(
-    "cookie-policy",
-    "Cookie Policy",
-    `<p>This site does not set tracking or advertising cookies. Fonts are loaded from Google Fonts, which may process your IP address to serve the files.</p>`
-  ),
 };
 for (const p of projects) out[`projects/${p.slug}.html`] = projectPage(p);
 
 mkdirSync("projects", { recursive: true });
-mkdirSync("legal", { recursive: true });
 for (const [f, html] of Object.entries(out)) writeFileSync(f, html);
 console.log("built", Object.keys(out).length, "pages");
