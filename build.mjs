@@ -388,6 +388,7 @@ const projectPage = (p) =>
     og: p.cover,
     body: `
 ${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].accent || THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}}</style>` : ""}
+<a class="pill back-fixed" href="/projects" aria-label="Back to all work">← Back</a>
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>${p.title}</h1>
@@ -411,7 +412,8 @@ ${p.docHtml ? p.docHtml : `<section class="gallery${p.tight ? " tight" : ""}">
         : `<div class="g-pair"><figure data-reveal="scale"><img src="/img/${g[1]}.webp" alt="${p.title}" loading="lazy" /></figure><figure data-reveal="scale"><img src="/img/${g[2]}.webp" alt="${p.title}" loading="lazy" /></figure></div>`
     )
     .join("")}
-</section>`}`,
+</section>`}
+<div class="back-bottom"><a class="pill pill-lg" href="/projects">← Back to all work</a></div>`,
   });
 
 const out = {

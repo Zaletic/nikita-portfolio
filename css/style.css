@@ -48,7 +48,7 @@ em { font-style: italic; }
 
 /* ---------- nav ---------- */
 .nav {
-  position: fixed; inset: 0 0 auto 0; z-index: 20;
+  position: absolute; inset: 0 0 auto 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between;
   padding: 19px var(--pad);
   pointer-events: none;
@@ -102,7 +102,7 @@ em { font-style: italic; }
 .chip img.on { opacity: 1; transform: scale(1); }
 
 /* ---------- home: scattered work ---------- */
-.work-scatter { position: relative; height: 118vw; max-width: 100%; margin-top: 4vw; }
+.work-scatter { position: relative; height: 126vw; max-width: 100%; margin-top: 4vw; }
 .card { display: block; position: absolute; will-change: transform; transform-origin: 50% 50%; }
 .card-img { display: block; overflow: hidden; border-radius: 6px; }
 .card-img img { width: 100%; height: auto; transition: transform 0.9s var(--ease); }
@@ -112,9 +112,9 @@ em { font-style: italic; }
 .card:hover .card-title::after { transform: scaleX(1); }
 .scatter.s1 { left: 8%; top: 0; width: 26.74%; }
 .scatter.s2 { left: 52%; top: 10vw; width: 41%; }
-.scatter.s3 { left: 19%; top: 62vw; width: 29%; }
-.scatter.s4 { left: 56%; top: 80vw; width: 36%; }
-.scatter.s5 { left: 8%; top: 36vw; width: 27%; }
+.scatter.s3 { left: 19%; top: 70vw; width: 29%; }
+.scatter.s4 { left: 56%; top: 86vw; width: 36%; }
+.scatter.s5 { left: 8%; top: 41vw; width: 31%; }
 
 /* ---------- process ---------- */
 .process { padding: 8vw var(--pad) 6vw; }
@@ -512,3 +512,7 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .footer .pill:hover, .footer .pill:focus-visible { box-shadow: -2px 4px 0 #0B4A4D; }
 .footer .copy-btn { color: #0B4A4D; border-color: #0B4A4D; }
 .footer .copy-tip { background: #0B4A4D; color: #A8EFEF; }
+
+/* back buttons on case studies */
+.back-fixed { position: fixed; top: 19px; left: 50%; transform: translateX(-50%); z-index: 25; background: var(--cream); }
+.back-bottom { display: flex; justify-content: center; padding: 20px var(--pad) 90px; }
