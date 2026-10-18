@@ -88,6 +88,39 @@ const projects = [
       ["full", "trust-14"],
     ],
   },
+  {
+    slug: "dau-ridepod",
+    fig: "tap",
+    homeImg: "/img/ridepod-card.webp",
+    homeTitle: "DAU RidePod - Kiosk UI &amp; Human Factors",
+    title: "DAU RidePod",
+    cover: "/img/ridepod-card.webp",
+    tight: true,
+    pos: "center",
+    blurb:
+      "A self-service e-bike vending kiosk and smart docking system that lets DAU students rent a bike for short trips off campus in under a minute, designed through the lens of human factors in interaction design.",
+    meta: { Programme: "M.Des IUxD, DAU", Type: "Team project of four", Focus: ["Interaction Design", "Human Factors"], Course: "Human Factors in Interaction Design" },
+    gallery: [
+      ["full", "ridepod-pdf/page-01"],
+      ["full", "ridepod-pdf/page-02"],
+      ["full", "ridepod-pdf/page-03"],
+      ["full", "ridepod-pdf/page-04"],
+      ["full", "ridepod-pdf/page-05"],
+      ["full", "ridepod-pdf/page-06"],
+      ["full", "ridepod-pdf/page-07"],
+      ["full", "ridepod-pdf/page-08"],
+      ["full", "ridepod-pdf/page-09"],
+      ["full", "ridepod-pdf/page-10"],
+      ["full", "ridepod-pdf/page-11"],
+      ["full", "ridepod-pdf/page-12"],
+      ["full", "ridepod-pdf/page-13"],
+      ["full", "ridepod-pdf/page-14"],
+      ["full", "ridepod-pdf/page-15"],
+      ["full", "ridepod-pdf/page-16"],
+      ["full", "ridepod-pdf/page-17"],
+      ["full", "ridepod-pdf/page-18"],
+    ],
+  },
 ];
 
 const nav = (active) => `
@@ -316,6 +349,7 @@ const contact = page({
 const THEMES = {
   streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
   "railway-network": { bg: "#F4EBE2", ink: "#1F3A3A", line: "#C8703A", grid: "rgba(31,58,58,0.08)" },
+  "dau-ridepod": { bg: "#DCEEF7", ink: "#0B3A57", line: "#0A8FC4", grid: "rgba(11,58,87,0.07)" },
   "bridging-the-trust-gap": { bg: "#F4F0EC", ink: "#3B3835", line: "#3B3835", grid: "rgba(59,56,53,0.08)" },
 };
 const hot = (key) =>
