@@ -413,7 +413,7 @@ ${p.docHtml ? p.docHtml : `<section class="gallery${p.tight ? " tight" : ""}">
     )
     .join("")}
 </section>`}
-<div class="back-bottom"><a class="pill pill-lg" href="/projects">← Back to all work</a></div>`,
+<div class="back-bottom"><a class="pill pill-lg" href="/projects">All featured Work</a></div>`,
   });
 
 const out = {
