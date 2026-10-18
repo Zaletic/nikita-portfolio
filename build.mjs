@@ -113,7 +113,7 @@ const footer = `
   <div class="footer-cols">
     <div class="footer-mail">
       <p class="label">Email me</p>
-      <a class="serif-link big" href="mailto:${SITE.email}">${SITE.email}</a>
+      <div class="mail-row"><a class="serif-link big" href="mailto:${SITE.email}">${SITE.email}</a><button class="copy-btn" type="button" data-copy="${SITE.email}" aria-label="Copy email address"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="copy-tip" role="status">Copied!</span></button></div>
     </div>
     <div>
       <p class="label">Website</p>
@@ -250,8 +250,8 @@ const projectsPage = page({
     .map(
       (p) => `
   <a class="card tile" href="/projects/${p.slug}" data-reveal="scale">
-    <span class="card-img"><img src="${p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
-    <span class="tile-title">${p.title}</span>
+    <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" loading="lazy" /></span>
+    <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
     )
     .join("")}

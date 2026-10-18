@@ -128,6 +128,14 @@
   /* ---------- scroll-linked card grow + scrub (single rAF loop) ---------- */
   // Project cards start at 70% size and grow to 100% as they travel up the screen
   // (measured from the original: progress runs from card-centre at 1.42 x viewport height to 0.39 x).
+  /* copy email */
+  $$("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
+    const t = b.dataset.copy;
+    try { await navigator.clipboard.writeText(t); }
+    catch { const a = document.createElement("textarea"); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand("copy"); } catch {} a.remove(); }
+    b.classList.add("done"); clearTimeout(b._t); b._t = setTimeout(() => b.classList.remove("done"), 1600);
+  }));
+
   /* case-study pages: home palette up top, project palette from the first image down */
   const gal = $(".gallery");
   if (gal && document.body.classList.contains("project-page")) {
