@@ -55,16 +55,19 @@ const projects = [
     homeImg: "/img/railway-card-v2.webp",
     title: "Railway Network",
     cover: "/img/railway-cover.webp",
+    tight: true,
     pos: "center",
     blurb:
       "A visual and interactive exploration of the Central Indian railway network, mapping zones, history, divisions and routes through information design so a complex system becomes easy to understand.",
     meta: { Client: "Academic project", Timeline: "March 2026", Role: "Information Designer", Skills: ["Information Design", "Research"] },
     gallery: [
-      ["full", "railway-01"],
-      ["pair", "railway-02", "railway-03"],
-      ["full", "railway-04"],
-      ["pair", "railway-05", "railway-06"],
-      ["full", "railway-07"],
+      ["full", "railway-pdf/page-01"],
+      ["full", "railway-pdf/page-02"],
+      ["full", "railway-pdf/page-03"],
+      ["full", "railway-pdf/page-04"],
+      ["full", "railway-pdf/page-05"],
+      ["full", "railway-pdf/page-06"],
+      ["full", "railway-pdf/page-07"],
     ],
   },
   {
@@ -315,7 +318,7 @@ const contact = page({
 // ---------- Project pages ----------
 const THEMES = {
   streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
-  "railway-network": { bg: "#E8E0D0", ink: "#464646", line: "#C8703A", grid: "rgba(70,70,70,0.10)" },
+  "railway-network": { bg: "#F4EBE2", ink: "#1F3A3A", line: "#C8703A", grid: "rgba(31,58,58,0.08)" },
   "bridging-the-trust-gap": { bg: "#F4F0EC", ink: "#3B3835", line: "#3B3835", grid: "rgba(59,56,53,0.08)" },
 };
 const hot = (key) =>
