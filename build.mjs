@@ -15,7 +15,7 @@ const projects = [
   {
     slug: "streetly",
     fig: "streetly",
-    homeImg: "/img/streetly-card.webp",
+    homeImg: "/img/streetly-card-v2.webp",
     homeTitle: "STREETLY - UI/UX Design",
     title: "Streetly",
     cover: "/img/streetly-cover.webp",
