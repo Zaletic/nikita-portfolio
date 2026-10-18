@@ -209,3 +209,8 @@
     $$("input, textarea", form).forEach((f) => f.addEventListener("input", () => f.classList.remove("bad")));
   }
 })();
+
+/* back buttons: return to the page the visitor came from, else to Work */
+document.querySelectorAll(".back-fixed, .back-bottom a").forEach((a) => a.addEventListener("click", (e) => {
+  try { if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) { e.preventDefault(); history.back(); } } catch {}
+}));

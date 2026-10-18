@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8" />
-<script>document.documentElement.className="js";try{history.scrollRestoration="manual"}catch(e){}if(!location.hash)addEventListener("pageshow",function(){scrollTo(0,0)});</script>
+<script>document.documentElement.className="js";try{history.scrollRestoration="manual"}catch(e){}var K="sy:"+location.pathname;addEventListener("pagehide",function(){try{sessionStorage.setItem(K,scrollY)}catch(e){}});addEventListener("pageshow",function(){var n=performance.getEntriesByType("navigation")[0],y=0;try{if(n&&n.type==="back_forward")y=+sessionStorage.getItem(K)||0}catch(e){}if(location.hash&&!y)return;scrollTo(0,y);if(y)setTimeout(function(){scrollTo(0,y)},350)});</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Streetly — Nikita Bangia</title>
 <meta name="description" content="Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a n" />
