@@ -332,7 +332,6 @@ const hot = (key) =>
 
 const projectPage = (p) =>
   page({
-    bodyStyle: THEMES[p.slug] ? `--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}` : "",
     themeColor: THEMES[p.slug]?.bg,
     title: `${p.title} — ${SITE.name}`,
     desc: p.blurb.slice(0, 150),
@@ -340,6 +339,7 @@ const projectPage = (p) =>
     bodyClass: "project-page",
     og: p.cover,
     body: `
+${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}}</style>` : ""}
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>${p.title}</h1>
