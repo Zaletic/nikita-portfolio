@@ -333,3 +333,8 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
 .fig-read { right: 14px; opacity: 0.75; }
 .card-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 12px; }
 .card-row .card-title { margin-top: 0; font-size: 26px; }
+
+/* case-study pages: one whole page fits the screen at a time */
+.gallery.tight figure { width: min(100%, calc((100vh - 110px) * 16 / 9)); margin-inline: auto; scroll-snap-align: center; scroll-margin-top: 0; }
+body.project-page:has(.gallery.tight) { scroll-snap-type: y proximity; }
+html:has(.gallery.tight) { scroll-snap-type: y proximity; }
