@@ -2,6 +2,7 @@
 import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.meta.url), "utf8"));
 
+import { groomcueDoc } from "./groomcue-doc.mjs";
 const SITE = {
   name: "Nikita Bangia",
   role: "UI/UX Designer",
@@ -133,29 +134,8 @@ const projects = [
     blurb:
       "A phygital grooming companion for small dogs. GroomCue keeps a dog calm and engaged through light, sound and treats, so the groomer can stay focused on grooming.",
     meta: { Course: "Phygital Design", Programme: "M.Des IUxD", Team: "Team project of three", Focus: ["Product Design", "Embedded Electronics"] },
-    gallery: [
-      ["full", "groomcue-pdf/page-01"],
-      ["full", "groomcue-pdf/page-02"],
-      ["full", "groomcue-pdf/page-03"],
-      ["full", "groomcue-pdf/page-04"],
-      ["full", "groomcue-pdf/page-05"],
-      ["full", "groomcue-pdf/page-06"],
-      ["full", "groomcue-pdf/page-07"],
-      ["full", "groomcue-pdf/page-08"],
-      ["full", "groomcue-pdf/page-09"],
-      ["full", "groomcue-pdf/page-10"],
-      ["full", "groomcue-pdf/page-11"],
-      ["full", "groomcue-pdf/page-12"],
-      ["full", "groomcue-pdf/page-13"],
-      ["full", "groomcue-pdf/page-14"],
-      ["full", "groomcue-pdf/page-15"],
-      ["full", "groomcue-pdf/page-16"],
-      ["full", "groomcue-pdf/page-17"],
-      ["full", "groomcue-pdf/page-18"],
-      ["full", "groomcue-pdf/page-19"],
-      ["full", "groomcue-pdf/page-20"],
-      ["full", "groomcue-pdf/page-21"],
-    ],
+    docHtml: groomcueDoc,
+    gallery: [],
   },
 ];
 
@@ -419,7 +399,7 @@ ${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THE
       .join("")}
   </dl>
 </section>
-<section class="gallery${p.tight ? " tight" : ""}">
+${p.docHtml ? p.docHtml : `<section class="gallery${p.tight ? " tight" : ""}">
   ${p.gallery
     .map((g) =>
       g[0] === "full"
@@ -431,7 +411,7 @@ ${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THE
         : `<div class="g-pair"><figure data-reveal="scale"><img src="/img/${g[1]}.webp" alt="${p.title}" loading="lazy" /></figure><figure data-reveal="scale"><img src="/img/${g[2]}.webp" alt="${p.title}" loading="lazy" /></figure></div>`
     )
     .join("")}
-</section>`,
+</section>`}`,
   });
 
 const out = {
