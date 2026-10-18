@@ -133,7 +133,7 @@ const projects = [
     pos: "center",
     blurb:
       "A phygital grooming companion for small dogs. GroomCue keeps a dog calm and engaged through light, sound and treats, so the groomer can stay focused on grooming.",
-    meta: { Course: "Phygital Design", Programme: "M.Des IUxD", Team: "Team project of three", Focus: ["Product Design", "Embedded Electronics"] },
+    meta: { Duration: "3 weeks", Timeline: "July/Aug 2026", Role: "Product Designer", Deliverables: "PoC / Prototype" },
     docHtml: groomcueDoc,
     gallery: [],
   },

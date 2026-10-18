@@ -51,19 +51,6 @@ export const groomcueDoc = `
 </section>
 
 <section class="d-sec" data-reveal>
-  ${lab("Benchmark")}<h2 class="d-h">Dyson Pet Grooming Kit</h2>
-  <p class="d-p d-narrow">Dyson treats grooming as an extension of an existing household ecosystem, with premium ergonomics, minimal form and effortless integration. It has no smart connectivity and relies on the vacuum for power.</p>
-  <div class="d-split d-top">
-    <div class="d-grid2">
-      ${[["Smart features", "Removes loose hair straight into the vacuum, with trigger-controlled suction."], ["Ease of use", "Quick-release attachments and a lightweight, one-handed brush."], ["Pet comfort", "Angled stainless-steel bristles reach the undercoat gently without stress."], ["Maintenance", "Hair goes into the vacuum bin, with a washable attachment and little manual cleaning."]]
-        .map(([a, b]) => `<div class="d-card"><div class="d-k">${a}</div><p>${b}</p></div>`).join("")}
-    </div>
-    <div class="d-img d-tall d-dark">${I("dyson-kit", "Dyson pet grooming kit")}</div>
-  </div>
-  <div class="d-img d-white">${I("dyson-eco", "Dyson pet grooming kit ecosystem map")}</div>
-</section>
-
-<section class="d-sec" data-reveal>
   ${lab("02 · Research")}<h2 class="d-h">Grooming alone takes more than two hands</h2>
   <p class="d-quote">“I need both hands free but I only have two.”</p>
   <div class="d-grid2 d-charts">
