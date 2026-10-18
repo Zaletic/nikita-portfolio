@@ -110,7 +110,7 @@ em { font-style: italic; }
 .card-title { display: inline-block; margin-top: 10px; font-size: 22px; line-height: 1.1; letter-spacing: -0.2px; position: relative; }
 .card-title::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.5s var(--ease); }
 .card:hover .card-title::after { transform: scaleX(1); }
-.scatter.s1 { left: 9%; top: 0; width: 18.6%; }
+.scatter.s1 { left: 8%; top: 0; width: 23.25%; }
 .scatter.s2 { left: 52%; top: 10vw; width: 41%; }
 .scatter.s3 { left: 19%; top: 62vw; width: 29%; }
 
