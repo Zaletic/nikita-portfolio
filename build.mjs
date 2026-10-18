@@ -52,7 +52,8 @@ const projects = [
   {
     slug: "railway-network",
     fig: "railway",
-    homeImg: "/img/railway-card-v2.webp",
+    homeImg: "/img/railway-card-v3.webp",
+    homeTitle: "Railway Network - Information &amp; UI Design",
     title: "Railway Network",
     cover: "/img/railway-cover.webp",
     tight: true,
