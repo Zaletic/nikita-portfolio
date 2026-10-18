@@ -91,10 +91,10 @@ const projects = [
   {
     slug: "dau-ridepod",
     fig: "tap",
-    homeImg: "/img/ridepod-card.webp",
+    homeImg: "/img/ridepod-card-v2.webp",
     homeTitle: "DAU RidePod - Kiosk UI &amp; Human Factors",
     title: "DAU RidePod",
-    cover: "/img/ridepod-card.webp",
+    cover: "/img/ridepod-card-v2.webp",
     tight: true,
     pos: "center",
     blurb:
