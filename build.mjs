@@ -125,7 +125,7 @@ const projects = [
   {
     slug: "groomcue",
     fig: "tap",
-    homeImg: "/img/groomcue-card.webp",
+    homeImg: "/img/groomcue-card-v2.webp",
     homeTitle: "GroomCue - Phygital Product Design",
     title: "GroomCue",
     cover: "/img/groomcue-card.webp",

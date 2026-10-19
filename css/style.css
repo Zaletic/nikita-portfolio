@@ -112,7 +112,7 @@ em { font-style: italic; }
 .card:hover .card-title::after { transform: scaleX(1); }
 .scatter.s1 { left: 8%; top: 0; width: 26.74%; }
 .scatter.s2 { left: 52%; top: 10vw; width: 41%; }
-.scatter.s3 { left: 19%; top: 70vw; width: 29%; }
+.scatter.s3 { left: 19%; top: 70vw; width: 33.35%; }
 .scatter.s4 { left: 56%; top: 86vw; width: 36%; }
 .scatter.s5 { left: 8%; top: 41vw; width: 31%; }
 
