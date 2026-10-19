@@ -231,9 +231,9 @@ const home = page({
   body: `
 <section class="hero">
   <h1 class="hero-title" aria-label="${SITE.role} crafting design solutions and visual stories">
-    <span class="row"><span class="w">UI/UX</span> ${chip(1, ["lab-selfie", "mountains", "sushi"])} <span class="w">Designer</span></span>
+    <span class="row"><span class="w">UI/UX</span> ${chip(1, ["lab-studio", "headphones", "bw-profile"])} <span class="w">Designer</span></span>
     <span class="row"><span class="w it">crafting</span> <span class="w ico">${smile1}</span> <span class="w">design</span> <span class="w">solutions</span> ${chip(2, ["park-smile", "street-camera", "cat"])}</span>
-    <span class="row"><span class="w">and</span> ${chip(3, ["daiict-sign", "nift-campus", "lab-selfie"])} <span class="w it">visual</span> <span class="w it">stories</span> <span class="w ico">${smile2}</span></span>
+    <span class="row"><span class="w">and</span> ${chip(3, ["hills", "beach", "red-kurta"])} <span class="w it">visual</span> <span class="w it">stories</span> <span class="w ico">${smile2}</span></span>
   </h1>
 </section>
 
