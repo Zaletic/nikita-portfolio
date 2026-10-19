@@ -232,7 +232,7 @@ const home = page({
 <section class="hero">
   <h1 class="hero-title" aria-label="${SITE.role} crafting design solutions and visual stories">
     <span class="row"><span class="w">UI/UX</span> ${chip(1, ["lab-studio", "headphones", "bw-profile"])} <span class="w">Designer</span></span>
-    <span class="row"><span class="w it">crafting</span> <span class="w ico">${smile1}</span> <span class="w">design</span> <span class="w">solutions</span> ${chip(2, ["park-smile", "street-camera", "cat"])}</span>
+    <span class="row"><span class="w it">crafting</span> <span class="w ico">${smile1}</span> <span class="w">design</span> <span class="w">solutions</span> ${chip(2, ["park-smile", "street-camera"])}</span>
     <span class="row"><span class="w">and</span> ${chip(3, ["hills", "beach", "red-kurta"])} <span class="w it">visual</span> <span class="w it">stories</span> <span class="w ico">${smile2}</span></span>
   </h1>
 </section>
@@ -317,7 +317,7 @@ const about = page({
 <section class="about-hero">
   <h1 class="h-xxl right" data-chars>I craft ideas, stories and <em>joyful interactions</em></h1>
 </section>
-<div class="about-photo" data-reveal="fade"><img src="/img/lab-selfie.webp" alt="${SITE.name} at work" style="object-position:center 35%" /></div>
+<div class="about-photo" data-reveal="fade"><img src="/img/lab-selfie-v2.webp" alt="${SITE.name} at work" style="object-position:center 35%" /></div>
 <section class="about-text">
   <h3 class="h-l scrub" data-scrub>I approach design with a sense of quiet intention. My work lives at the intersection of structure and softness, where clarity is not forced but carefully shaped. I’m interested in how ideas take form, how vision becomes language through systems, visuals and thoughtful decisions that feel considered rather than ornamental.</h3>
 </section>
