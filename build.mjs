@@ -3,6 +3,7 @@ import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.meta.url), "utf8"));
 
 import { groomcueDoc } from "./groomcue-doc.mjs";
+import { railwayDoc } from "./railway-doc.mjs";
 const SITE = {
   name: "Nikita Bangia",
   role: "UI/UX Designer",
@@ -62,15 +63,8 @@ const projects = [
     blurb:
       "A visual and interactive exploration of the Central Indian railway network, mapping zones, history, divisions and routes through information design so a complex system becomes easy to understand.",
     meta: { Duration: "2 weeks", Timeline: "March 2026", Role: ["Information Designer", "UI Designer"], "Tools Used": "Figma and Framer" },
-    gallery: [
-      ["full", "railway-pdf/page-01"],
-      ["full", "railway-pdf/page-02"],
-      ["full", "railway-pdf/page-03"],
-      ["full", "railway-pdf/page-04"],
-      ["full", "railway-pdf/page-05"],
-      ["full", "railway-pdf/page-06"],
-      ["full", "railway-pdf/page-07"],
-    ],
+    docHtml: railwayDoc,
+    gallery: [],
   },
   {
     slug: "bridging-the-trust-gap",
