@@ -344,7 +344,7 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .copy-btn.done .copy-tip { opacity: 1; transform: translate(-50%, 0); }
 
 /* ---------- case study as a scrollable document (GroomCue) ---------- */
-.doc { padding: 40px var(--pad) 160px; color: #fff; max-width: 1480px; margin: 0 auto; }
+.doc { padding: 40px 40px 160px; color: #fff; margin: 0 var(--pad); background: #004B87; border-radius: 6px; }
 .doc .d-lab { display: flex; gap: 10px; align-items: center; font: 500 15px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
 .doc .d-lab::before { content: "✦"; font-size: 17px; }
 .doc .d-h { font: 400 clamp(44px, 5.2vw, 84px)/1.02 "Instrument Serif", serif; letter-spacing: -0.02em; margin-top: 16px; color: #fff; }
@@ -526,3 +526,4 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .doc .d-sketches .d-img:not(.d-big) { position: relative; min-height: 0; }
 .doc .d-sketches .d-img:not(.d-big) img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 900px) { .doc .d-sketches .d-img:not(.d-big) { aspect-ratio: 4 / 3; } }
+@media (max-width: 700px) { .doc { padding-inline: 18px; } }
