@@ -341,7 +341,7 @@ const about = page({
 <section class="about-hero">
   <h1 class="h-xxl right" data-chars>I craft ideas, stories and <em>joyful interactions</em></h1>
 </section>
-<div class="about-photo" data-reveal="fade"><img src="/img/lab-selfie-v2.webp" alt="${SITE.name} at work" style="object-position:center 35%" /></div>
+<div class="about-photo" data-reveal="fade"><img src="/img/chip-lab-pose.webp" alt="${SITE.name} at work" style="object-position:center 40%" /></div>
 <section class="about-text">
   <h3 class="h-l scrub" data-scrub>I approach design with a sense of quiet intention. My work lives at the intersection of structure and softness, where clarity is not forced but carefully shaped. I’m interested in how ideas take form, how vision becomes language through systems, visuals and thoughtful decisions that feel considered rather than ornamental.</h3>
 </section>
