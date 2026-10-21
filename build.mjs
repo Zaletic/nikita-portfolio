@@ -232,7 +232,7 @@ const home = page({
 <section class="hero">
   <h1 class="hero-title" aria-label="Product Designer crafting experiences, interactions and visual stories">
     <span class="row"><span class="w">Product</span> ${chip(1, ["chip-lab-plaid", "chip-dau", "chip-nift"])} <span class="w">Designer</span></span>
-    <span class="row"><span class="w it">crafting</span> <span class="w ico">${smile1}</span> <span class="w">experiences</span> ${chip(2, ["street-camera", "chip-desk", "chip-museum"])}</span>
+    <span class="row"><span class="w it">crafting</span> <span class="w ico">${smile1}</span> <span class="w">experiences</span> ${chip(2, ["street-camera", "sushi", "chip-lab-pose"])}</span>
     <span class="row"><span class="w">interactions</span> ${chip(3, ["chip-hillflower", "beach", "hills"])} <span class="w">&amp;</span> <span class="w it">visual</span> <span class="w it">stories</span> <span class="w ico">${smile2}</span></span>
   </h1>
 </section>
