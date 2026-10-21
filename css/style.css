@@ -286,6 +286,8 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   .svc { flex-direction: column; gap: 14px; }
   .svc-t { font-size: 32px; }
   .stack-grid { grid-template-columns: 1fr; gap: 48px; }
+  .svc-c { gap: 0 16px; grid-template-columns: 30px 1fr; padding: 12px 0 14px; }
+  .svc-c .svc-t { font-size: 28px; }
   .svc-ico { width: 30px; height: 30px; margin-right: 16px; }
   .svc-d { width: 100%; }
   .footer { padding-top: 60px; }
