@@ -519,13 +519,10 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .doc .l1 .d-lb { display: flex; flex-wrap: wrap; gap: 20px 34px; }
 .doc .d-wf { margin-top: 0; }
 
-/* bright green footer, same on every page */
-.footer { background: #A8EFEF; --text: #0B4A4D; --red: #0B4A4D; --line: #0B4A4D; --cream: #A8EFEF; color: #0B4A4D; }
-.footer .footer-title, .footer .serif-link, .footer .label { color: #0B4A4D; }
-.footer .pill { background: transparent; border-color: #0B4A4D; color: #0B4A4D; box-shadow: none; }
-.footer .pill:hover, .footer .pill:focus-visible { box-shadow: -2px 4px 0 #0B4A4D; }
-.footer .copy-btn { color: #0B4A4D; border-color: #0B4A4D; }
-.footer .copy-tip { background: #0B4A4D; color: #A8EFEF; }
+/* footer: original yellow-green with red text, same on every page */
+.footer { background: #EBECB0; --text: #d60004; --red: #f21317; --line: #ff1519; --cream: #f7f2e6; color: #d60004; }
+.footer .footer-title, .footer .serif-link { color: #f21317; }
+.footer .label { color: #d60004; }
 
 /* back buttons on case studies */
 .back-fixed { position: fixed; top: 19px; left: 50%; transform: translateX(-50%); z-index: 25; background: var(--cream); }
