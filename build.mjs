@@ -295,7 +295,7 @@ ${stackSection([
           ["Framer", "framer", "Turning designs into live, interactive websites."],
           ["Blender", "blender", "3D product visuals and renders for concepts."],
           ["Illustrator", "adobeillustrator", "Illustration, icons and brand graphics."],
-          ["Photoshop", "adobephotoshop", "Image editing and photo retouching."],
+          ["Procreate", "procreate", "Sketching, illustration and hand-drawn concepts."],
           ["Unity", "unity", "Interactive 3D and real-time prototypes."],
         ], true),
         stackCol("AI Assistance", [
