@@ -225,6 +225,26 @@ const chip = (id, imgs) =>
   `<span class="chip" data-chip="${id}">${imgs.map((s, i) => `<img src="/img/${s}.webp" alt=""${i ? "" : ' class="on"'} />`).join("")}</span>`;
 
 // ---------- Home ----------
+const stackSection = (title, items) => `<section class="services">
+  <div class="services-inner">
+    <h2 class="h-xl" data-lines>${title}</h2>
+    <div class="svc-list">
+      ${items
+        .map(([t, icon, d], i) => {
+          const svg = readFileSync(new URL(`./icons/${icon}.svg`, import.meta.url), "utf8")
+            .replace(/<title>.*?<\/title>/, "")
+            .replace("<svg ", '<svg aria-hidden="true" ');
+          return `
+      <div class="svc" data-reveal>
+        <div class="svc-t"><span class="svc-ico">${svg}</span><span>${t}</span><sup>0${i + 1}</sup></div>
+        <p class="svc-d">${d}</p>
+      </div>`;
+        })
+        .join("")}
+    </div>
+  </div>
+</section>`;
+
 const home = page({
   title: `${SITE.name} — ${SITE.role} Portfolio`,
   desc: `${SITE.name} is a ${SITE.role} crafting design solutions and visual stories.`,
@@ -265,33 +285,22 @@ const home = page({
   <h2 class="h-xl scrub" data-scrub>I approach design with intention and restraint, shaping structure and nuance into systems that feel deeply human. Each project is a process of translating ideas into forms that communicate without excess.</h2>
 </section>
 
-<section class="services">
-  <div class="services-inner">
-    <h2 class="h-xl" data-lines>Stack</h2>
-    <div class="svc-list">
-      ${[
+${stackSection("Stack", [
         ["Figma", "figma", "Interface design, prototypes and design systems."],
         ["Framer", "framer", "Turning designs into live, interactive websites."],
-        ["Miro", "miro", "Mapping research, journeys and ideas with a team."],
         ["Blender", "blender", "3D product visuals and renders for concepts."],
         ["Photoshop", "adobephotoshop", "Image editing and photo retouching."],
         ["Illustrator", "adobeillustrator", "Illustration, icons and brand graphics."],
-        ["Notion", "notion", "Research notes, documentation and planning."],
-      ]
-        .map(([t, icon, d], i) => {
-          const svg = readFileSync(new URL(`./icons/${icon}.svg`, import.meta.url), "utf8")
-            .replace(/<title>.*?<\/title>/, "")
-            .replace("<svg ", '<svg aria-hidden="true" ');
-          return `
-      <div class="svc" data-reveal>
-        <div class="svc-t"><span class="svc-ico">${svg}</span><span>${t}</span><sup>0${i + 1}</sup></div>
-        <p class="svc-d">${d}</p>
-      </div>`;
-        })
-        .join("")}
-    </div>
-  </div>
-</section>`,
+      ])}
+
+${stackSection("AI Assistance", [
+        ["ChatGPT", "openai", "Brainstorming, copy drafts and quick research."],
+        ["Claude", "claude", "Writing, analysis and building working prototypes."],
+        ["Replit", "replit", "Spinning up and testing app ideas in the browser."],
+        ["Lovable", "lovable", "Turning prompts into working app concepts."],
+        ["Perplexity", "perplexity", "Sourced answers for research and fact-checking."],
+      ])}
+`,
 });
 
 // ---------- Projects ----------
