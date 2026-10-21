@@ -12,7 +12,7 @@ const SITE = {
   resume: "/resume.pdf",
 };
 
-const projects = [
+const allProjects = [
   {
     slug: "streetly",
     fig: "streetly",
@@ -74,6 +74,7 @@ const projects = [
   },
   {
     slug: "bridging-the-trust-gap",
+    hidden: true,
     fig: "tap",
     title: "Bridging the Trust Gap",
     cover: "/img/trust-cover.webp",
@@ -138,6 +139,7 @@ const projects = [
     gallery: [],
   },
 ];
+const projects = allProjects.filter((p) => !p.hidden);
 
 const nav = (active) => `
 <header class="nav">
@@ -241,7 +243,7 @@ const home = page({
   ${projects
     .map(
       (p, i) => `
-  <a class="card scatter s${i + 1}" href="/projects/${p.slug}" data-grow>
+  <a class="card scatter s${[1, 2, 5, 4][i]}" href="/projects/${p.slug}" data-grow>
     <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`

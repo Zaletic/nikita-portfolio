@@ -102,7 +102,7 @@ em { font-style: italic; }
 .chip img.on { opacity: 1; transform: scale(1); }
 
 /* ---------- home: scattered work ---------- */
-.work-scatter { position: relative; height: 126vw; max-width: 100%; margin-top: 4vw; }
+.work-scatter { position: relative; height: 104vw; max-width: 100%; margin-top: 4vw; }
 .card { display: block; position: absolute; will-change: transform; transform-origin: 50% 50%; }
 .card-img { display: block; overflow: hidden; border-radius: 6px; }
 .card-img img { width: 100%; height: auto; transition: transform 0.9s var(--ease); }
@@ -113,7 +113,7 @@ em { font-style: italic; }
 .scatter.s1 { left: 8%; top: 0; width: 26.74%; }
 .scatter.s2 { left: 52%; top: 10vw; width: 41%; }
 .scatter.s3 { left: 19%; top: 70vw; width: 33.35%; }
-.scatter.s4 { left: 56%; top: 86vw; width: 36%; }
+.scatter.s4 { left: 56%; top: 62vw; width: 36%; }
 .scatter.s5 { left: 8%; top: 41vw; width: 31%; }
 
 /* ---------- process ---------- */
