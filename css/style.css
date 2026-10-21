@@ -147,6 +147,9 @@ em { font-style: italic; }
 .svc { display: flex; justify-content: space-between; gap: 40px; padding: 28px 0 30px; border-bottom: 1px solid var(--line); transition: padding 0.4s var(--ease); }
 .svc:hover { padding-left: 14px; }
 .svc-t { font-size: 40px; line-height: 1.1; letter-spacing: -0.4px; flex: 1; }
+.svc-t { display: flex; align-items: center; }
+.svc-ico { width: 40px; height: 40px; margin-right: 22px; flex: none; color: var(--red); display: inline-flex; }
+.svc-ico svg { width: 100%; height: 100%; fill: currentColor; }
 .svc-t sup { font: 400 16px var(--sans); color: var(--text); margin-left: 6px; vertical-align: top; position: relative; top: 4px; }
 .svc-d { width: 320px; flex: none; font-size: 16px; }
 .svc:first-child { border-top: 0; }
@@ -275,6 +278,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   .services-inner, .exp-inner { margin-left: 0; }
   .svc { flex-direction: column; gap: 14px; }
   .svc-t { font-size: 32px; }
+  .svc-ico { width: 30px; height: 30px; margin-right: 16px; }
   .svc-d { width: 100%; }
   .footer { padding-top: 60px; }
   .footer-top { flex-direction: column; }

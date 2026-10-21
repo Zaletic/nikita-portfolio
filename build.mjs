@@ -267,21 +267,27 @@ const home = page({
 
 <section class="services">
   <div class="services-inner">
-    <h2 class="h-xl" data-lines>Services</h2>
+    <h2 class="h-xl" data-lines>Stack</h2>
     <div class="svc-list">
       ${[
-        ["UI/UX Design", "Designing clear, intuitive products and interfaces that balance visual appeal with usability and strong structure."],
-        ["Information Design", "Turning complex systems and data into visual explanations that people can read, trust and act on."],
-        ["User Research", "Learning from real people through interviews, observation and synthesis to find what actually matters."],
-        ["Visual & Brand Design", "Defining visual direction and graphics that help ideas communicate consistently and with purpose."],
+        ["Figma", "figma", "Interface design, prototypes and design systems."],
+        ["Framer", "framer", "Turning designs into live, interactive websites."],
+        ["Miro", "miro", "Mapping research, journeys and ideas with a team."],
+        ["Blender", "blender", "3D product visuals and renders for concepts."],
+        ["Photoshop", "adobephotoshop", "Image editing and photo retouching."],
+        ["Illustrator", "adobeillustrator", "Illustration, icons and brand graphics."],
+        ["Notion", "notion", "Research notes, documentation and planning."],
       ]
-        .map(
-          ([t, d], i) => `
+        .map(([t, icon, d], i) => {
+          const svg = readFileSync(new URL(`./icons/${icon}.svg`, import.meta.url), "utf8")
+            .replace(/<title>.*?<\/title>/, "")
+            .replace("<svg ", '<svg aria-hidden="true" ');
+          return `
       <div class="svc" data-reveal>
-        <div class="svc-t"><span>${t}</span><sup>0${i + 1}</sup></div>
+        <div class="svc-t"><span class="svc-ico">${svg}</span><span>${t}</span><sup>0${i + 1}</sup></div>
         <p class="svc-d">${d}</p>
-      </div>`
-        )
+      </div>`;
+        })
         .join("")}
     </div>
   </div>
