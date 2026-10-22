@@ -114,7 +114,7 @@ em { font-style: italic; }
 .scatter.s2 { left: 52%; top: 10vw; width: 41%; }
 .scatter.s3 { left: 19%; top: 70vw; width: 33.35%; }
 .scatter.s4 { left: 56%; top: 62vw; width: 36%; }
-.scatter.s5 { left: 8%; top: 41vw; width: 31%; }
+.scatter.s5 { left: 8%; top: 40vw; width: 40.3%; }
 
 /* ---------- process ---------- */
 .process { padding: 8vw var(--pad) 6vw; }
