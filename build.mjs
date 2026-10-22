@@ -93,10 +93,10 @@ const allProjects = [
   {
     slug: "dau-ridepod",
     fig: "tap",
-    homeImg: "/img/ridepod-card-v2.webp",
+    homeImg: "/img/ridepod-card-v3.webp",
     homeTitle: "DAU RidePod - Kiosk UI &amp; Human Factors",
     title: "DAU RidePod",
-    cover: "/img/ridepod-card-v2.webp",
+    cover: "/img/ridepod-card-v3.webp",
     tight: true,
     pos: "center",
     blurb:
