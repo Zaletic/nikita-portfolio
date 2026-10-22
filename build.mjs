@@ -160,7 +160,7 @@ const footer = `
       <h3 class="footer-title" data-lines>Get in touch today to discuss how I can bring thoughtful design to your next product.</h3>
       <a class="pill pill-lg" href="/contact">Drop a line</a>
     </div>
-    <div class="footer-photo" data-reveal><img src="/img/mountains.webp" alt="${SITE.name}" loading="lazy" /></div>
+    <div class="footer-photo" data-reveal><img src="/img/footer-portrait.webp" alt="${SITE.name}" loading="lazy" /></div>
   </div>
   <hr class="footer-rule" />
   <div class="footer-cols">
