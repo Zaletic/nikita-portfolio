@@ -3,6 +3,7 @@ import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.meta.url), "utf8"));
 
 import { groomcueDoc } from "./groomcue-doc.mjs";
+import { ridepodInterview } from "./ridepod-interview.mjs";
 const SITE = {
   name: "Nikita Bangia",
   role: "UI/UX Designer",
@@ -92,6 +93,7 @@ const allProjects = [
   },
   {
     slug: "dau-ridepod",
+    extraHtml: ridepodInterview,
     fig: "tap",
     homeImg: "/img/ridepod-card-v3.webp",
     homeTitle: "DAU RidePod - Kiosk UI &amp; Human Factors",
@@ -437,6 +439,7 @@ ${p.docHtml ? p.docHtml : `<section class="gallery${p.tight ? " tight" : ""}">
     )
     .join("")}
 </section>`}
+${p.extraHtml || ""}
 <div class="back-bottom"><a class="pill pill-lg" href="/projects">All featured Work</a></div>`,
   });
 
