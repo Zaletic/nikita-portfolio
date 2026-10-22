@@ -103,7 +103,7 @@ const allProjects = [
     pos: "center",
     blurb:
       "A self-service e-bike vending kiosk and smart docking system that lets DAU students rent a bike for short trips off campus in under a minute, designed through the lens of human factors in interaction design.",
-    meta: { Programme: "M.Des IUxD, DAU", Type: "Team project of four", Focus: ["Interaction Design", "Human Factors"], Course: "Human Factors in Interaction Design" },
+    meta: { Duration: "18 days", Timeline: "April 2026", Role: ["Interaction Designer", "UX Researcher"], Course: "Human Factors in Interaction Design" },
     gallery: [
       ["full", "ridepod-pdf/page-01"],
       ["full", "ridepod-pdf/page-02"],
