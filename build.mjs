@@ -3,6 +3,7 @@ import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.meta.url), "utf8"));
 
 import { groomcueDoc } from "./groomcue-doc.mjs";
+import { streetlyDoc } from "./streetly-doc.mjs";
 import { ridepodInterview } from "./ridepod-interview.mjs";
 const SITE = {
   name: "Nikita Bangia",
@@ -26,6 +27,7 @@ const allProjects = [
       "Streetly is an e-bike rental app that helps people compare options and book the nearest ride. The goal was a calm, map-first experience that makes a new kind of commute feel simple and trustworthy.",
     meta: { Duration: "2-3 weeks", Timeline: "May 2026", Role: "UI/UX Designer", Skills: ["Product Design", "UX Research"] },
     tight: true,
+    docHtml: streetlyDoc,
     gallery: [
       ["full", "streetly-pdf/page-01"],
       ["full", "streetly-pdf/page-02"],
