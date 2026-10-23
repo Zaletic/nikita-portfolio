@@ -706,11 +706,11 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .dd-vp { overflow: hidden; padding: 18px var(--pad) 30px; }
 .dd-loop .dd-vp { padding-inline: 0; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
 .dd-loop .dd-vp.d { cursor: grabbing; }
-.dd-track { display: flex; gap: 22px; width: max-content; will-change: transform; }
+.dd-track { display: flex; gap: 44px; width: max-content; will-change: transform; }
 .dd-c { flex: none; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); transform: rotate(var(--r)); }
 .dd-c:hover { transform: rotate(0deg) translateY(-6px); }
 .dd-p { display: block; }
-.dd-art { height: clamp(190px, 26vw, 300px); background: #fffdf7; border: 6px solid #fffdf7; border-radius: 6px; box-shadow: 0 18px 40px -22px rgba(214, 0, 4, 0.5); overflow: hidden; pointer-events: none; }
+.dd-art { height: clamp(171px, 23.4vw, 270px); background: #fffdf7; border: 6px solid #fffdf7; border-radius: 6px; overflow: hidden; pointer-events: none; }
 .dd-art img { display: block; height: 100%; width: auto; object-fit: cover; border-radius: 2px; }
 .dd-cap { font: 400 19px/1.1 var(--serif); margin-top: 14px; pointer-events: none; }
 .dd-cap small { display: block; font: 400 12px var(--sans); opacity: 0.75; margin-top: 3px; }
