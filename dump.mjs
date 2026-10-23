@@ -1,7 +1,7 @@
 // "Design dump": hanging polaroids of paintings, sketches and crafts.
 // 4+ items: endless loop, drag to move, idle sway. Fewer items: a static row that just sways.
 export const dumpItems = [
-  { img: "/img/dump-railway-model.webp", w: 1068, h: 960, title: "Mumbai CST model", kind: "Craft · Railway Network" },
+  { img: "/img/dump-railway-model.webp", w: 1400, h: 1000, title: "Mumbai CST model", kind: "Craft · Railway Network" },
 ];
 
 const card = (it, i, hidden) =>
