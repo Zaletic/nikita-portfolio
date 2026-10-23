@@ -4,6 +4,7 @@ const HOT = JSON.parse(readFileSync(new URL("./streetly-hotspots.json", import.m
 
 import { groomcueDoc } from "./groomcue-doc.mjs";
 import { streetlyDoc } from "./streetly-doc.mjs";
+import { dumpSection } from "./dump.mjs";
 import { ridepodInterview } from "./ridepod-interview.mjs";
 const SITE = {
   name: "Nikita Bangia",
@@ -276,15 +277,7 @@ const home = page({
     .join("")}
 </section>
 
-<section class="process">
-  <h2 class="h-xl" data-lines>Shaping ideas into design solutions.</h2>
-  <div class="steps">
-    <article class="step st1" data-reveal><span class="num">01</span><div><h3>Understand</h3><p>Dig into the people, the context and the problem through research, conversations and observation before a single screen is drawn.</p></div></article>
-    <article class="step st2" data-reveal><span class="num">02</span><div><h3>Define</h3><p>Turn insights into a clear problem statement, user flows and an information architecture the whole product can stand on.</p></div></article>
-    <article class="step st3" data-reveal><span class="num">03</span><div><h3>Design</h3><p>Move from wireframes to a polished, considered interface, testing ideas quickly and refining the details that make it feel human.</p></div></article>
-    <article class="step st4" data-reveal><span class="num">04</span><div><h3>Deliver</h3><p>Prototype, polish and hand off clean files and documentation so the idea can be built, scaled and maintained.</p></div></article>
-  </div>
-</section>
+${dumpSection()}
 
 <section class="statement">
   <h2 class="h-xl scrub" data-scrub>I approach design with intention and restraint, shaping structure and nuance into systems that feel deeply human. Each project is a process of translating ideas into forms that communicate without excess.</h2>
