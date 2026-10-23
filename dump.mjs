@@ -1,7 +1,7 @@
 // "Design dump": hanging polaroids of paintings, sketches and crafts.
 // 4+ items: endless loop, drag to move, idle sway. Fewer items: a static row that just sways.
 export const dumpItems = [
-  { img: "/img/dump-railway-model.webp", w: 1400, h: 1000, title: "Mumbai CST model", kind: "Craft · Railway Network" },
+  { img: "/img/dump-railway-model.webp", w: 1400, h: 1000, title: "Central Railway Model", kind: "Information Design - April 2026" },
 ];
 
 const card = (it, i, hidden) =>
@@ -15,7 +15,7 @@ export const dumpSection = (items = dumpItems) => {
   return `
 <section class="dd${loop ? " dd-loop" : ""}">
   <div class="dd-k" data-reveal>Design dump</div>
-  <h2 class="h-xl dd-h" data-lines>The dump behind the design.</h2>
+  <h2 class="h-xl dd-h" data-lines>The design dump</h2>
   <p class="dd-tip" data-reveal>Paintings, sketches and little crafts. This is where my colour, form and patience come from.</p>
   <div class="dd-string"><div class="dd-vp" id="ddvp"><div class="dd-track" id="ddtr">${cards}</div></div></div>
 </section>${loop ? `
