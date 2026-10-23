@@ -2,10 +2,14 @@
 // 4+ items: endless loop, drag to move, idle sway. Fewer items: a static row that just sways.
 export const dumpItems = [
   { img: "/img/dump-railway-model.webp", w: 1400, h: 1000, title: "Central Railway Model", kind: "Information Design - April 2026" },
+  { img: "/img/dump-ph-1.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Painting" },
+  { img: "/img/dump-ph-2.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Sketching" },
+  { img: "/img/dump-ph-3.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Painting" },
+  { img: "/img/dump-ph-4.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Sketching" },
 ];
 
 const card = (it, i, hidden) =>
-  `<div class="dd-c"${hidden ? ' aria-hidden="true"' : ""} style="--r:${i % 2 ? 2.5 : -2.5}deg;--d:${(3.4 + ((i * 0.37) % 1.6)).toFixed(2)}s;--l:${(-i * 0.6).toFixed(1)}s"><div class="dd-p"><div class="dd-art" style="aspect-ratio:${it.w} / ${it.h}"><img src="${it.img}" alt="${it.title}" loading="lazy" draggable="false" /></div><div class="dd-cap">${it.title}<small>${it.kind}</small></div></div></div>`;
+  `<div class="dd-c"${hidden ? ' aria-hidden="true"' : ""} style="--r:${i % 2 ? 2.5 : -2.5}deg;--d:${(3.4 + ((i * 0.37) % 1.6)).toFixed(2)}s;--l:${(-i * 0.6).toFixed(1)}s"><div class="dd-p"><div class="dd-art" style="aspect-ratio:${it.w} / ${it.h}"><img src="${it.img}" alt="${it.title}" loading="eager" draggable="false" /></div><div class="dd-cap">${it.title}<small>${it.kind}</small></div></div></div>`;
 
 export const dumpSection = (items = dumpItems) => {
   const loop = items.length >= 4;
