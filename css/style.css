@@ -700,7 +700,7 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 /* ---------- Design dump ---------- */
 .dd { padding: 8vw var(--pad) 6vw; }
 .dd-k { font: 500 13px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; }
-.dd-h { max-width: 900px; margin-top: 14px; font-size: clamp(44px, 6.67vw, 140px); }
+.dd-h { max-width: 1200px; margin-top: 14px; font-size: clamp(44px, 6.67vw, 140px); }
 .dd-tip { font: 400 16px var(--sans); max-width: 520px; margin-top: 18px; opacity: 0.9; }
 .dd-string { position: relative; margin: 36px calc(-1 * var(--pad)) 0; }
 .dd-vp { overflow: hidden; padding: 18px var(--pad) 30px; }
