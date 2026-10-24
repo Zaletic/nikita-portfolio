@@ -277,6 +277,15 @@ const home = page({
     .join("")}
 </section>
 
+<section class="am">
+  <div class="am-photo" data-reveal="fade"><img src="/img/about-studio.webp" alt="${SITE.name}" loading="lazy" /></div>
+  <div class="am-text">
+    <div class="am-k">About me</div>
+    <h2 class="h-xl am-h" data-lines>Hi, I’m Nikita</h2>
+    <p class="am-p" data-reveal>A designer who loves creating and curating, driven by curiosity, Exploring Interactions, experiences and the ideas that live between them.</p>
+  </div>
+</section>
+
 ${dumpSection()}
 
 <section class="statement">

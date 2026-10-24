@@ -716,3 +716,10 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .dd-cap small { display: block; font: 400 12px var(--sans); opacity: 0.75; margin-top: 3px; }
 @media (prefers-reduced-motion: reduce) { .dd-loop .dd-vp { overflow-x: auto; cursor: auto; } }
 @media (max-width: 800px) { .dd { padding-inline: 18px; } }
+
+.am { padding: 8vw var(--pad) 2vw; display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 6vw; align-items: center; }
+.am-photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: 6px; transform: rotate(-1.5deg); }
+.am-k { font: 500 13px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; }
+.am-h { margin-top: 12px; font-size: clamp(44px, 6.67vw, 140px); }
+.am-p { font: 400 clamp(22px, 2.1vw, 30px)/1.25 var(--serif); max-width: 640px; margin-top: 22px; }
+@media (max-width: 800px) { .am { grid-template-columns: 1fr; gap: 28px; padding: 14vw 18px 4vw; } .am-photo { max-width: 300px; } }
