@@ -278,7 +278,7 @@ const home = page({
 </section>
 
 <section class="am">
-  <p class="am-t" data-reveal><img class="am-img" src="/img/about-studio.webp" alt="${SITE.name}" loading="lazy" />Hi, I’m <span class="am-n">Nikita</span>. A designer who loves creating and curating, driven by curiosity, Exploring Interactions, experiences and the ideas that live between them.</p>
+  <p class="am-t" data-reveal><span class="am-img" role="img" aria-label="${SITE.name}"></span>Hi, I’m <span class="am-n">Nikita</span>. A designer who loves creating and curating, driven by curiosity, Exploring Interactions, experiences and the ideas that live between them.</p>
 </section>
 
 ${dumpSection()}
