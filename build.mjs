@@ -198,7 +198,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=glass5" />
+<link rel="stylesheet" href="/css/style.css?v=glass6" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -379,7 +379,7 @@ const projectPage = (p) =>
     og: p.cover,
     body: `
 ${THEMES[p.slug] ? `<style>body.case-on{--cream:${THEMES[p.slug].bg};--red:${THEMES[p.slug].accent || THEMES[p.slug].ink};--text:${THEMES[p.slug].ink};--line:${THEMES[p.slug].line};--grid:${THEMES[p.slug].grid}}</style>` : ""}
-<a class="pill back-fixed" href="/projects" aria-label="Back to all work">← Back</a>
+<div class="proj-wrap">
 <section class="proj-head">
   <div class="proj-left">
     <h1 class="h-xxl" data-chars>${p.title}</h1>
@@ -405,7 +405,9 @@ ${p.docHtml ? p.docHtml : `<section class="gallery${p.tight ? " tight" : ""}">
     .join("")}
 </section>`}
 ${p.extraHtml || ""}
-<div class="back-bottom"><a class="pill pill-lg" href="/projects">All featured Work</a></div>`,
+<div class="back-bottom"><a class="pill pill-lg" href="/projects">All featured Work</a></div>
+<div class="back-dock"><a class="pill back-fixed" href="/projects" aria-label="Back to all work">← Back</a></div>
+</div>`,
   });
 
 const out = {

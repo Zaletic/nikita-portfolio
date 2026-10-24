@@ -540,7 +540,8 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .doc .d-hero .d-wide { height: calc(100vh - 150px); max-height: 760px; margin-inline: auto; width: auto; aspect-ratio: 1750 / 1215; max-width: 100%; }
 .doc .d-hero .d-wide img { height: 100%; object-fit: cover; }
 
-.back-fixed { left: var(--pad); top: auto; bottom: 24px; transform: none; }
+.back-dock { position: sticky; bottom: 0; height: 0; z-index: 25; }
+.back-fixed { position: absolute; left: var(--pad); top: auto; bottom: 24px; transform: none; }
 .back-bottom { justify-content: center; }
 .doc .d-sketches { grid-template-rows: 1fr 1fr; }
 .doc .d-sketches .d-img:not(.d-big) { position: relative; min-height: 0; }
