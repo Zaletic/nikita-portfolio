@@ -152,11 +152,12 @@ const nav = (active) => `
   <nav class="nav-links" aria-label="Main">
     <a class="pill${active === "work" ? "" : ""}" href="/projects">Work</a>
     <a class="pill${active === "about" ? "" : ""}" href="/about">About</a>
+    <a class="pill" href="#connect" data-connect>Connect</a>
   </nav>
 </header>`;
 
 const footer = `
-<footer class="footer">
+<footer class="footer" id="connect">
   <div class="footer-top">
     <div>
       <h3 class="footer-title" data-lines>Get in touch today to discuss how I can bring thoughtful design to your next product.</h3>
