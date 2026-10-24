@@ -152,7 +152,6 @@ const nav = (active) => `
   <nav class="nav-links" aria-label="Main">
     <a class="pill${active === "work" ? "" : ""}" href="/projects">Work</a>
     <a class="pill${active === "about" ? "" : ""}" href="/about">About</a>
-    <a class="pill${active === "contact" ? "" : ""}" href="/contact">Contact</a>
   </nav>
 </header>`;
 
@@ -161,7 +160,6 @@ const footer = `
   <div class="footer-top">
     <div>
       <h3 class="footer-title" data-lines>Get in touch today to discuss how I can bring thoughtful design to your next product.</h3>
-      <a class="pill pill-lg" href="/contact">Drop a line</a>
     </div>
     <div class="footer-photo" data-reveal><img src="/img/footer-portrait.webp" alt="${SITE.name}" loading="lazy" /></div>
   </div>
@@ -173,7 +171,6 @@ const footer = `
     <div>
       <a class="serif-link" href="/projects">Works</a>
       <a class="serif-link" href="/about">About</a>
-      <a class="serif-link" href="/contact">Contact</a>
     </div>
     <div>
       <a class="serif-link" href="${SITE.instagram}" target="_blank" rel="noopener">Instagram</a>
@@ -356,29 +353,6 @@ const about = page({
 </section>`,
 });
 
-// ---------- Contact ----------
-const contact = page({
-  title: `Contact — ${SITE.name}`,
-  desc: `Get in touch with ${SITE.name}.`,
-  active: "contact",
-  bodyClass: "contact-page",
-  body: `
-<section class="contact-hero">
-  <h1 class="h-xxl center" data-chars>All great ideas are born from a <em>conversation</em></h1>
-  <p class="contact-sub" data-reveal>No matter what stage of the process you're in, I recommend getting in touch.</p>
-  <form class="form" id="contact-form" novalidate data-reveal>
-    <label><span>Name</span><input name="name" type="text" placeholder="Jane Smith" autocomplete="name" required /></label>
-    <label><span>Email Address</span><input name="email" type="email" placeholder="jane@email.com" autocomplete="email" required /></label>
-    <label><span>How can I help you?</span><textarea name="message" rows="6" placeholder="Write your message here" required></textarea></label>
-    <label><span>How did you hear about me?</span>
-      <span class="select-wrap"><select name="source"><option value="">Select…</option><option>Google Search</option><option>LinkedIn</option><option>Instagram</option><option>Friends and Family</option></select></span>
-    </label>
-    <button class="pill pill-lg submit" type="submit">Submit form</button>
-    <p class="form-note" role="status" aria-live="polite"></p>
-  </form>
-</section>`,
-});
-
 // ---------- Project pages ----------
 const THEMES = {
   streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
@@ -439,7 +413,6 @@ const out = {
   "index.html": home,
   "projects.html": projectsPage,
   "about.html": about,
-  "contact.html": contact,
 };
 for (const p of projects) out[`projects/${p.slug}.html`] = projectPage(p);
 
