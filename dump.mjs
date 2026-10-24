@@ -2,13 +2,13 @@
 // 4+ items: endless loop, drag to move, idle sway. Fewer items: a static row that just sways.
 export const dumpItems = [
   { img: "/img/dump-railway-model-2.webp", w: 1400, h: 1050, title: "Central Railway Model", kind: "Information Design - April 2026" },
-  { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Green weave samples", kind: "Weaving" },
-  { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Plaid weave samples", kind: "Weaving" },
+  { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Carpet weaving swatches", kind: "B.Des, NIFT" },
+  { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Checks &amp; Stripes swatches", kind: "B.Des, NIFT" },
   { img: "/img/dump-print-lynx.webp", w: 1200, h: 1200, title: "Print patterns", kind: "Print Design - Lynx 2024" },
-  { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Quilled carrot", kind: "Paper Quilling - 2024" },
-  { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Quilled ghost", kind: "Paper Quilling - 2024" },
-  { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Quilled snowman", kind: "Paper Quilling - 2024" },
-  { img: "/img/dump-quill-gnome.webp", w: 1050, h: 1400, title: "Quilled gnome", kind: "Paper Quilling - 2024" },
+  { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Paper Quilling - Carrot", kind: "2024" },
+  { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Paper Quilling - Ghost", kind: "2024" },
+  { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Paper Quilling - Snowman", kind: "2024" },
+  { img: "/img/dump-quill-gnome.webp", w: 1050, h: 1400, title: "Paper Quilling - Santa", kind: "2024" },
   { img: "/img/dump-ink.webp", w: 1400, h: 852, title: "Ink studies", kind: "Ink Painting" },
 ];
 
