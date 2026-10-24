@@ -283,10 +283,6 @@ const home = page({
 
 ${dumpSection()}
 
-<section class="statement">
-  <h2 class="h-xl scrub" data-scrub>I approach design with intention and restraint, shaping structure and nuance into systems that feel deeply human. Each project is a process of translating ideas into forms that communicate without excess.</h2>
-</section>
-
 ${stackSection([
         stackCol("Stack", [
           ["Figma", "figma", "Interface design, prototypes and design systems."],
