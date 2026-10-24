@@ -4,7 +4,6 @@ export const dumpItems = [
   { img: "/img/dump-railway-model-2.webp", w: 1400, h: 1050, title: "Central Railway Model", kind: "Information Design - April 2026" },
   { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Carpet weaving swatches", kind: "B.Des, NIFT" },
   { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Checks &amp; Stripes swatches", kind: "B.Des, NIFT" },
-  { img: "/img/dump-print-lynx.webp", w: 1200, h: 1200, title: "Print patterns", kind: "Print Design - Lynx 2024" },
   { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Paper Quilling - Carrot", kind: "2024" },
   { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Paper Quilling - Ghost", kind: "2024" },
   { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Paper Quilling - Snowman", kind: "2024" },
@@ -25,7 +24,7 @@ export const dumpSection = (items = dumpItems) => {
   return `
 <section class="dd${loop ? " dd-loop" : ""}">
   <h2 class="h-xl dd-h" data-lines>Artsy, Crafty Dump</h2>
-  <p class="dd-tip" data-reveal>Weaving, paper quilling, ink, prints and little models. This is where my colour, form and patience come from.</p>
+  <p class="dd-tip" data-reveal>Weaving, paper quilling, ink, calligraphy and little models. This is where my colour, form and patience come from.</p>
   <div class="dd-string"><div class="dd-vp" id="ddvp"><div class="dd-track" id="ddtr">${cards}</div></div></div>
 </section>${loop ? `
 <script>

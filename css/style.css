@@ -710,8 +710,8 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .dd-c { flex: none; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); transform: rotate(var(--r)); }
 .dd-c:has(.dd-art:hover) { transform: rotate(0deg) translateY(-6px); }
 .dd-p { display: block; }
-.dd-art { height: clamp(171px, 23.4vw, 270px); background: #fffdf7; border: 6px solid #fffdf7; border-radius: 6px; overflow: hidden; }
-.dd-art img { pointer-events: none; display: block; height: 100%; width: auto; object-fit: cover; border-radius: 2px; }
+.dd-art { height: clamp(171px, 23.4vw, 270px); border-radius: 6px; overflow: hidden; }
+.dd-art img { pointer-events: none; display: block; height: 100%; width: auto; object-fit: cover; }
 .dd-cap { font: 400 19px/1.1 var(--serif); margin-top: 14px; pointer-events: none; }
 .dd-cap small { display: block; font: 400 12px var(--sans); opacity: 0.75; margin-top: 3px; }
 @media (prefers-reduced-motion: reduce) { .dd-loop .dd-vp { overflow-x: auto; cursor: auto; } }
