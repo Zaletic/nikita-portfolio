@@ -209,7 +209,7 @@ ${footer}
 ${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
 <script src="/js/hairline-kernel.js" defer></script>
 ${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
-` : ""}<script src="/js/main.js?v=back" defer></script>
+` : ""}<script src="/js/main.js?v=back2" defer></script>
 </body>
 </html>
 `;
@@ -263,7 +263,7 @@ const home = page({
   ${projects
     .map(
       (p, i) => `
-  <a class="card scatter s${[1, 2, 5, 4][i]}" href="/projects/${p.slug}" data-grow>
+  <a class="card scatter s${[1, 2, 5, 4][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
     <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
@@ -312,7 +312,7 @@ const projectsPage = page({
   ${projects
     .map(
       (p) => `
-  <a class="card tile" href="/projects/${p.slug}" data-reveal="scale">
+  <a class="card tile" id="p-${p.slug}" href="/projects/${p.slug}" data-reveal="scale">
     <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" loading="lazy" /></span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`

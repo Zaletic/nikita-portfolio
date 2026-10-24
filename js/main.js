@@ -210,23 +210,19 @@
   }
 })();
 
-/* back buttons: return to the page the visitor came from, else to Work */
-document.querySelectorAll(".back-fixed, .back-bottom a").forEach((a) => a.addEventListener("click", (e) => {
-  try { if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) { e.preventDefault(); history.back(); } } catch {}
-}));
-
-/* remember which project card was opened, so Back lands on that card */
+/* Back (case study) returns to the card that was opened; the card is centred on arrival */
 (() => {
-  const KEY = "lastProject";
-  document.addEventListener("click", (e) => {
-    const a = e.target.closest("a.card[href^='/projects/']");
-    if (a) try { sessionStorage.setItem(KEY, new URL(a.href).pathname); } catch {}
-  });
-  const nav = performance.getEntriesByType("navigation")[0];
-  if (!nav || nav.type !== "back_forward") return;
-  let path = null;
-  try { path = sessionStorage.getItem(KEY); } catch {}
-  const card = path && document.querySelector(`a.card[href="${path}"]`);
+  const slug = (location.pathname.match(/^\/projects\/([^/]+)/) || [])[1];
+  if (slug) {
+    let ref = null;
+    try { ref = document.referrer && new URL(document.referrer); } catch {}
+    const from = ref && ref.origin === location.origin && (ref.pathname === "/" || ref.pathname === "/projects" || ref.pathname === "/projects.html") ? ref.pathname.replace(".html", "") : "/projects";
+    const target = from + "#p-" + slug;
+    document.querySelectorAll(".back-fixed").forEach((a) => (a.href = target));
+    return;
+  }
+  const id = location.hash.startsWith("#p-") && location.hash.slice(1);
+  const card = id && document.getElementById(id);
   if (!card) return;
   const go = () => card.scrollIntoView({ block: "center", behavior: "instant" });
   go();
