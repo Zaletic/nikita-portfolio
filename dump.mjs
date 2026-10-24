@@ -22,7 +22,7 @@ export const dumpSection = (items = dumpItems) => {
     : items.map((it, i) => card(it, i, false)).join("");
   return `
 <section class="dd${loop ? " dd-loop" : ""}">
-  <h2 class="h-xl dd-h" data-lines>Hands-on, artsy, crafty dump</h2>
+  <h2 class="h-xl dd-h" data-lines>Artsy, Crafty Dump</h2>
   <p class="dd-tip" data-reveal>Paintings, sketches and little crafts. This is where my colour, form and patience come from.</p>
   <div class="dd-string"><div class="dd-vp" id="ddvp"><div class="dd-track" id="ddtr">${cards}</div></div></div>
 </section>${loop ? `
