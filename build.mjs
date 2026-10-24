@@ -333,7 +333,6 @@ const about = page({
   <h1 class="h-xxl right" data-chars>I craft ideas, stories and <em>joyful interactions</em></h1>
 </section>
 <div class="about-photo" data-reveal="fade"><img src="/img/about-studio.webp" alt="${SITE.name} at work" /></div>
-<div class="about-resume" data-reveal><a class="pill pill-lg" href="${SITE.resume}" target="_blank" rel="noopener">View resume</a></div>
 <section class="experience">
   <div class="exp-inner">
     ${[
