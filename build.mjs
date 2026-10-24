@@ -271,6 +271,8 @@ const home = page({
     .join("")}
 </section>
 
+<div class="show-more"><a class="show-more-link" href="/projects">Show more</a></div>
+
 <section class="am">
   <p class="am-t" data-reveal><span class="am-img" role="img" aria-label="${SITE.name}"></span>Hi, I’m <span class="am-n">Nikita</span>. A designer who loves creating and curating, driven by curiosity, Exploring Interactions, experiences and the ideas that live between them.</p>
 </section>

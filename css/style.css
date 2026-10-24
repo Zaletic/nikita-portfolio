@@ -105,6 +105,8 @@ em { font-style: italic; }
 .chip img.on { opacity: 1; transform: scale(1); }
 
 /* ---------- home: scattered work ---------- */
+.show-more { display: flex; justify-content: center; margin: -9vw 0 4vw; position: relative; z-index: 2; }
+.show-more-link { font: 400 28px/1.2 var(--serif); letter-spacing: -0.2px; color: var(--red); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 .work-scatter { position: relative; height: 104vw; max-width: 100%; margin-top: 4vw; }
 .card { display: block; position: absolute; will-change: transform; transform-origin: 50% 50%; }
 .card-img { display: block; overflow: hidden; border-radius: 6px; }
@@ -283,6 +285,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   .hero { padding-top: 80px; }
   .hero-title { font-size: 12vw; }
   .hero-title .row { white-space: normal; margin-bottom: 0.06em; }
+  .show-more { margin: 0 0 40px; }
   .work-scatter { height: auto; margin: 40px 0; display: grid; gap: 40px; padding: 0 var(--pad); }
   .card.scatter { position: relative; left: auto !important; top: auto !important; width: 100% !important; }
   .process { padding: 60px var(--pad); }
