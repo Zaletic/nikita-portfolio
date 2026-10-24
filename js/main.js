@@ -210,7 +210,7 @@
   }
 })();
 
-/* Back (case study) returns to the card that was opened; the card is centred on arrival */
+/* Back (case study) returns to the card that was opened (landing position comes from CSS scroll-margin) */
 (() => {
   const slug = (location.pathname.match(/^\/projects\/([^/]+)/) || [])[1];
   if (slug) {
@@ -221,11 +221,4 @@
     document.querySelectorAll(".back-fixed").forEach((a) => (a.href = target));
     return;
   }
-  const id = location.hash.startsWith("#p-") && location.hash.slice(1);
-  const card = id && document.getElementById(id);
-  if (!card) return;
-  const go = () => card.scrollIntoView({ block: "center", behavior: "instant" });
-  go();
-  addEventListener("load", go);
-  setTimeout(go, 400);
 })();
