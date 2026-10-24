@@ -23,11 +23,13 @@ export const dumpSection = (items = dumpItems) => {
   return `
 <section class="dd${loop ? " dd-loop" : ""}">
   <h2 class="h-xl dd-h" data-lines>Artsy, Crafty Dump</h2>
-  <p class="dd-tip" data-reveal>Paintings, sketches and little crafts. This is where my colour, form and patience come from.</p>
+  <p class="dd-tip" data-reveal>Weaving, paper quilling, ink, prints and little models. This is where my colour, form and patience come from.</p>
   <div class="dd-string"><div class="dd-vp" id="ddvp"><div class="dd-track" id="ddtr">${cards}</div></div></div>
 </section>${loop ? `
 <script>
-(()=>{const v=document.getElementById("ddvp"),t=document.getElementById("ddtr"),cs=[...t.children];
+(()=>{const v=document.getElementById("ddvp"),t=document.getElementById("ddtr");let cs=[...t.children];
+{const n=cs.length/3,p=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[p[i],p[j]]=[p[j],p[i]]}
+ const o=[];for(let k=0;k<3;k++)p.forEach((j,i)=>{const c=cs[k*n+j];c.style.setProperty("--r",(i%2?1.5:-1.5)+"deg");o.push(c)});t.append(...o);cs=o}
 let vx=0,drag=false,hov=false,lx=0,last=0;const SPEED=-38;
 const PAD=()=>parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--pad"))||40;
 const S=()=>cs[cs.length/3].offsetLeft-cs[0].offsetLeft;
@@ -42,7 +44,7 @@ v.addEventListener("pointerdown",e=>{if(e.pointerType==="mouse"&&e.button!==0)re
 v.addEventListener("pointermove",e=>{if(!drag)return;const d=e.clientX-lx;lx=e.clientX;x+=d;vx=clamp(d,-40,40)});
 const up=()=>{if(!drag)return;drag=false;v.classList.remove("d")};
 v.addEventListener("pointerup",up);v.addEventListener("pointercancel",up);
-v.addEventListener("pointerenter",e=>{if(e.pointerType==="mouse")hov=true});v.addEventListener("pointerleave",()=>{hov=false});
+v.addEventListener("pointermove",e=>{if(e.pointerType==="mouse")hov=!!(e.target.closest&&e.target.closest(".dd-art"))});v.addEventListener("pointerleave",()=>{hov=false});
 v.addEventListener("wheel",e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){e.preventDefault();vx=clamp(vx-e.deltaX*.12,-30,30)}},{passive:false});
 addEventListener("resize",()=>{wrap();t.style.transform="translateX("+x+"px)"});t.style.transform="translateX("+x+"px)";requestAnimationFrame(tick);
 })();
