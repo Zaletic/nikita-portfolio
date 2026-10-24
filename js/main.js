@@ -214,3 +214,22 @@
 document.querySelectorAll(".back-fixed, .back-bottom a").forEach((a) => a.addEventListener("click", (e) => {
   try { if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) { e.preventDefault(); history.back(); } } catch {}
 }));
+
+/* remember which project card was opened, so Back lands on that card */
+(() => {
+  const KEY = "lastProject";
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a.card[href^='/projects/']");
+    if (a) try { sessionStorage.setItem(KEY, new URL(a.href).pathname); } catch {}
+  });
+  const nav = performance.getEntriesByType("navigation")[0];
+  if (!nav || nav.type !== "back_forward") return;
+  let path = null;
+  try { path = sessionStorage.getItem(KEY); } catch {}
+  const card = path && document.querySelector(`a.card[href="${path}"]`);
+  if (!card) return;
+  const go = () => card.scrollIntoView({ block: "center", behavior: "instant" });
+  go();
+  addEventListener("load", go);
+  setTimeout(go, 400);
+})();
