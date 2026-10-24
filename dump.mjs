@@ -5,6 +5,10 @@ export const dumpItems = [
   { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Green weave samples", kind: "Weaving" },
   { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Plaid weave samples", kind: "Weaving" },
   { img: "/img/dump-print-lynx.webp", w: 1200, h: 1200, title: "Print patterns", kind: "Print Design - Lynx 2024" },
+  { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Quilled carrot", kind: "Paper Quilling - 2024" },
+  { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Quilled ghost", kind: "Paper Quilling - 2024" },
+  { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Quilled snowman", kind: "Paper Quilling - 2024" },
+  { img: "/img/dump-quill-gnome.webp", w: 1050, h: 1400, title: "Quilled gnome", kind: "Paper Quilling - 2024" },
   { img: "/img/dump-ph-4.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Sketching" },
 ];
 
