@@ -4,7 +4,7 @@ export const dumpItems = [
   { img: "/img/dump-railway-model-2.webp", w: 1400, h: 1050, title: "Central Railway Model", kind: "Information Design - April 2026" },
   { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Green weave samples", kind: "Weaving" },
   { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Plaid weave samples", kind: "Weaving" },
-  { img: "/img/dump-ph-3.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Painting" },
+  { img: "/img/dump-print-lynx.webp", w: 1200, h: 1200, title: "Print patterns", kind: "Print Design - Lynx 2024" },
   { img: "/img/dump-ph-4.svg", w: 1400, h: 1000, title: "Coming soon", kind: "Sketching" },
 ];
 
