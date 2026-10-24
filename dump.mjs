@@ -9,6 +9,8 @@ export const dumpItems = [
   { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Paper Quilling - Ghost", kind: "2024" },
   { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Paper Quilling - Snowman", kind: "2024" },
   { img: "/img/dump-quill-gnome.webp", w: 1050, h: 1400, title: "Paper Quilling - Santa", kind: "2024" },
+  { img: "/img/dump-callig-bamboo.webp", w: 1400, h: 863, title: "Calligraphy", kind: "Done with Ink" },
+  { img: "/img/dump-callig-nikita.webp", w: 1377, h: 882, title: "Calligraphy", kind: "Done with Ink" },
   { img: "/img/dump-ink.webp", w: 1400, h: 852, title: "Ink studies", kind: "Ink Painting" },
 ];
 
