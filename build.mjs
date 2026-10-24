@@ -198,7 +198,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=glass7" />
+<link rel="stylesheet" href="/css/style.css?v=edx2" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -334,21 +334,27 @@ const about = page({
 </section>
 <div class="about-photo" data-reveal="fade"><img src="/img/about-studio.webp" alt="${SITE.name} at work" /></div>
 <section class="about-text">
-  <h3 class="h-l scrub" data-scrub>I approach design with a sense of quiet intention. My work lives at the intersection of structure and softness, where clarity is not forced but carefully shaped. I’m interested in how ideas take form, how vision becomes language through systems, visuals and thoughtful decisions that feel considered rather than ornamental.</h3>
+  <h3 class="h-l">I approach design with a sense of quiet intention. My work lives at the intersection of structure and softness, where clarity is not forced but carefully shaped. I’m interested in how ideas take form, how vision becomes language through systems, visuals and thoughtful decisions that feel considered rather than ornamental.</h3>
 </section>
 <div class="about-resume" data-reveal><a class="pill pill-lg" href="${SITE.resume}" target="_blank" rel="noopener">View resume</a></div>
 <section class="experience">
   <div class="exp-inner">
-    <h2 class="h-xl" data-lines>Experience</h2>
+    ${[
+      ["Education", [
+        ["2025 – Now", "Dhirubhai Ambani University", "M.Des, Intelligent User Experience Design"],
+        ["2019 – 2023", "NIFT", "B.Des"],
+      ]],
+      ["Experience", [
+        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer"],
+      ]],
+    ]
+      .map(
+        ([h, rows]) => `<div class="exp-group"><h2 class="h-xl" data-lines>${h}</h2>
     <div class="exp-list">
-      ${[
-        ["2024 – Ongoing", "DAIICT, Gandhinagar", "M.Des"],
-        ["2024", "Lynx", "Graphic Designer"],
-        ["2023", "NIFT", "B.Des"],
-      ]
-        .map(([a, b, c]) => `<div class="exp-row" data-reveal><p>${a}</p><p>${b}</p><p>${c}</p></div>`)
-        .join("")}
-    </div>
+      ${rows.map(([a, b, c]) => `<div class="exp-row" data-reveal><p>${a}</p><p>${b}</p><p>${c}</p></div>`).join("")}
+    </div></div>`
+      )
+      .join("")}
   </div>
 </section>`,
 });

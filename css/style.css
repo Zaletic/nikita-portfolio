@@ -735,3 +735,4 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 
 /* Back from a case study lands on its card, upper-middle of the screen, in a single jump */
 .card[id^="p-"] { scroll-margin-top: 22vh; }
+.exp-group + .exp-group { margin-top: 90px; }
