@@ -215,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=card4" />
+<link rel="stylesheet" href="/css/style.css?v=edu1" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -349,22 +349,21 @@ const about = page({
 <section class="about-hero">
   <h1 class="h-xxl right" data-chars>I craft ideas, stories and <em>joyful interactions</em></h1>
 </section>
-<div class="about-photo" data-reveal="fade"><img src="/img/about-studio.webp" alt="${SITE.name} at work" /></div>
 <section class="experience">
   <div class="exp-inner">
     ${[
       ["Education", [
-        ["2025 – Now", "Dhirubhai Ambani University", "M.Des, Intelligent User Experience Design", "Gandhinagar, Gujarat. A postgraduate programme in Intelligent User Experience Design, focused on research-led UX, interaction and immersive design. My recent projects, from Streetly and DAU RidePod to GroomCue and the VR Tattoo Studio, come from this work."],
-        ["2019 – 2023", "NIFT", "B.Des", "Gandhinagar, Gujarat. An undergraduate degree in design at the National Institute of Fashion Technology, where I built a foundation in textiles, colour, pattern and weave, as seen in the swatches in my Artsy, Crafty Dump."],
+        ["2025 – Now", "Dhirubhai Ambani University", "M.Des, Intelligent User Experience Design", "/img/edu-dau.webp", "Gandhinagar, Gujarat. A postgraduate programme in Intelligent User Experience Design, focused on research-led UX, interaction and immersive design. My recent projects, from Streetly and DAU RidePod to GroomCue and the VR Tattoo Studio, come from this work."],
+        ["2019 – 2023", "NIFT", "B.Des", "/img/edu-nift.webp", "Gandhinagar, Gujarat. An undergraduate degree in design at the National Institute of Fashion Technology, where I built a foundation in textiles, colour, pattern and weave, as seen in the swatches in my Artsy, Crafty Dump."],
       ]],
       ["Experience", [
-        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer", "At Lynx Designers &amp; Creators, I worked on graphic design and packaging for gifting products, creating CADs, digital prints, and print-ready artwork. I also developed product mockups and portfolio documentation while researching design trends to shape market-relevant collections. My work involved collaborating with the design team and using Adobe Illustrator, Photoshop, InDesign, and Procreate."],
+        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer", "", "At Lynx Designers &amp; Creators, I worked on graphic design and packaging for gifting products, creating CADs, digital prints, and print-ready artwork. I also developed product mockups and portfolio documentation while researching design trends to shape market-relevant collections. My work involved collaborating with the design team and using Adobe Illustrator, Photoshop, InDesign, and Procreate."],
       ]],
     ]
       .map(
         ([h, rows]) => `<div class="exp-group"><h2 class="h-xl" data-lines>${h}</h2>
     <div class="exp-list">
-      ${rows.map(([a, b, c, d]) => `<div class="exp-item" data-reveal><button class="exp-row" type="button" aria-expanded="false"><span class="exp-plus" aria-hidden="true">+</span><p>${a}</p><p>${b}</p><p>${c}</p></button><div class="exp-more"><div><p>${d}</p></div></div></div>`).join("")}
+      ${rows.map(([a, b, c, im, d]) => `<div class="exp-item" data-reveal><button class="exp-row" type="button" aria-expanded="false"><span class="exp-plus" aria-hidden="true">+</span><p>${a}</p><p>${b}</p><p>${c}</p>${im ? `<img class="exp-thumb" src="${im}" alt="" loading="lazy" />` : ""}</button><div class="exp-more"><div><p>${d}</p></div></div></div>`).join("")}
     </div></div>`
       )
       .join("")}
