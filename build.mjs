@@ -132,10 +132,10 @@ const allProjects = [
   {
     slug: "groomcue",
     fig: "tap",
-    homeImg: "/img/groomcue-card-v2.webp",
+    homeImg: "/img/groomcue-card-v3.webp",
     homeTitle: "GroomCue - Phygital Product Design",
     title: "GroomCue",
-    cover: "/img/groomcue-card.webp",
+    cover: "/img/groomcue-card-v3.webp",
     tight: true,
     pos: "center",
     blurb:
@@ -215,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=vr6" />
+<link rel="stylesheet" href="/css/style.css?v=card4" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
