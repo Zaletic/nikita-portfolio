@@ -736,3 +736,23 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 /* Back from a case study lands on its card, upper-middle of the screen, in a single jump */
 .card[id^="p-"] { scroll-margin-top: 22vh; }
 .exp-group + .exp-group { margin-top: 90px; }
+
+/* ---------- VR Tattoo Studio case study ---------- */
+.vr { padding: 10px var(--pad) 140px; color: var(--text); }
+.vr-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 18px; background: #000; }
+.vr-cap { font: 400 15px/1.5 var(--sans); opacity: 0.75; margin-top: 14px; }
+.vr-sec { margin-top: 140px; }
+.vr-lab { display: flex; gap: 10px; align-items: center; font: 500 15px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
+.vr-lab::before { content: "✦"; font-size: 17px; }
+.vr-h { font: 400 clamp(44px, 5.2vw, 84px)/1.02 "Instrument Serif", serif; letter-spacing: -0.02em; margin-top: 16px; }
+.vr-p { font: 400 19px/1.65 var(--sans); margin-top: 18px; }
+.vr-split { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: end; }
+.vr-steps, .vr-dec { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 36px; }
+.vr-step, .vr-d { border-top: 1px solid var(--line); padding-top: 22px; }
+.vr-n { font: 400 48px/1 "Instrument Serif", serif; color: var(--red); }
+.vr-step h3, .vr-d h3 { font: 400 32px/1.1 "Instrument Serif", serif; margin: 12px 0 10px; }
+.vr-step p, .vr-d p { font: 400 17px/1.6 var(--sans); opacity: 0.88; }
+@media (max-width: 800px) {
+  .vr-split, .vr-steps, .vr-dec { grid-template-columns: 1fr; gap: 28px; }
+  .vr-sec { margin-top: 90px; }
+}

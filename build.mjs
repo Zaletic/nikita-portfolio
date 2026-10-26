@@ -6,6 +6,7 @@ import { groomcueDoc } from "./groomcue-doc.mjs";
 import { streetlyDoc } from "./streetly-doc.mjs";
 import { dumpSection } from "./dump.mjs";
 import { ridepodInterview } from "./ridepod-interview.mjs";
+import { vrDoc } from "./vr-doc.mjs";
 const SITE = {
   name: "Nikita Bangia",
   role: "UI/UX Designer",
@@ -143,6 +144,21 @@ const allProjects = [
     docHtml: groomcueDoc,
     gallery: [],
   },
+  {
+    slug: "vr-tattoo-studio",
+    fig: "tap",
+    homeImg: "/img/vr-tattoo-card.webp",
+    homeTitle: "VR Tattoo Studio - Immersive VR Experience",
+    title: "VR Tattoo Studio",
+    cover: "/img/vr-tattoo-card.webp",
+    tight: true,
+    pos: "center",
+    blurb:
+      "An immersive VR experience that turns a tattoo studio into a doorway to the Māori world of New Zealand. You step into their culture, then return through a portal with a tattoo on your hand as a memory of the journey.",
+    meta: { Type: "VR Experience", "Tools Used": "Blender and Unity", Focus: ["Interactive Experience", "Cultural Storytelling"] },
+    docHtml: vrDoc,
+    gallery: [],
+  },
 ];
 const projects = allProjects.filter((p) => !p.hidden);
 
@@ -198,7 +214,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=edx2" />
+<link rel="stylesheet" href="/css/style.css?v=vr1" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -210,7 +226,7 @@ ${footer}
 ${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
 <script src="/js/hairline-kernel.js" defer></script>
 ${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
-` : ""}<script src="/js/main.js?v=back4" defer></script>
+` : ""}<script src="/js/main.js?v=back5" defer></script>
 </body>
 </html>
 `;
@@ -264,7 +280,7 @@ const home = page({
   ${projects
     .map(
       (p, i) => `
-  <a class="card scatter s${[1, 2, 5, 4][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
+  <a class="card scatter s${[1, 2, 5, 4, 3][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
     <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
@@ -360,6 +376,7 @@ const THEMES = {
   streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
   "railway-network": { bg: "#F4EBE2", ink: "#1F3A3A", line: "#C8703A", grid: "rgba(31,58,58,0.08)" },
   "dau-ridepod": { bg: "#DCEEF7", ink: "#0B3A57", line: "#0A8FC4", grid: "rgba(11,58,87,0.07)" },
+  "vr-tattoo-studio": { bg: "#1C1714", ink: "#F3E7D6", accent: "#E8793B", line: "#E8793B", grid: "rgba(243,231,214,0.07)" },
   groomcue: { bg: "#004B87", ink: "#FFFFFF", accent: "#FFC928", line: "#FFC928", grid: "rgba(255,255,255,0.08)" },
   "bridging-the-trust-gap": { bg: "#F4F0EC", ink: "#3B3835", line: "#3B3835", grid: "rgba(59,56,53,0.08)" },
 };

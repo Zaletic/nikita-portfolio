@@ -137,7 +137,7 @@
   }));
 
   /* case-study pages: home palette up top, project palette from the first image down */
-  const gal = $(".gallery, .doc, .sdoc");
+  const gal = $(".gallery, .doc, .sdoc, .vr");
   if (gal && document.body.classList.contains("project-page")) {
     const sync = () => document.body.classList.toggle("case-on", gal.getBoundingClientRect().top < innerHeight * 0.5);
     addEventListener("scroll", sync, { passive: true });
