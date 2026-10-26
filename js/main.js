@@ -228,3 +228,16 @@
     if (b) b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true");
   });
 })();
+(() => {
+  const f = document.getElementById("connect"), b = document.querySelector("[data-connect]");
+  if (!f || !b) return;
+  const sync = () => {
+    const r = f.getBoundingClientRect();
+    const here = r.top < innerHeight * 0.5 && r.bottom > innerHeight * 0.5;
+    b.classList.toggle("is-here", here);
+    here ? b.setAttribute("aria-current", "location") : b.removeAttribute("aria-current");
+  };
+  addEventListener("scroll", sync, { passive: true });
+  addEventListener("resize", sync);
+  sync();
+})();

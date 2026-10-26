@@ -767,3 +767,6 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
   .vr-split, .vr-steps, .vr-dec { grid-template-columns: 1fr; gap: 28px; }
   .vr-sec { margin-top: 90px; }
 }
+
+/* Connect pill goes quiet while the footer is on screen */
+.pill[data-connect].is-here { opacity: 0.45; pointer-events: none; transform: none; box-shadow: none; }
