@@ -215,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=vr3" />
+<link rel="stylesheet" href="/css/style.css?v=vr4" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -227,7 +227,7 @@ ${footer}
 ${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
 <script src="/js/hairline-kernel.js" defer></script>
 ${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
-` : ""}<script src="/js/main.js?v=back5" defer></script>
+` : ""}<script src="/js/main.js?v=back6" defer></script>
 </body>
 </html>
 `;
@@ -292,7 +292,7 @@ const home = page({
 <div class="show-more"><a class="show-more-link" href="/projects">Show more</a></div>
 
 <section class="am">
-  <p class="am-t" data-reveal><span class="am-img" role="img" aria-label="${SITE.name}"></span>Hi, I’m <span class="am-n">Nikita</span>. A designer who loves creating and curating, driven by curiosity, Exploring Interactions, experiences and the ideas that live between them.</p>
+  <p class="am-t" data-reveal><span class="am-img" role="img" aria-label="${SITE.name}"></span>I’m <span class="am-n">Nikita</span>. A designer who loves creating and curating, driven by curiosity, Exploring Interactions, experiences and the ideas that live between them.</p>
 </section>
 
 ${stackSection([
@@ -354,17 +354,17 @@ const about = page({
   <div class="exp-inner">
     ${[
       ["Education", [
-        ["2025 – Now", "Dhirubhai Ambani University", "M.Des, Intelligent User Experience Design"],
-        ["2019 – 2023", "NIFT", "B.Des"],
+        ["2025 – Now", "Dhirubhai Ambani University", "M.Des, Intelligent User Experience Design", "Gandhinagar, Gujarat. A postgraduate programme in Intelligent User Experience Design, focused on research-led UX, interaction and immersive design. My recent projects, from Streetly and DAU RidePod to GroomCue and the VR Tattoo Studio, come from this work."],
+        ["2019 – 2023", "NIFT", "B.Des", "Gandhinagar, Gujarat. An undergraduate degree in design at the National Institute of Fashion Technology, where I built a foundation in textiles, colour, pattern and weave, as seen in the swatches in my Artsy, Crafty Dump."],
       ]],
       ["Experience", [
-        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer"],
+        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer", "Noida, UP (Feb – Oct 2024). Designed CADs, digital prints and packaging artwork for gifting products such as paper bags, boxes and ribbons, while researching design trends to shape market-relevant collections. Also created product mockups, documented the company's product portfolio and prepared print-ready assets in Illustrator, Procreate, InDesign and Photoshop."],
       ]],
     ]
       .map(
         ([h, rows]) => `<div class="exp-group"><h2 class="h-xl" data-lines>${h}</h2>
     <div class="exp-list">
-      ${rows.map(([a, b, c]) => `<div class="exp-row" data-reveal><p>${a}</p><p>${b}</p><p>${c}</p></div>`).join("")}
+      ${rows.map(([a, b, c, d]) => `<div class="exp-item" data-reveal><button class="exp-row" type="button" aria-expanded="false"><span class="exp-plus" aria-hidden="true">+</span><p>${a}</p><p>${b}</p><p>${c}</p></button><div class="exp-more"><div><p>${d}</p></div></div></div>`).join("")}
     </div></div>`
       )
       .join("")}

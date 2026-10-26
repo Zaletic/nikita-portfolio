@@ -1,20 +1,20 @@
 // "Design dump": hanging polaroids of paintings, sketches and crafts.
 // 4+ items: endless loop, drag to move, idle sway. Fewer items: a static row that just sways.
 export const dumpItems = [
-  { img: "/img/dump-railway-model-2.webp", w: 1400, h: 1050, title: "Central Railway Model", kind: "Information Design - April 2026" },
+  { img: "/img/dump-railway-model-2.webp", w: 1400, h: 1050, title: "Central Railway Model", kind: "Information Design" },
   { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Carpet weaving swatches", kind: "B.Des, NIFT" },
   { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Checks &amp; Stripes swatches", kind: "B.Des, NIFT" },
-  { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Paper Quilling - Carrot", kind: "2024" },
-  { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Paper Quilling - Ghost", kind: "2024" },
-  { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Paper Quilling - Snowman", kind: "2024" },
-  { img: "/img/dump-quill-gnome.webp", w: 1050, h: 1400, title: "Paper Quilling - Santa", kind: "2024" },
+  { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Paper Quilling - Carrot", kind: "" },
+  { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Paper Quilling - Ghost", kind: "" },
+  { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Paper Quilling - Snowman", kind: "" },
+  { img: "/img/dump-quill-gnome.webp", w: 1050, h: 1400, title: "Paper Quilling - Santa", kind: "" },
   { img: "/img/dump-callig-bamboo.webp", w: 1400, h: 863, title: "Calligraphy", kind: "Done with Ink" },
   { img: "/img/dump-callig-nikita.webp", w: 1377, h: 882, title: "Calligraphy", kind: "Done with Ink" },
   { img: "/img/dump-ink.webp", w: 1400, h: 852, title: "Ink studies", kind: "Ink Painting" },
 ];
 
 const card = (it, i, hidden) =>
-  `<div class="dd-c"${hidden ? ' aria-hidden="true"' : ""} style="--r:${i % 2 ? 1.5 : -1.5}deg"><div class="dd-p"><div class="dd-art"><img src="${it.img}" width="${it.w}" height="${it.h}" style="aspect-ratio:${it.w} / ${it.h}" alt="${it.title}" loading="eager" draggable="false" /></div><div class="dd-cap">${it.title}<small>${it.kind}</small></div></div></div>`;
+  `<div class="dd-c"${hidden ? ' aria-hidden="true"' : ""} style="--r:${i % 2 ? 1.5 : -1.5}deg"><div class="dd-p"><div class="dd-art"><img src="${it.img}" width="${it.w}" height="${it.h}" style="aspect-ratio:${it.w} / ${it.h}" alt="${it.title}" loading="eager" draggable="false" /></div><div class="dd-cap">${it.title}${it.kind ? `<small>${it.kind}</small>` : ""}</div></div></div>`;
 
 export const dumpSection = (items = dumpItems) => {
   const loop = items.length >= 4;

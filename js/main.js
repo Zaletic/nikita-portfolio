@@ -222,3 +222,9 @@
     return;
   }
 })();
+(() => {
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".exp-row");
+    if (b) b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  });
+})();
