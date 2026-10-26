@@ -147,14 +147,15 @@ const allProjects = [
   {
     slug: "vr-tattoo-studio",
     fig: "tap",
-    homeImg: "/img/vr-tattoo-card.webp",
+    homeImg: "/img/vr-tattoo-card2.webp",
+    homeVideo: "/video/vr-tattoo-loop-v2.mp4",
     homeTitle: "VR Tattoo Studio - Immersive VR Experience",
     title: "VR Tattoo Studio",
-    cover: "/img/vr-tattoo-card.webp",
+    cover: "/img/vr-tattoo-card2.webp",
     tight: true,
     pos: "center",
     blurb:
-      "An immersive VR experience that turns a tattoo studio into a doorway to the Māori world of New Zealand. You step into their culture, then return through a portal with a tattoo on your hand as a memory of the journey.",
+      "VR Tattoo Studio reimagines the tattoo parlour as an immersive space for cultural learning. Users step from a virtual studio through a portal into the world of a Māori tribe of New Zealand, meeting its culture first-hand, then return carrying a tattoo on their hand as a memory of the journey.",
     meta: { Type: "VR Experience", "Tools Used": "Blender and Unity", Focus: ["Interactive Experience", "Cultural Storytelling"] },
     docHtml: vrDoc,
     gallery: [],
@@ -214,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=vr1" />
+<link rel="stylesheet" href="/css/style.css?v=vr2" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -281,7 +282,7 @@ const home = page({
     .map(
       (p, i) => `
   <a class="card scatter s${[1, 2, 5, 4, 3][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
-    <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" /></span>
+    <span class="card-img">${p.homeVideo ? `<video src="${p.homeVideo}" poster="${p.homeImg}" autoplay muted loop playsinline preload="auto" aria-label="${p.title}"></video>` : `<img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" />`}</span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
     )
@@ -330,7 +331,7 @@ const projectsPage = page({
     .map(
       (p) => `
   <a class="card tile" id="p-${p.slug}" href="/projects/${p.slug}" data-reveal="scale">
-    <span class="card-img"><img src="${p.homeImg || p.cover}" alt="${p.title}" loading="lazy" /></span>
+    <span class="card-img">${p.homeVideo ? `<video src="${p.homeVideo}" poster="${p.homeImg}" autoplay muted loop playsinline preload="auto" aria-label="${p.title}"></video>` : `<img src="${p.homeImg || p.cover}" alt="${p.title}" loading="lazy" />`}</span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
     )

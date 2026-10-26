@@ -107,9 +107,11 @@ em { font-style: italic; }
 /* ---------- home: scattered work ---------- */
 .show-more { display: flex; justify-content: center; margin: -9vw 0 4vw; position: relative; z-index: 2; }
 .show-more-link { font: 400 28px/1.2 var(--serif); letter-spacing: -0.2px; color: var(--red); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
-.work-scatter { position: relative; height: 104vw; max-width: 100%; margin-top: 4vw; }
+.work-scatter { position: relative; height: 112vw; max-width: 100%; margin-top: 4vw; }
 .card { display: block; position: absolute; will-change: transform; transform-origin: 50% 50%; }
 .card-img { display: block; overflow: hidden; border-radius: 6px; }
+.card-img video { display: block; width: 100%; height: auto; transition: transform 0.9s var(--ease); }
+.card:hover .card-img video { transform: scale(1.05); }
 .card-img img { width: 100%; height: auto; transition: transform 0.9s var(--ease); }
 .card:hover .card-img img { transform: scale(1.05); }
 .card-title { display: inline-block; margin-top: 10px; font-size: 22px; line-height: 1.1; letter-spacing: -0.2px; position: relative; }
@@ -117,7 +119,7 @@ em { font-style: italic; }
 .card:hover .card-title::after { transform: scaleX(1); }
 .scatter.s1 { left: 8%; top: 0; width: 26.74%; }
 .scatter.s2 { left: 52%; top: 10vw; width: 41%; }
-.scatter.s3 { left: 19%; top: 70vw; width: 33.35%; }
+.scatter.s3 { left: 22%; top: 80vw; width: 36%; }
 .scatter.s4 { left: 56%; top: 62vw; width: 36%; }
 .scatter.s5 { left: 8%; top: 40vw; width: 40.3%; }
 

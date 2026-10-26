@@ -2,31 +2,31 @@
 const lab = (t) => `<div class="vr-lab">${t}</div>`;
 
 const steps = [
-  ["01", "In the studio", "You start inside a tattoo studio, a space most people only ever see as a place to book a session. Here it is somewhere you can look around, move through and interact with."],
-  ["02", "Into the Māori world", "From the studio you choose to step into a particular world, the Māori tribe of New Zealand. You enter it and meet familiar things from their culture, shown in context instead of explained in a caption."],
-  ["03", "Back through the portal", "A portal brings you back to the studio. You return with a tattoo on your hand, a small memory of having been there."],
+  ["01", "Arrival", "Users begin inside a virtual tattoo studio, a familiar setting they can look around and interact with. From here they are invited to choose a world to enter."],
+  ["02", "Immersion", "Choosing the Māori world transports users to the setting of a Māori tribe of New Zealand. Objects and surroundings drawn from the culture appear in context, so understanding builds through exploration rather than explanation."],
+  ["03", "Return", "A portal leads back to the studio. The journey leaves a trace: a tattoo on the user's hand, a lasting memory of the place they visited."],
 ];
 
 const decisions = [
-  ["Make the studio something you explore", "The main idea was to lift the tattoo studio experience by making it more engaging and interactive, so the visit is more than choosing a design and waiting."],
-  ["Teach through the experience, not a poster", "Tattoos carry cultural meaning. Instead of telling people about it, the experience puts them inside the Māori world so they learn by seeing and being there."],
-  ["Let the tattoo be the memory", "Coming back with a tattoo on your hand turns the journey into something you keep. The tattoo is the souvenir of the experience."],
+  ["Interaction over passive viewing", "To deepen engagement, the studio became a space to explore and make choices in, giving users agency from the very first moment."],
+  ["Learning through presence", "Tattoos carry cultural meaning. Rather than explaining it in text, the experience places that context in an environment users inhabit, so knowledge is encountered, not lectured."],
+  ["The tattoo as memory", "Ending with a tattoo on the user's hand closes the loop between story and studio. The mark becomes a personal souvenir that links the virtual journey to the act of being tattooed."],
 ];
 
 export const vrDoc = `
 <div class="vr">
 
 <section class="vr-video" data-reveal>
-  <video controls playsinline preload="metadata" poster="/img/vr-tattoo-card.webp" aria-label="Walkthrough of the VR Tattoo Studio experience">
-    <source src="/video/vr-tattoo.mp4" type="video/mp4" />
+  <video controls playsinline preload="metadata" poster="/img/vr-tattoo-poster.webp" aria-label="Walkthrough of the VR Tattoo Studio experience">
+    <source src="/video/vr-tattoo-v2.mp4" type="video/mp4" />
   </video>
-  <p class="vr-cap">Walkthrough of the experience, about 2 minutes. Built with Blender and Unity.</p>
+  <p class="vr-cap">Walkthrough of the experience (about 2 minutes), built with Blender and Unity.</p>
 </section>
 
 <section class="vr-sec" data-reveal>
   <div class="vr-split">
-    <div>${lab("The idea")}<h2 class="vr-h">A tattoo studio you can step out of.</h2></div>
-    <p class="vr-p">The aim was to make a tattoo studio more engaging and interactive, and at the same time teach people more about the cultural side of tattoos. Inside VR the studio becomes a doorway: you choose a world, walk into it, and come back changed.</p>
+    <div>${lab("The idea")}<h2 class="vr-h">From studio visit to cultural journey.</h2></div>
+    <p class="vr-p">A tattoo studio is usually a transactional space: a person arrives, chooses a design and leaves. This project asks whether the visit can become something richer. Set in virtual reality, the studio turns interactive and doubles as a doorway, inviting users to learn about the cultural roots of tattooing by stepping into a world where that culture lives.</p>
   </div>
 </section>
 
@@ -46,8 +46,8 @@ export const vrDoc = `
 
 <section class="vr-sec" data-reveal>
   <div class="vr-split">
-    <div>${lab("How it was made")}<h2 class="vr-h">Blender and Unity.</h2></div>
-    <p class="vr-p">The experience was made with Blender and Unity: the 3D spaces were built in Blender and brought to life as an interactive VR experience in Unity.</p>
+    <div>${lab("How it was made")}<h2 class="vr-h">Built with Blender and Unity.</h2></div>
+    <p class="vr-p">The 3D spaces were modelled in Blender and assembled in Unity, where the interactions, the portal transition and the VR experience were developed.</p>
   </div>
 </section>
 
