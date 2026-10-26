@@ -215,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=vr4" />
+<link rel="stylesheet" href="/css/style.css?v=vr5" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -358,7 +358,7 @@ const about = page({
         ["2019 – 2023", "NIFT", "B.Des", "Gandhinagar, Gujarat. An undergraduate degree in design at the National Institute of Fashion Technology, where I built a foundation in textiles, colour, pattern and weave, as seen in the swatches in my Artsy, Crafty Dump."],
       ]],
       ["Experience", [
-        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer", "Noida, UP (Feb – Oct 2024). Designed CADs, digital prints and packaging artwork for gifting products such as paper bags, boxes and ribbons, while researching design trends to shape market-relevant collections. Also created product mockups, documented the company's product portfolio and prepared print-ready assets in Illustrator, Procreate, InDesign and Photoshop."],
+        ["2024", "Lynx Designers &amp; Creators", "Graphic Designer", "At Lynx Designers &amp; Creators, I worked on graphic design and packaging for gifting products, creating CADs, digital prints, and print-ready artwork. I also developed product mockups and portfolio documentation while researching design trends to shape market-relevant collections. My work involved collaborating with the design team and using Adobe Illustrator, Photoshop, InDesign, and Procreate."],
       ]],
     ]
       .map(

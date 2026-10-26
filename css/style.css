@@ -212,8 +212,7 @@ em { font-style: italic; }
 .exp-item { border-bottom: 1px solid var(--line); }
 .exp-row { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; padding: 24px 0 26px 44px; text-align: left; font: inherit; color: inherit; background: none; border: 0; cursor: pointer; transition: padding 0.4s var(--ease); }
 .exp-row:hover { padding-left: 56px; }
-.exp-plus { position: absolute; left: 0; top: 50%; width: 28px; height: 28px; margin-top: -14px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; font: 400 22px/1 var(--sans); transition: transform 0.4s var(--ease), background 0.3s, color 0.3s; }
-.exp-row:hover .exp-plus { background: var(--red); color: var(--cream); }
+.exp-plus { position: absolute; left: 0; top: 50%; width: 28px; height: 28px; margin-top: -14px; display: grid; place-items: center; font: 400 28px/1 var(--sans); transition: transform 0.4s var(--ease); }
 .exp-row[aria-expanded="true"] .exp-plus { transform: rotate(45deg); }
 .exp-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s var(--ease); }
 .exp-more > div { overflow: hidden; }
