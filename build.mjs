@@ -215,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=cur1" />
+<link rel="stylesheet" href="/css/style.css?v=sk2" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -367,6 +367,14 @@ const about = page({
     </div></div>`
       )
       .join("")}
+    <div class="exp-group"><h2 class="h-xl" data-lines>Skills &amp; Tools</h2>
+    <div class="exp-list" data-reveal><div class="skills-cols">
+      ${[
+        ["Design", ["UX research", "User interface", "Interaction design", "Visual design", "Wireframing", "Prototyping"]],
+        ["Immersive", ["VR and spatial UX", "3D modelling"]],
+        ["Tools", ["Figma", "Framer", "Illustrator, Photoshop, InDesign", "Procreate", "Blender"]],
+      ].map(([h, li]) => `<div><h3>${h}</h3><ul>${li.map((x) => `<li>${x}</li>`).join("")}</ul></div>`).join("")}
+    </div></div></div>
   </div>
 </section>`,
 });

@@ -778,6 +778,12 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .pill[data-connect].is-here { opacity: 0.45; pointer-events: none; transform: none; box-shadow: none; }
 
 /* ---------- "View" cursor on portfolio cards ---------- */
-.view-cursor { position: fixed; left: 0; top: 0; z-index: 90; display: grid; place-items: center; width: 84px; height: 84px; margin: 0; border-radius: 50%; background: var(--red); color: var(--cream); font-family: var(--serif); font-size: 22px; letter-spacing: -0.2px; pointer-events: none; opacity: 0; scale: 0.4; transition: opacity 0.25s ease, scale 0.35s var(--ease); will-change: transform; }
+.view-cursor { position: fixed; left: 0; top: 0; z-index: 90; display: grid; place-items: center; width: 62px; height: 32px; margin: 0; border-radius: 8px; background: var(--red); color: var(--cream); font-family: var(--serif); font-size: 18px; line-height: 1; letter-spacing: -0.1px; pointer-events: none; opacity: 0; scale: 0.6; transition: opacity 0.25s ease, scale 0.35s var(--ease); will-change: transform; }
 .view-cursor.on { opacity: 1; scale: 1; }
 @media (hover: hover) and (pointer: fine) { .card { cursor: none; } }
+
+/* ---------- About: skills and tools ---------- */
+.skills-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 28px 0 32px 44px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.skills-cols h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.1; letter-spacing: -0.2px; margin-bottom: 12px; }
+.skills-cols ul { list-style: none; margin: 0; padding: 0; font-size: 18px; line-height: 1.7; }
+@media (max-width: 768px) { .skills-cols { grid-template-columns: 1fr; padding-left: 0; } }
