@@ -227,7 +227,7 @@ ${footer}
 ${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
 <script src="/js/hairline-kernel.js" defer></script>
 ${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
-` : ""}<script src="/js/main.js?v=cur1" defer></script>
+` : ""}<script src="/js/main.js?v=cur3" defer></script>
 </body>
 </html>
 `;
