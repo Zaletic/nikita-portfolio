@@ -776,3 +776,8 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 
 /* Connect pill goes quiet while the footer is on screen */
 .pill[data-connect].is-here { opacity: 0.45; pointer-events: none; transform: none; box-shadow: none; }
+
+/* ---------- "View" cursor on portfolio cards ---------- */
+.view-cursor { position: fixed; left: 0; top: 0; z-index: 90; display: grid; place-items: center; width: 84px; height: 84px; margin: 0; border-radius: 50%; background: var(--red); color: var(--cream); font-family: var(--serif); font-size: 22px; letter-spacing: -0.2px; pointer-events: none; opacity: 0; scale: 0.4; transition: opacity 0.25s ease, scale 0.35s var(--ease); will-change: transform; }
+.view-cursor.on { opacity: 1; scale: 1; }
+@media (hover: hover) and (pointer: fine) { .card { cursor: none; } }

@@ -241,3 +241,29 @@
   addEventListener("resize", sync);
   sync();
 })();
+/* "View" cursor over portfolio cards (fine pointers only) */
+(() => {
+  if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  const cards = document.querySelectorAll(".card");
+  if (!cards.length) return;
+  const c = document.createElement("div");
+  c.className = "view-cursor";
+  c.setAttribute("aria-hidden", "true");
+  c.textContent = "View";
+  document.body.append(c);
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let x = 0, y = 0, cx = 0, cy = 0, on = false, raf = 0;
+  const tick = () => {
+    cx += (x - cx) * (reduce ? 1 : 0.2);
+    cy += (y - cy) * (reduce ? 1 : 0.2);
+    c.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`;
+    raf = on || Math.abs(x - cx) > 0.5 || Math.abs(y - cy) > 0.5 ? requestAnimationFrame(tick) : 0;
+  };
+  const show = (v) => { on = v; c.classList.toggle("on", v); if (v && !raf) raf = requestAnimationFrame(tick); };
+  cards.forEach((el) => {
+    el.addEventListener("pointerenter", (e) => { x = cx = e.clientX; y = cy = e.clientY; show(true); });
+    el.addEventListener("pointerleave", () => show(false));
+    el.addEventListener("pointermove", (e) => { x = e.clientX; y = e.clientY; });
+  });
+  addEventListener("scroll", () => { if (on && !document.querySelector(".card:hover")) show(false); }, { passive: true });
+})();
