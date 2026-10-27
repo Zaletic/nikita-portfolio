@@ -215,7 +215,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=edu7" />
+<link rel="stylesheet" href="/css/style.css?v=edu8" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -354,7 +354,7 @@ const about = page({
     ${[
       ["Education", [
         ["2025 – Now", "Dhirubhai Ambani University", "M.Des, Intelligent User Experience Design", "/img/edu-dau.webp|center 62%", "Gandhinagar, Gujarat. This is where I learnt that good design starts with a question, not a screen. The programme taught me to watch real people first, test ideas early and let research steer every interaction, then stretch it into immersive territory. It runs through all my recent work, from Streetly and DAU RidePod to GroomCue and a VR Tattoo Studio built in Unity and Blender."],
-        ["2019 – 2023", "National Institute of Fashion Technology", "B.Des", "/img/edu-nift.webp|center 30%", "Gandhinagar, Gujarat. Four years at the National Institute of Fashion Technology taught me to think with my hands: how colours are mixed and matched, how a pattern repeats, how a weave holds a design together, and how a sketch becomes something people wear. That feel for texture and detail still shapes my interfaces, and you can see it in the swatches in my Artsy, Crafty Dump."],
+        ["2019 – 2023", "National Institute of Fashion Technology", "B.Des in Textile Design", "/img/edu-nift.webp|center 30%", "Gandhinagar, Gujarat. Four years at the National Institute of Fashion Technology taught me to think with my hands: how colours are mixed and matched, how a pattern repeats, how a weave holds a design together, and how a sketch becomes something people wear. That feel for texture and detail still shapes my interfaces, and you can see it in the swatches in my Artsy, Crafty Dump."],
       ]],
       ["Experience", [
         ["2024", "Lynx Designers &amp; Creators", "Graphic Designer", "", "At Lynx Designers &amp; Creators, I worked on graphic design and packaging for gifting products, creating CADs, digital prints, and print-ready artwork. I also developed product mockups and portfolio documentation while researching design trends to shape market-relevant collections. My work involved collaborating with the design team and using Adobe Illustrator, Photoshop, InDesign, and Procreate."],
