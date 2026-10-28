@@ -340,7 +340,7 @@ const about = page({
   bodyClass: "about-page",
   body: `
 <section class="about-hero">
-  <h1 class="h-xxl right" data-chars>I craft ideas, stories and <em>joyful interactions</em></h1>
+  <h1 class="h-xxl right" data-chars>I craft ideas, experience and <em>joyful interactions</em>.</h1>
 </section>
 <div class="about-photo" data-reveal="fade"><img src="/img/about-studio.webp" alt="${SITE.name} at work" /></div>
 <section class="experience">
@@ -366,7 +366,7 @@ const about = page({
       ${[
         ["Design", ["UX research", "User interface", "Interaction design", "Visual design", "Wireframing", "Prototyping"]],
         ["Immersive", ["VR and spatial UX", "3D modelling"]],
-        ["Tools", ["Figma", "Framer", "Illustrator, Photoshop, InDesign", "Procreate", "Blender"]],
+        ["Tools", ["Figma", "Framer", "Illustrator, Photoshop, InDesign", "Procreate", "Blender", "Unity"]],
       ].map(([h, li]) => `<div><h3>${h}</h3><ul>${li.map((x) => `<li>${x}</li>`).join("")}</ul></div>`).join("")}
     </div></div></div>
   </div>
