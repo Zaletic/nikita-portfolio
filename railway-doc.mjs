@@ -36,7 +36,7 @@ export const railwayDoc = `
       <p class="rw-p">By combining geographical mapping, structured data and visual representation, I explored ways to make the network easier to navigate and understand. The outcome is a website concept that brings railway information into one unified visual experience.</p>
     </div>
   </div>
-  <div class="rw-hills" aria-hidden="true">${I("hills", "")}</div>
+  <div class="rw-hills" aria-hidden="true">${I("hills2", "")}</div>
 </section>
 
 <section class="rw-sec" data-reveal>
@@ -64,7 +64,7 @@ export const railwayDoc = `
     <figure>${I("cmap", "Central Railway system map")}<figcaption>Official maps and public data used to understand the structure.</figcaption></figure>
     <figure>${I("divisions", "The five divisions")}<figcaption>Central Railway is divided into five divisions.</figcaption></figure>
     <figure class="rw-layers-fig">
-      <div class="rw-layers-box">${I("layers", "Layers of information")}
+      <div class="rw-layers-box">${I("layers2", "Layers of information")}
         <ul class="rw-layers">${layers.map((l, i) => `<li data-l="${i}">${l}</li>`).join("")}</ul>
       </div>
       <figcaption><b>Types of information.</b> The network has layers that need to be organised and represented. Hover a layer.</figcaption>
