@@ -1,0 +1,175 @@
+<!doctype html><meta charset="utf-8"><title>GroomCue illustrated card options</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0}
+body{font:15px/1.5 system-ui,sans-serif;background:#f7f2e6;color:#222;padding:28px}
+h1{font:400 32px "Instrument Serif",Georgia,serif;color:#d60004;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.lab{font:600 12px system-ui;letter-spacing:.08em;text-transform:uppercase;color:#d60004;margin-bottom:6px}
+svg.card{display:block;width:100%;height:auto;border-radius:6px}
+.ttl{margin-top:8px;font:400 20px "Instrument Serif",Georgia,serif;color:#d60004}
+</style>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<!-- soft paper grain, like the painted cards -->
+<filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .25  0 0 0 .09 0"/></filter>
+<linearGradient id="bd" x1="0" x2="1"><stop offset="0" stop-color="#e6ebf2"/><stop offset=".4" stop-color="#fff"/><stop offset=".75" stop-color="#fbfcfe"/><stop offset="1" stop-color="#d3dae5"/></linearGradient>
+<linearGradient id="bs" x1="0" x2="1"><stop offset="0" stop-color="#dfe5ee"/><stop offset=".5" stop-color="#f6f8fb"/><stop offset="1" stop-color="#c6cfdb"/></linearGradient>
+<linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b303b"/><stop offset=".55" stop-color="#161a20"/><stop offset="1" stop-color="#0c0e12"/></linearGradient>
+<radialGradient id="led" cx=".5" cy=".4" r=".75"><stop offset="0" stop-color="#fff0a0"/><stop offset=".55" stop-color="#FFC928"/><stop offset="1" stop-color="#eaa800"/></radialGradient>
+<radialGradient id="halo"><stop offset="0" stop-color="#FFD54A" stop-opacity=".65"/><stop offset="1" stop-color="#FFD54A" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="6.5" cy="6.5" r="2.3" fill="#4d5463"/></pattern>
+<radialGradient id="fur" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#FFFDF8"/><stop offset=".7" stop-color="#FBF3E4"/><stop offset="1" stop-color="#EBDCC4"/></radialGradient>
+<linearGradient id="ear" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E5C595"/><stop offset="1" stop-color="#C99E69"/></linearGradient>
+
+<!-- GroomCue device, 220 x 400 -->
+<symbol id="device" viewBox="0 0 220 400">
+ <ellipse cx="110" cy="386" rx="102" ry="11" fill="#1c3a66" opacity=".22"/>
+ <rect x="10" y="304" width="200" height="76" rx="30" fill="url(#bs)"/>
+ <rect x="22" y="300" width="176" height="22" rx="11" fill="#e6ebf3"/>
+ <rect x="30" y="6" width="160" height="312" rx="80" fill="url(#bd)"/>
+ <rect x="30" y="6" width="160" height="312" rx="80" fill="none" stroke="#d5dce7" stroke-width="2"/>
+ <rect x="48" y="30" width="124" height="256" rx="62" fill="url(#gl)"/>
+ <path d="M62 74 Q70 44 108 40" stroke="#fff" stroke-opacity=".16" stroke-width="6" fill="none" stroke-linecap="round"/>
+ <circle cx="110" cy="86" r="66" fill="url(#halo)"/>
+ <rect x="79" y="55" width="62" height="62" rx="15" fill="#6e561d"/>
+ <rect x="84" y="60" width="52" height="52" rx="11" fill="url(#led)"/>
+ <circle cx="110" cy="174" r="39" fill="url(#dots)"/>
+ <rect x="78" y="234" width="64" height="38" rx="9" fill="#0e1014" stroke="#3a3f4b"/>
+ <ellipse cx="110" cy="254" rx="13" ry="6" fill="#e89a2b"/>
+</symbol>
+
+<!-- sitting dog, facing right, 420 x 440 -->
+<symbol id="dog" viewBox="0 0 420 440">
+ <ellipse cx="200" cy="428" rx="160" ry="11" fill="#1c3a66" opacity=".2"/>
+ <!-- tail -->
+ <g fill="url(#fur)"><circle cx="46" cy="300" r="34"/><circle cx="30" cy="268" r="26"/><circle cx="62" cy="262" r="24"/></g>
+ <!-- haunch + body -->
+ <ellipse cx="150" cy="335" rx="112" ry="92" fill="url(#fur)"/>
+ <ellipse cx="236" cy="290" rx="86" ry="118" fill="url(#fur)"/>
+ <path d="M60 372 q-18 4 -10 20 q40 20 110 18 q40-2 20-24z" fill="#EBDCC4" opacity=".55"/>
+ <!-- scalloped fur edges -->
+ <g fill="url(#fur)"><circle cx="82" cy="400" r="22"/><circle cx="118" cy="412" r="22"/><circle cx="158" cy="414" r="22"/><circle cx="52" cy="352" r="20"/></g>
+ <!-- front legs and paws -->
+ <rect x="252" y="320" width="52" height="96" rx="26" fill="url(#fur)"/>
+ <rect x="206" y="326" width="48" height="92" rx="24" fill="#F3E8D6"/>
+ <ellipse cx="282" cy="414" rx="34" ry="17" fill="url(#fur)"/>
+ <ellipse cx="228" cy="416" rx="32" ry="16" fill="#F3E8D6"/>
+ <g stroke="#DDCBB0" stroke-width="2.2" stroke-linecap="round"><path d="M270 418v-6M284 419v-6M298 418v-6"/><path d="M216 420v-6M230 421v-6M244 420v-6"/></g>
+ <!-- chest fluff -->
+ <g fill="#FFFDF8"><circle cx="300" cy="270" r="26"/><circle cx="292" cy="300" r="22"/></g>
+ <!-- head -->
+ <circle cx="272" cy="150" r="88" fill="url(#fur)"/>
+ <g fill="url(#fur)"><circle cx="222" cy="86" r="30"/><circle cx="262" cy="66" r="32"/><circle cx="304" cy="76" r="28"/></g>
+ <!-- muzzle -->
+ <ellipse cx="334" cy="180" rx="38" ry="32" fill="#FFFDF8"/>
+ <!-- near ear: floppy, hangs down the side of the head -->
+ <path d="M236 98 C190 96 168 136 172 190 C174 226 200 240 226 226 C250 212 252 160 250 120 Z" fill="url(#ear)"/>
+ <path d="M226 118 C204 124 194 154 198 190 C200 210 214 216 226 208 C238 196 238 156 236 130 Z" fill="#B98A57" opacity=".3"/>
+ <g fill="#D9B782"><circle cx="190" cy="216" r="14"/><circle cx="212" cy="228" r="14"/><circle cx="234" cy="218" r="12"/></g>
+ <!-- far ear tip peeking behind the head -->
+ <path d="M342 92 C372 98 384 130 376 160 C368 150 352 134 342 112 Z" fill="#C99E69"/>
+ <!-- face -->
+ <circle cx="296" cy="140" r="11" fill="#2a2430"/><circle cx="299" cy="136" r="3.6" fill="#fff"/>
+ <circle cx="340" cy="144" r="9.5" fill="#2a2430"/><circle cx="343" cy="140.5" r="3.2" fill="#fff"/>
+ <path d="M285 122 q12-9 24-2M331 128 q10-7 20-1" stroke="#CDB28B" stroke-width="4" fill="none" stroke-linecap="round"/>
+ <ellipse cx="358" cy="165" rx="13" ry="9.5" fill="#2a2430"/>
+ <ellipse cx="354" cy="161" rx="4.2" ry="2.6" fill="#fff" opacity=".55"/>
+ <path d="M358 174 v9 M346 188 q12 12 24 0" stroke="#2a2430" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+ <path d="M349 190 q8 20 18 2 q-7 5 -18 -2z" fill="#F29AA6"/>
+ <ellipse cx="318" cy="166" rx="15" ry="9" fill="#F6B4B0" opacity=".45"/>
+</symbol>
+
+<!-- cloud -->
+<symbol id="cloud" viewBox="0 0 300 120"><g fill="#fff"><rect x="10" y="50" width="280" height="60" rx="30"/><circle cx="105" cy="52" r="46"/><circle cx="185" cy="46" r="38"/></g></symbol>
+</defs></svg>
+
+<h1>GroomCue card, illustrated to match Streetly and Railway</h1>
+<div class="grid">
+
+<!-- A: soft sky, hills, navy table, hand with brush -->
+<div><div class="lab">A · Soft sky + groomer's hand (like Streetly)</div>
+<svg class="card" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFD7EE"/><stop offset=".55" stop-color="#E7EEF0"/><stop offset="1" stop-color="#F6EEDC"/></linearGradient>
+  <linearGradient id="tblA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C6DB0"/><stop offset="1" stop-color="#27508F"/></linearGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6BE96"/><stop offset="1" stop-color="#E89E74"/></linearGradient>
+ </defs>
+ <rect width="1500" height="1000" fill="url(#skyA)"/>
+ <use href="#cloud" x="120" y="90" width="300" height="120"/>
+ <use href="#cloud" x="1080" y="150" width="220" height="88" opacity=".9"/>
+ <ellipse cx="380" cy="700" rx="620" ry="170" fill="#D3E4C5"/>
+ <ellipse cx="1180" cy="720" rx="640" ry="190" fill="#BFD9A8"/>
+ <!-- table -->
+ <rect x="-20" y="740" width="1540" height="280" fill="url(#tblA)"/>
+ <rect x="-20" y="740" width="1540" height="22" fill="#5C8BCB"/>
+ <!-- device + dog -->
+ <use href="#device" x="1010" y="300" width="270" height="491"/>
+ <use href="#dog" x="480" y="372" width="520" height="440"/>
+ <!-- sleeve + hand + brush (first person, from left) -->
+ <g transform="translate(20 600) rotate(-12) scale(1.3)">
+  <rect x="-80" y="40" width="330" height="190" rx="70" fill="#F1E5CF"/>
+  <g stroke="#E1D1B4" stroke-width="5" stroke-linecap="round"><path d="M10 60v150M42 56v158M74 54v162M106 54v162"/></g>
+  <path d="M230 70 q110 -20 190 12 q40 22 10 58 q-60 40 -200 28z" fill="url(#skin)"/>
+  <g fill="url(#skin)"><rect x="352" y="62" width="96" height="34" rx="17" transform="rotate(8 352 62)"/><rect x="360" y="96" width="98" height="34" rx="17" transform="rotate(4 360 96)"/><rect x="354" y="130" width="94" height="32" rx="16" transform="rotate(-2 354 130)"/></g>
+  <path d="M236 150 q60 40 140 14 q-30 40 -110 40 q-50 -4 -30 -54z" fill="#E89E74"/>
+ </g>
+
+ <!-- brush: handle from the hand up to the dog's back -->
+ <line x1="560" y1="735" x2="650" y2="640" stroke="#2C5AA0" stroke-width="30" stroke-linecap="round"/>
+ <g transform="rotate(-8 660 625)"><rect x="585" y="598" width="150" height="40" rx="14" fill="#FFC928"/><g stroke="#fff" stroke-width="3.5" opacity=".8" stroke-linecap="round"><path d="M603 630v10M621 630v10M639 630v10M657 630v10M675 630v10M693 630v10M711 630v10"/></g></g>
+ <rect width="1500" height="1000" filter="url(#grain)"/>
+</svg><div class="ttl">GroomCue - Phygital Product Design</div></div>
+
+<!-- B: solid blue backdrop + cream table (like Railway) -->
+<div><div class="lab">B · Flat blue backdrop + table (like Railway)</div>
+<svg class="card" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
+ <defs><linearGradient id="tblB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E7D3"/><stop offset="1" stop-color="#E1CFB4"/></linearGradient></defs>
+ <rect width="1500" height="1000" fill="#6FA8DC"/>
+ <ellipse cx="750" cy="470" rx="520" ry="360" fill="#86B8E4" opacity=".6"/>
+ <!-- table -->
+ <rect x="-20" y="740" width="1540" height="110" fill="url(#tblB)"/>
+ <rect x="-20" y="740" width="1540" height="14" fill="#FBF2E2"/>
+ <rect x="-20" y="850" width="1540" height="160" fill="#4F8CC9"/>
+ <rect x="150" y="850" width="70" height="150" fill="#C9B79B"/><rect x="1280" y="850" width="70" height="150" fill="#C9B79B"/>
+ <use href="#device" x="840" y="310" width="262" height="477"/>
+ <use href="#dog" x="360" y="362" width="500" height="424"/>
+ <!-- a treat -->
+ <g transform="translate(1180 770)"><g fill="#E89A2B"><circle cx="0" cy="-8" r="9"/><circle cx="0" cy="8" r="9"/><circle cx="46" cy="-8" r="9"/><circle cx="46" cy="8" r="9"/></g><rect x="0" y="-8" width="46" height="16" rx="7" fill="#E89A2B"/></g>
+ <rect width="1500" height="1000" filter="url(#grain)"/>
+</svg><div class="ttl">GroomCue - Phygital Product Design</div></div>
+
+<!-- C: warm yellow variant -->
+<div><div class="lab">C · Warm sunrise, device with sun halo</div>
+<svg class="card" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7D78B"/><stop offset=".6" stop-color="#FBE9C6"/><stop offset="1" stop-color="#F6EEDC"/></linearGradient>
+  <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B5CA3"/><stop offset="1" stop-color="#1E4682"/></linearGradient>
+ </defs>
+ <rect width="1500" height="1000" fill="url(#skyC)"/>
+ <circle cx="1060" cy="450" r="300" fill="#FFE9A8" opacity=".75"/><circle cx="1060" cy="450" r="200" fill="#FFF1C4" opacity=".8"/>
+ <use href="#cloud" x="150" y="110" width="280" height="112" opacity=".95"/>
+ <ellipse cx="300" cy="760" rx="700" ry="150" fill="#E9D9B4"/>
+ <rect x="-20" y="760" width="1540" height="260" fill="url(#gC)"/>
+ <rect x="-20" y="760" width="1540" height="18" fill="#4F7FC2"/>
+ <g fill="#4F7FC2" opacity=".6"><g transform="translate(240 900)"><ellipse cx="0" cy="10" rx="16" ry="13"/><circle cx="-20" cy="-8" r="6"/><circle cx="-6" cy="-18" r="6"/><circle cx="10" cy="-18" r="6"/><circle cx="22" cy="-8" r="6"/></g><g transform="translate(1260 930)"><ellipse cx="0" cy="10" rx="16" ry="13"/><circle cx="-20" cy="-8" r="6"/><circle cx="-6" cy="-18" r="6"/><circle cx="10" cy="-18" r="6"/><circle cx="22" cy="-8" r="6"/></g></g>
+ <use href="#device" x="930" y="320" width="270" height="491"/>
+ <use href="#dog" x="440" y="388" width="500" height="424"/>
+ <rect width="1500" height="1000" filter="url(#grain)"/>
+</svg><div class="ttl">GroomCue - Phygital Product Design</div></div>
+
+<!-- D: dog close-up in same flat language -->
+<div><div class="lab">D · Cropped close-up, dog meets device</div>
+<svg class="card" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
+ <defs><linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C3DAEF"/><stop offset="1" stop-color="#F3ECDD"/></linearGradient></defs>
+ <rect width="1500" height="1000" fill="url(#skyD)"/>
+ <use href="#cloud" x="1000" y="80" width="300" height="120"/>
+ <ellipse cx="750" cy="900" rx="900" ry="200" fill="#CFE1BD"/>
+ <rect x="-20" y="780" width="1540" height="240" fill="#F1E2C9"/>
+ <rect x="-20" y="780" width="1540" height="14" fill="#FBF1DC"/>
+ <use href="#device" x="900" y="170" width="340" height="618"/>
+ <use href="#dog" x="150" y="190" width="760" height="644"/>
+ <rect width="1500" height="1000" filter="url(#grain)"/>
+</svg><div class="ttl">GroomCue - Phygital Product Design</div></div>
+
+</div>

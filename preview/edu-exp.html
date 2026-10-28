@@ -1,0 +1,70 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+body{background:var(--cream,#f7f2e6)}
+.lab{font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:28px var(--pad) 0;color:#222}
+.ee{padding:5vw var(--pad) 6vw}
+.ee .h-xl{font-size:clamp(48px,6vw,88px)}
+.row{display:grid;gap:20px;align-items:baseline;border-bottom:1px solid var(--line);padding:26px 0 28px}
+.t{font-family:var(--serif);font-size:32px;line-height:1.1}
+.s{font-size:14px;margin-top:4px}
+.d{font-size:15px}
+/* A: two columns like Stack */
+.A .g{display:grid;grid-template-columns:1.25fr 1fr;gap:5vw;margin-left:26.1%}
+.A .row{grid-template-columns:1fr auto}
+.A .list{margin-top:24px}
+/* B: one table, grouped */
+.B .in{margin-left:26.1%}
+.B .grp{margin-top:56px}
+.B .grp:first-child{margin-top:0}
+.B .row{grid-template-columns:1fr 1.4fr 1.2fr}
+.B h3{font:400 28px var(--serif);margin:0 0 6px}
+/* C: heading left, entries right with blurbs */
+.C .g{display:grid;grid-template-columns:26.1% 1fr;gap:0}
+.C .row{grid-template-columns:150px 1fr;padding:30px 0 34px}
+.C .p{font-size:15px;max-width:560px;margin-top:10px}
+.C .sub{font:400 22px var(--serif);margin:48px 0 4px}
+.C .sub:first-child{margin-top:0}
+</style></head><body>
+
+<div class="lab">Option A — Two columns, same grid as Stack + AI Assistance</div>
+<section class="ee A"><div class="g">
+ <div><h2 class="h-xl">Education</h2><div class="list">
+  <div class="row"><div><div class="t">Dhirubhai Ambani University</div><div class="s">M.Des, Intelligent User Experience Design · CPI 8.05</div></div><div class="d">2025 – Present</div></div>
+  <div class="row"><div><div class="t">NIFT</div><div class="s">National Institute of Fashion Technology · CPI 6.8</div></div><div class="d">2019 – 2023</div></div>
+ </div></div>
+ <div><h2 class="h-xl">Experience</h2><div class="list">
+  <div class="row"><div><div class="t">Lynx Designers &amp; Creators</div><div class="s">Graphic Designer · Noida</div></div><div class="d">Feb – Oct 2024</div></div>
+  <div class="row"><div><div class="t">Vimla Rugs</div><div class="s">Textile Design Intern · Jaipur</div></div><div class="d">Jun – Jul 2022</div></div>
+ </div></div>
+</div></section>
+
+<div class="lab">Option B — One clean table (date · place · role), matches the old Experience list</div>
+<section class="ee B"><div class="in">
+ <div class="grp"><h2 class="h-xl">Education</h2>
+  <div class="row"><div class="d">2025 – Present</div><div class="t">Dhirubhai Ambani University</div><div class="d">M.Des, Intelligent UX Design · CPI 8.05</div></div>
+  <div class="row"><div class="d">2019 – 2023</div><div class="t">NIFT</div><div class="d">National Institute of Fashion Technology · CPI 6.8</div></div>
+ </div>
+ <div class="grp"><h2 class="h-xl">Experience</h2>
+  <div class="row"><div class="d">Feb – Oct 2024</div><div class="t">Lynx Designers &amp; Creators</div><div class="d">Graphic Designer · Noida</div></div>
+  <div class="row"><div class="d">Jun – Jul 2022</div><div class="t">Vimla Rugs</div><div class="d">Textile Design Intern · Jaipur</div></div>
+ </div>
+</div></section>
+
+<div class="lab">Option C — Experience first, with short descriptions from your resume</div>
+<section class="ee C"><div class="g">
+ <div></div>
+ <div>
+  <h2 class="h-xl">Experience</h2>
+  <div style="margin-top:24px">
+   <div class="row"><div class="d">Feb – Oct 2024<br>Noida</div><div><div class="t">Graphic Designer, Lynx Designers &amp; Creators</div><div class="p">Designed CADs, digital prints and packaging artwork for gifting products, and created product mockups and print-ready assets.</div></div></div>
+   <div class="row"><div class="d">Jun – Jul 2022<br>Jaipur</div><div><div class="t">Textile Design Intern, Vimla Rugs</div><div class="p">Designed patterns for handwoven rugs and staircase runners through hand sketches and digital illustration.</div></div></div>
+  </div>
+  <h2 class="h-xl" style="margin-top:72px">Education</h2>
+  <div style="margin-top:24px">
+   <div class="row"><div class="d">2025 – Present<br>Gandhinagar</div><div><div class="t">M.Des, Dhirubhai Ambani University</div><div class="p">Intelligent User Experience Design · CPI 8.05</div></div></div>
+   <div class="row"><div class="d">2019 – 2023<br>Gandhinagar</div><div><div class="t">NIFT</div><div class="p">National Institute of Fashion Technology · CPI 6.8</div></div></div>
+  </div>
+ </div>
+</div></section>
+</body></html>

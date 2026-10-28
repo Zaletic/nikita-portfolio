@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+body{background:#f7f2e6}
+.lab{font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:28px var(--pad) 0;color:#222}
+.ee{padding:3vw var(--pad) 3vw}
+.r{display:flex;justify-content:space-between;gap:20px;align-items:baseline;border-bottom:1px solid var(--line);padding:14px 0 15px;font:400 22px/1.2 var(--serif)}
+.r small{font:400 14px var(--sans);white-space:nowrap}
+.h{font:400 clamp(32px,3.6vw,52px)/1 var(--serif);margin:0}
+/* D: two small columns */
+.D .g{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-left:26.1%}
+.D .h{margin-bottom:14px}
+/* E: label left, rows right */
+.E .g{display:grid;grid-template-columns:26.1% 1fr;}
+.E .blk{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:6px 0 18px}
+.E .blk+.blk{margin-top:6px}
+.E .h{font-size:20px;font-family:var(--sans);font-weight:500}
+.E .r:first-child{padding-top:0}
+/* F: single line per entry, no dividers */
+.F .g{margin-left:26.1%;display:grid;grid-template-columns:1fr 1fr;gap:5vw}
+.F .h{font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.F .l{font:400 22px/1.45 var(--serif)}
+.F .l small{font:400 14px var(--sans);margin-left:8px}
+</style></head><body>
+
+<div class="lab">Option D — two small columns, one line per entry</div>
+<section class="ee D"><div class="g">
+ <div><h2 class="h">Education</h2>
+  <div class="r"><span>Dhirubhai Ambani University</span><small>2025 – Now</small></div>
+  <div class="r"><span>NIFT</span><small>2019 – 2023</small></div></div>
+ <div><h2 class="h">Experience</h2>
+  <div class="r"><span>Lynx Designers &amp; Creators</span><small>2024</small></div>
+  <div class="r"><span>Vimla Rugs</span><small>2022</small></div></div>
+</div></section>
+
+<div class="lab">Option E — small label on the left, thin rows on the right</div>
+<section class="ee E"><div class="g"><div></div><div>
+ <div class="blk"><h2 class="h">Education</h2><div>
+  <div class="r"><span>M.Des, Dhirubhai Ambani University</span><small>2025 – Now</small></div>
+  <div class="r"><span>B.Des, NIFT</span><small>2019 – 2023</small></div></div></div>
+ <div class="blk"><h2 class="h">Experience</h2><div>
+  <div class="r"><span>Graphic Designer, Lynx</span><small>2024</small></div>
+  <div class="r"><span>Textile Design Intern, Vimla Rugs</span><small>2022</small></div></div></div>
+</div></div></section>
+
+<div class="lab">Option F — most minimal, plain list, no lines</div>
+<section class="ee F"><div class="g">
+ <div><h2 class="h">Education</h2>
+  <div class="l">M.Des, DAU<small>2025 – Now</small></div>
+  <div class="l">B.Des, NIFT<small>2019 – 2023</small></div></div>
+ <div><h2 class="h">Experience</h2>
+  <div class="l">Graphic Designer, Lynx<small>2024</small></div>
+  <div class="l">Textile Intern, Vimla Rugs<small>2022</small></div></div>
+</div></section>
+</body></html>
