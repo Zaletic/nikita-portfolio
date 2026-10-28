@@ -340,7 +340,7 @@ const about = page({
   bodyClass: "about-page",
   body: `
 <section class="about-hero">
-  <h1 class="h-xxl right" data-chars>I craft ideas, experience and <em>joyful interactions</em>.</h1>
+  <h1 class="h-xxl right" data-chars>I craft ideas, experience and <em>joyful interactions</em></h1>
 </section>
 <div class="about-photo" data-reveal="fade"><img src="/img/about-studio-2.webp" alt="${SITE.name} at work" /></div>
 <section class="experience">
