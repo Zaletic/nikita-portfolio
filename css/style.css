@@ -846,6 +846,7 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .rw-card.swap { animation: rw-swap 0.5s var(--ease); }
 @keyframes rw-swap { from { opacity: 0; transform: translateY(10px); } }
 
+.rw-sketch { width: 80%; justify-self: end; }
 .rw-sketch img { width: 100%; border-radius: 12px; transform: rotate(0.6deg); box-shadow: 0 20px 40px -22px rgba(31,58,58,.45); }
 .rw-end { text-align: center; }
 .rw-end .rw-lab { justify-content: center; }
@@ -870,6 +871,6 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .rw-model img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 40px -22px rgba(31,58,58,.45); }
 .rw-model figcaption { font: 400 15px/1.5 var(--sans); margin-top: 14px; max-width: 560px; }
 .rw-model figcaption b { font-weight: 600; }
-@media (max-width: 900px) { .rw-end-grid { grid-template-columns: 1fr; gap: 40px; } .rw-model { width: 100%; justify-self: start; } }
+@media (max-width: 900px) { .rw-end-grid { grid-template-columns: 1fr; gap: 40px; } .rw-model, .rw-sketch { width: 100%; justify-self: start; } }
 .rw-live.pill { margin-top: 40px; background: var(--line); color: var(--cream); border-color: var(--line); font-size: 22px; padding: 16px 34px; box-shadow: 0 14px 30px -12px var(--line); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
 .rw-live.pill:hover { background: var(--text); border-color: var(--text); transform: translateY(-3px); }
