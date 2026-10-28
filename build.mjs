@@ -7,6 +7,7 @@ import { streetlyDoc } from "./streetly-doc.mjs";
 import { dumpSection } from "./dump.mjs";
 import { ridepodInterview } from "./ridepod-interview.mjs";
 import { vrDoc } from "./vr-doc.mjs";
+import { railwayDoc } from "./railway-doc.mjs";
 const SITE = {
   name: "Nikita Bangia",
   role: "UI/UX Designer",
@@ -67,15 +68,7 @@ const allProjects = [
     blurb:
       "A visual and interactive exploration of the Central Indian railway network, mapping zones, history, divisions and routes through information design so a complex system becomes easy to understand.",
     meta: { Duration: "2 weeks", Timeline: "March 2026", Role: ["Information Designer", "UI Designer"], "Tools Used": "Figma and Framer" },
-    gallery: [
-      ["full", "railway-pdf/page-01"],
-      ["full", "railway-pdf/page-02"],
-      ["full", "railway-pdf/page-03"],
-      ["full", "railway-pdf/page-04"],
-      ["full", "railway-pdf/page-05"],
-      ["full", "railway-pdf/page-06"],
-      ["full", "railway-pdf/page-07"],
-    ],
+    docHtml: railwayDoc,
   },
   {
     slug: "bridging-the-trust-gap",
@@ -215,7 +208,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=sk2" />
+<link rel="stylesheet" href="/css/style.css?v=rw1" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -227,7 +220,7 @@ ${footer}
 ${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
 <script src="/js/hairline-kernel.js" defer></script>
 ${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
-` : ""}<script src="/js/main.js?v=cur3" defer></script>
+` : ""}<script src="/js/main.js?v=rw1" defer></script>
 </body>
 </html>
 `;

@@ -137,7 +137,7 @@
   }));
 
   /* case-study pages: home palette up top, project palette from the first image down */
-  const gal = $(".gallery, .doc, .sdoc, .vr");
+  const gal = $(".gallery, .doc, .sdoc, .vr, .rw");
   if (gal && document.body.classList.contains("project-page")) {
     const sync = () => document.body.classList.toggle("case-on", gal.getBoundingClientRect().top < innerHeight * 0.5);
     addEventListener("scroll", sync, { passive: true });
@@ -273,4 +273,31 @@
   addEventListener("pointermove", (e) => { seen = true; x = e.clientX; y = e.clientY; queue(); }, { passive: true });
   document.documentElement.addEventListener("pointerleave", () => { seen = false; show(false); });
   addEventListener("scroll", queue, { passive: true });
+})();
+
+/* Railway case study: hills parallax + train timeline */
+(() => {
+  const ia = document.querySelector("[data-ia]");
+  const hills = document.querySelector(".rw-hills img");
+  if (hills && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const f = () => { const r = hills.getBoundingClientRect(); hills.style.setProperty("--py", `${Math.max(-40, Math.min(40, (r.top - innerHeight) * -0.06 + 20))}px`); };
+    addEventListener("scroll", f, { passive: true }); f();
+  }
+  if (!ia) return;
+  const stops = JSON.parse(ia.querySelector(".rw-data").textContent);
+  const btns = [...ia.querySelectorAll(".rw-stop")], card = ia.querySelector(".rw-card");
+  const go = (i) => {
+    btns.forEach((b, k) => b.classList.toggle("on", k === i));
+    ia.style.setProperty("--p", `${3 + (94 * i) / (btns.length - 1)}%`);
+    card.innerHTML = `<h3>${stops[i][0]}</h3><p>${stops[i][1]}</p>`;
+    card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap");
+  };
+  btns.forEach((b, i) => b.addEventListener("click", () => go(i)));
+  ia.style.setProperty("--p", "3%");
+  let seen = false;
+  new IntersectionObserver((es) => {
+    if (seen || !es[0].isIntersecting) return;
+    seen = true; let i = 0;
+    const t = setInterval(() => { go(++i); if (i >= btns.length - 1) { clearInterval(t); setTimeout(() => go(0), 1400); } }, 900);
+  }, { threshold: 0.6 }).observe(ia);
 })();
