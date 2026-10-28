@@ -98,11 +98,19 @@ export const railwayDoc = `
 </section>
 
 <section class="rw-sec rw-end" data-reveal>
-  ${lab("The website")}
-  <h2 class="rw-h">The final website.</h2>
-  <p class="rw-p rw-narrow">The website is the primary outcome of the project: a digital space for presenting the railway network through maps, structured information and visual exploration.</p>
-  <p class="rw-tools">Tools used <span>Figma</span><span>Framer</span></p>
-  <p><a class="pill pill-lg rw-live" href="https://central-railway.framer.website/" target="_blank" rel="noopener">View live website ↗</a></p>
+  <div class="rw-end-grid">
+    <div class="rw-end-copy">
+      ${lab("The website")}
+      <h2 class="rw-h">The final website.</h2>
+      <p class="rw-p rw-narrow">The website is the primary outcome of the project: a digital space for presenting the railway network through maps, structured information and visual exploration.</p>
+      <p class="rw-tools">Tools used <span>Figma</span><span>Framer</span></p>
+      <p><a class="pill pill-lg rw-live" href="https://central-railway.framer.website/" target="_blank" rel="noopener">View live website ↗</a></p>
+    </div>
+    <figure class="rw-model">
+      <img src="/img/dump-railway-model-2.webp" width="1400" height="1050" alt="Handmade tabletop model of Mumbai CST station showing Central Railway divisions, passengers onboard and accident data" loading="lazy">
+      <figcaption><b>The companion model.</b> The same research, built by hand for the Information Design module: tickets for the divisions, stairs for passenger numbers, and luggage on the tracks for accident data.</figcaption>
+    </figure>
+  </div>
 </section>
 
 </div>`;
