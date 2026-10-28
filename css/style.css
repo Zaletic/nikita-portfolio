@@ -201,7 +201,7 @@ em { font-style: italic; }
 /* ---------- about ---------- */
 .about-hero { padding: 240px var(--pad) 40px; display: flex; justify-content: flex-end; }
 .about-hero .h-xxl { max-width: 800px; width: 56%; }
-.about-photo { width: min(calc(100% - 2 * var(--pad)), 605px); margin: 0 auto; border-radius: 6px; overflow: hidden; aspect-ratio: 1080 / 1009; }
+.about-photo { width: min(calc(100% - 2 * var(--pad)), 424px); margin: 0 auto; border-radius: 6px; overflow: hidden; aspect-ratio: 1080 / 1009; }
 .about-photo img { display: block; width: 100%; height: 100%; object-fit: contain; transform: scale(1.08); transition: transform 1.6s var(--ease); }
 .about-photo.in img { transform: scale(1); }
 .about-text { padding: 160px var(--pad) 0; }
