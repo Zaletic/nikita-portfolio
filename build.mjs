@@ -208,7 +208,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=rw4" />
+<link rel="stylesheet" href="/css/style.css?v=rw5" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -360,6 +360,7 @@ const about = page({
     </div></div>`
       )
       .join("")}
+    <div class="about-photo about-photo-mid" data-reveal="fade"><img src="/img/about-studio.webp" alt="${SITE.name} at work" /></div>
     <div class="exp-group"><h2 class="h-xl" data-lines>Skills &amp; Tools</h2>
     <div class="exp-list" data-reveal><div class="skills-cols">
       ${[
