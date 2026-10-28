@@ -103,6 +103,7 @@ export const railwayDoc = `
   <h2 class="rw-h">The final website.</h2>
   <p class="rw-p rw-narrow">The website is the primary outcome of the project: a digital space for presenting the railway network through maps, structured information and visual exploration.</p>
   <p class="rw-tools">Tools used <span>Figma</span><span>Framer</span></p>
+  <p><a class="pill pill-lg rw-live" href="https://central-railway.framer.website/" target="_blank" rel="noopener">View live website ↗</a></p>
 </section>
 
 </div>`;

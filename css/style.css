@@ -863,3 +863,4 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 }
 @media (max-width: 540px) { .rw-res { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .rw-net, .rw-train, .rw-train img, .rw-smoke { animation: none; } .rw-train { left: 40%; } }
+.rw-live { margin-top: 36px; }
