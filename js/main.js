@@ -225,8 +225,18 @@
 (() => {
   document.addEventListener("click", (e) => {
     const b = e.target.closest(".exp-row");
+    if (b && e.detail > 0 && matchMedia("(hover:hover)").matches) return;
     if (b) b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true");
   });
+  /* hover opens/closes on mouse; click still toggles (touch, keyboard) */
+  const hover = (e, open) => {
+    if (e.pointerType !== "mouse") return;
+    const it = e.target.closest && e.target.closest(".exp-item");
+    const b = it && it.querySelector(".exp-row");
+    if (b && !(it.contains(e.relatedTarget))) b.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  document.addEventListener("pointerover", (e) => hover(e, true));
+  document.addEventListener("pointerout", (e) => hover(e, false));
 })();
 (() => {
   const f = document.getElementById("connect"), b = document.querySelector("[data-connect]");
