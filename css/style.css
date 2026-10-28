@@ -200,7 +200,7 @@ em { font-style: italic; }
 
 /* ---------- about ---------- */
 .about-hero { padding: 240px var(--pad) 40px; display: flex; justify-content: flex-end; }
-.about-hero .h-xxl { width: auto; max-width: 100%; font-size: clamp(30px, 4.8vw, 96px); white-space: nowrap; }
+.about-hero .h-xxl { width: auto; max-width: 100%; white-space: nowrap; }
 .about-photo { width: min(calc(100% - 2 * var(--pad)), 684px); margin: 0 auto; border-radius: 6px; overflow: hidden; aspect-ratio: 960 / 525; }
 .about-photo img { display: block; width: 100%; height: 100%; object-fit: contain; transform: scale(1.08); transition: transform 1.6s var(--ease); }
 .about-photo.in img { transform: scale(1); }
@@ -322,7 +322,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   .work-hero { padding-top: 36vh; }
   .grid2 { grid-template-columns: 1fr; padding-bottom: 80px; }
   .about-hero { padding-top: 140px; }
-  .about-hero .h-xxl { width: 100%; font-size: 6.4vw; }
+  .about-hero .h-xxl { width: 100%; font-size: 11vw; }
   .about-text { padding-top: 80px; }
   .about-text .h-l { text-indent: 0; }
   .exp-row { grid-template-columns: 1fr; gap: 4px; }
