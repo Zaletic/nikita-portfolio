@@ -58,16 +58,16 @@ export const railwayDoc = `
   <h2 class="rw-h">Understanding the network.</h2>
   <p class="rw-p rw-narrow">Before the visual direction, I looked into the structure of the network: its geographical spread, divisions, routes and history.</p>
   <div class="rw-res">
-    <figure>${I("about", "Central Railway about page")}<figcaption>Official history and facts about Central Railway.</figcaption></figure>
-    <figure>${I("geo", "Map of the Central Railway zone")}<figcaption><b>Geographical context.</b> The zone spans several states and meets other railway zones.</figcaption></figure>
-    <figure>${I("table", "List of zones and divisions")}<figcaption>Organised data used for mapping the network.</figcaption></figure>
-    <figure>${I("cmap", "Central Railway system map")}<figcaption>Official maps and public data used to understand the structure.</figcaption></figure>
-    <figure>${I("divisions", "The five divisions")}<figcaption>Central Railway is divided into five divisions.</figcaption></figure>
+    <figure>${I("about", "Central Railway about page")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
+    <figure>${I("geo", "Map of the Central Railway zone")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
+    <figure>${I("table", "List of zones and divisions")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
+    <figure>${I("cmap", "Central Railway system map")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
+    <figure>${I("divisions", "The five divisions")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
     <figure class="rw-layers-fig">
       <div class="rw-layers-box">${I("layers2", "Layers of information")}
         <ul class="rw-layers">${layers.map((l, i) => `<li data-l="${i}">${l}</li>`).join("")}</ul>
       </div>
-      <figcaption><b>Types of information.</b> The network has layers that need to be organised and represented. Hover a layer.</figcaption>
+      <figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption>
     </figure>
   </div>
 </section>
@@ -108,7 +108,7 @@ export const railwayDoc = `
     </div>
     <figure class="rw-model">
       <img src="/img/dump-railway-model-2.webp" width="1400" height="1050" alt="Handmade tabletop model of Mumbai CST station showing Central Railway divisions, passengers onboard and accident data" loading="lazy">
-      <figcaption><b>The companion model.</b> The same research, built by hand for the Information Design module: tickets for the divisions, stairs for passenger numbers, and bags on the tracks for accident data. The bags are deliberately broken and battered, because each one stands for a year of accidents; they look like they have been through one.</figcaption>
+      <figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption>
     </figure>
   </div>
 </section>
