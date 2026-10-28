@@ -208,7 +208,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=rw2" />
+<link rel="stylesheet" href="/css/style.css?v=rw3" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -220,7 +220,7 @@ ${footer}
 ${figs ? `<script>window.__figs={};window.hairline=function(f){window.__figs[f.name]=f}</script>
 <script src="/js/hairline-kernel.js" defer></script>
 ${projects.map((p) => `<script type="module" src="/hairline/${p.fig}.js"></script>`).join("")}
-` : ""}<script src="/js/main.js?v=rw1" defer></script>
+` : ""}<script src="/js/main.js?v=rw2" defer></script>
 </body>
 </html>
 `;
@@ -375,7 +375,7 @@ const about = page({
 // ---------- Project pages ----------
 const THEMES = {
   streetly: { bg: "#A8CDA9", ink: "#29471A", line: "#29471A", grid: "rgba(255,255,255,0.28)" },
-  "railway-network": { bg: "#F4EBE2", ink: "#1F3A3A", line: "#C8703A", grid: "rgba(31,58,58,0.08)" },
+  "railway-network": { bg: "#F4EAE2", ink: "#1F3A3A", line: "#C8703A", grid: "rgba(31,58,58,0.08)" },
   "dau-ridepod": { bg: "#DCEEF7", ink: "#0B3A57", line: "#0A8FC4", grid: "rgba(11,58,87,0.07)" },
   "vr-tattoo-studio": { bg: "#1C1714", ink: "#F3E7D6", accent: "#E8793B", line: "#E8793B", grid: "rgba(243,231,214,0.07)" },
   groomcue: { bg: "#004B87", ink: "#FFFFFF", accent: "#FFC928", line: "#FFC928", grid: "rgba(255,255,255,0.08)" },

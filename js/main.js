@@ -288,12 +288,12 @@
   const btns = [...ia.querySelectorAll(".rw-stop")], card = ia.querySelector(".rw-card");
   const go = (i) => {
     btns.forEach((b, k) => b.classList.toggle("on", k === i));
-    ia.style.setProperty("--p", `${3 + (94 * i) / (btns.length - 1)}%`);
+    ia.style.setProperty("--p", `${(100 * i) / (btns.length - 1)}%`);
     card.innerHTML = `<h3>${stops[i][0]}</h3><p>${stops[i][1]}</p>`;
     card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap");
   };
   btns.forEach((b, i) => b.addEventListener("click", () => go(i)));
-  ia.style.setProperty("--p", "3%");
+  ia.style.setProperty("--p", "0%");
   let seen = false;
   new IntersectionObserver((es) => {
     if (seen || !es[0].isIntersecting) return;

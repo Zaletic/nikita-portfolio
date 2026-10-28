@@ -78,7 +78,6 @@ export const railwayDoc = `
   <p class="rw-p rw-narrow">One scroll, six sections. Pick a stop and the train takes you there.</p>
   <div class="rw-ia" data-ia>
     <div class="rw-line"><span class="rw-line-fill"></span>
-      <div class="rw-ia-train">${I("train", "")}</div>
     </div>
     <ol class="rw-stops">
       ${stops.map(([n], i) => `<li><button type="button" class="rw-stop${i === 0 ? " on" : ""}" data-i="${i}"><span class="rw-dot"></span><em>0${i + 1}</em><b>${n}</b></button></li>`).join("")}
