@@ -874,3 +874,17 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 @media (max-width: 900px) { .rw-end-grid { grid-template-columns: 1fr; gap: 40px; } .rw-model, .rw-sketch { width: 100%; justify-self: start; } }
 .rw-live.pill { margin-top: 40px; background: var(--line); color: var(--cream); border-color: var(--line); font-size: 22px; padding: 16px 34px; box-shadow: 0 14px 30px -12px var(--line); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
 .rw-live.pill:hover { background: var(--text); border-color: var(--text); transform: translateY(-3px); }
+
+.rw-collage { display: flex; gap: 18px; align-items: center; margin-top: 36px; }
+.rw-collage img { flex: 1 1 0; min-width: 0; height: auto; border-radius: 10px; box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 10px 30px -14px rgba(31,58,58,.35); transition: transform 0.5s var(--ease); }
+.rw-collage img:nth-child(1) { flex-grow: 1.29; transform: rotate(-1.2deg); }
+.rw-collage img:nth-child(2) { flex-grow: 1.19; transform: rotate(0.9deg); }
+.rw-collage img:nth-child(3) { flex-grow: 0.74; transform: rotate(-0.8deg); }
+.rw-collage img:nth-child(4) { flex-grow: 0.92; transform: rotate(1.2deg); }
+.rw-collage img:nth-child(5) { flex-grow: 1.45; transform: rotate(-0.7deg); }
+.rw-collage img:hover { transform: translateY(-4px) scale(1.03) rotate(0deg); }
+@media (max-width: 760px) { .rw-collage { flex-wrap: wrap; } .rw-collage img { flex: 1 1 42%; } }
+.rw-collage-cap { font: 400 16px/1.5 var(--sans); margin-top: 22px; max-width: 760px; }
+.rw-collage-cap b { font-weight: 600; }
+.rw-layers-fig { margin-top: 56px; }
+.rw-layers-fig figcaption { font: 400 15px/1.45 var(--sans); margin-top: 10px; }

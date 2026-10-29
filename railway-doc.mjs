@@ -57,19 +57,20 @@ export const railwayDoc = `
   ${lab("Research and understanding")}
   <h2 class="rw-h">Understanding the network.</h2>
   <p class="rw-p rw-narrow">Before the visual direction, I looked into the structure of the network: its geographical spread, divisions, routes and history.</p>
-  <div class="rw-res">
-    <figure>${I("about", "Central Railway about page")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
-    <figure>${I("geo", "Map of the Central Railway zone")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
-    <figure>${I("table", "List of zones and divisions")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
-    <figure>${I("cmap", "Central Railway system map")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
-    <figure>${I("divisions", "The five divisions")}<figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption></figure>
-    <figure class="rw-layers-fig">
-      <div class="rw-layers-box">${I("layers2", "Layers of information")}
-        <ul class="rw-layers">${layers.map((l, i) => `<li data-l="${i}">${l}</li>`).join("")}</ul>
-      </div>
-      <figcaption><b>The same story, in 3D.</b> Alongside the website, I built this tabletop model of Mumbai CST for the same Information Design module. Data became objects you can read at a glance: ticket stacks for divisions, a staircase for passenger counts, and bags left on the tracks for accidents. The bags look scarred and wrecked on purpose, as if they had survived a crash themselves.</figcaption>
-    </figure>
+  <div class="rw-collage">
+    ${I("about", "Central Railway about page")}
+    ${I("geo", "Map of the Central Railway zone")}
+    ${I("table", "List of zones and divisions")}
+    ${I("cmap", "Central Railway system map")}
+    ${I("divisions", "The five divisions")}
   </div>
+  <p class="rw-collage-cap"><b>Source material.</b> Official history, maps, the zone and division tables and the five-division summary: the public records I studied to understand how Central Railway is organised before designing anything.</p>
+  <figure class="rw-layers-fig">
+    <div class="rw-layers-box">${I("layers2", "Layers of information")}
+      <ul class="rw-layers">${layers.map((l, i) => `<li data-l="${i}">${l}</li>`).join("")}</ul>
+    </div>
+    <figcaption><b>Types of information.</b> The network has layers that need to be organised and represented. Hover a layer.</figcaption>
+  </figure>
 </section>
 
 <section class="rw-sec" data-reveal>
