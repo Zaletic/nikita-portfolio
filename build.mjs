@@ -208,7 +208,7 @@ const page = ({ title, desc, active, body, bodyClass = "", og = "/img/streetly-c
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=rw22" />
+<link rel="stylesheet" href="/css/style.css?v=rw24" />
 </head>
 <body class="${bodyClass}"${bodyStyle ? ` style="${bodyStyle}"` : ""}>
 ${nav(active)}
@@ -272,9 +272,10 @@ const home = page({
 
 <section class="work-scatter" aria-label="Selected work">
   ${projects
+    .filter((p) => p.slug !== "groomcue")
     .map(
       (p, i) => `
-  <a class="card scatter s${[1, 2, 5, 4, 3][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
+  <a class="card scatter s${[1, 2, 5, 4][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
     <span class="card-img">${p.homeVideo ? `<video src="${p.homeVideo}" poster="${p.homeImg}" autoplay muted loop playsinline preload="auto" aria-label="${p.title}"></video>` : `<img src="${p.homeImg || p.cover}" alt="${p.title}" style="object-position:${p.pos}" loading="lazy" />`}</span>
     <span class="card-title">${p.homeTitle || p.title}</span>
   </a>`
@@ -318,7 +319,7 @@ const projectsPage = page({
   active: "work",
   bodyClass: "work-page",
   body: `
-<section class="work-hero"><h1 class="mega" data-fit>Featured Work</h1></section>
+<section class="work-hero"><h1 class="mega" data-fit>Selected Work</h1></section>
 <section class="grid2">
   ${projects
     .map(

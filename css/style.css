@@ -108,7 +108,7 @@ em { font-style: italic; }
 .show-more { display: flex; justify-content: center; margin: -9vw 0 4vw; position: relative; z-index: 2; }
 .show-more-link { font: 400 28px/1.2 var(--serif); letter-spacing: -0.2px; color: var(--red); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; padding: 8px 26px; border-radius: 999px; transition: background 0.35s var(--ease), color 0.35s var(--ease), transform 0.35s var(--ease), text-decoration-color 0.35s; }
 .show-more-link:hover, .show-more-link:focus-visible { background: var(--red); color: var(--cream); text-decoration-color: transparent; transform: translateY(-3px); }
-.work-scatter { position: relative; height: 112vw; max-width: 100%; margin-top: 4vw; }
+.work-scatter { position: relative; height: 88vw; max-width: 100%; margin-top: 4vw; }
 .card { display: block; position: absolute; will-change: transform; transform-origin: 50% 50%; }
 .card-img { display: block; overflow: hidden; border-radius: 6px; }
 .card-img video { display: block; width: 100%; height: auto; transition: transform 0.9s var(--ease); }
