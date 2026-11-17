@@ -115,6 +115,8 @@ em { font-style: italic; }
 .card:hover .card-img video { transform: scale(1.05); }
 .card-img img { width: 100%; height: auto; transition: transform 0.9s var(--ease); }
 .card:hover .card-img img { transform: scale(1.05); }
+.tile .card-img { aspect-ratio: 3 / 2; }
+.tile .card-img img, .tile .card-img video { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
 .card-title { display: inline-block; margin-top: 10px; font-size: 22px; line-height: 1.1; letter-spacing: -0.2px; position: relative; }
 .card-title::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.5s var(--ease); }
 .card:hover .card-title::after { transform: scaleX(1); }
