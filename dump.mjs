@@ -2,8 +2,8 @@
 // 4+ items: endless loop, drag to move, idle sway. Fewer items: a static row that just sways.
 export const dumpItems = [
   { img: "/img/dump-railway-model-2.webp", w: 1400, h: 1050, title: "Central Railway Model", kind: "Information Design" },
-  { img: "/img/dump-weave-green.webp", w: 1050, h: 1400, title: "Carpet weaving swatches", kind: "B.Des, NIFT" },
-  { img: "/img/dump-weave-plaid.webp", w: 1050, h: 1400, title: "Checks &amp; Stripes swatches", kind: "B.Des, NIFT" },
+  { img: "/img/dump-weave-green-v2.webp", w: 1050, h: 1120, title: "Carpet weaving swatches", kind: "B.Des, NIFT" },
+  { img: "/img/dump-weave-plaid-v2.webp", w: 1050, h: 1120, title: "Checks &amp; Stripes swatches", kind: "B.Des, NIFT" },
   { img: "/img/dump-quill-carrot.webp", w: 787, h: 1400, title: "Paper Quilling - Carrot", kind: "" },
   { img: "/img/dump-quill-ghost.webp", w: 787, h: 1400, title: "Paper Quilling - Ghost", kind: "" },
   { img: "/img/dump-quill-snowman.webp", w: 1050, h: 1400, title: "Paper Quilling - Snowman", kind: "" },
