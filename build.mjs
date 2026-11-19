@@ -272,7 +272,7 @@ const home = page({
 
 <section class="work-scatter" aria-label="Selected work">
   ${projects
-    .filter((p) => p.slug !== "groomcue")
+    .filter((p) => p.slug !== "dau-ridepod")
     .map(
       (p, i) => `
   <a class="card scatter s${[1, 2, 5, 4][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>
