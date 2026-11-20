@@ -890,3 +890,9 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .rw-collage-cap b { font-weight: 600; }
 .rw-layers-fig { margin-top: 56px; }
 .rw-layers-fig figcaption { font: 400 15px/1.45 var(--sans); margin-top: 10px; }
+
+/* Plate It Right (AR): portrait phone recording beside the notes */
+.ar-split { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 48px; align-items: start; }
+.ar-video { display: block; width: 100%; height: auto; aspect-ratio: 392 / 758; border-radius: 22px; background: #000; }
+.ar-split .vr-p + .vr-p { margin-top: 16px; }
+@media (max-width: 760px) { .ar-split { grid-template-columns: 1fr; gap: 28px; } .ar-video { max-width: 320px; margin: 0 auto; } }

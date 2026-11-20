@@ -7,6 +7,7 @@ import { streetlyDoc } from "./streetly-doc.mjs";
 import { dumpSection } from "./dump.mjs";
 import { ridepodInterview } from "./ridepod-interview.mjs";
 import { vrDoc } from "./vr-doc.mjs";
+import { arDoc } from "./ar-doc.mjs";
 import { railwayDoc } from "./railway-doc.mjs";
 const SITE = {
   name: "Nikita Bangia",
@@ -153,6 +154,23 @@ const allProjects = [
     docHtml: vrDoc,
     gallery: [],
   },
+  {
+    slug: "plate-it-right",
+    homeOff: true,
+    fig: "tap",
+    homeImg: "/img/plate-it-right-card.webp",
+    homeVideo: "/video/plate-it-right-loop.mp4",
+    homeTitle: "Plate It Right - AR Exploration",
+    title: "Plate It Right",
+    cover: "/img/plate-it-right-poster.webp",
+    tight: true,
+    pos: "center",
+    blurb:
+      "An exploration in augmented reality made with Kivicube. Scanning a plate image brings up a 3D balanced plate, split into vegetables and fruits, carbs and protein.",
+    meta: { Type: "AR Exploration", "Tools Used": "Kivicube (WebAR)", Focus: ["Augmented Reality", "Image Tracking"] },
+    docHtml: arDoc,
+    gallery: [],
+  },
 ];
 const projects = allProjects.filter((p) => !p.hidden);
 
@@ -272,7 +290,7 @@ const home = page({
 
 <section class="work-scatter" aria-label="Selected work">
   ${projects
-    .filter((p) => p.slug !== "dau-ridepod")
+    .filter((p) => p.slug !== "dau-ridepod" && !p.homeOff)
     .map(
       (p, i) => `
   <a class="card scatter s${[1, 2, 5, 4][i]}" id="p-${p.slug}" href="/projects/${p.slug}" data-grow>

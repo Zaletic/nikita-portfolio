@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.className="js";try{history.scrollRestoration="manual"}catch(e){}var K="sy:"+location.pathname;addEventListener("pagehide",function(){try{sessionStorage.setItem(K,scrollY)}catch(e){}});addEventListener("pageshow",function(){var n=performance.getEntriesByType("navigation")[0],y=0;try{if(n&&n.type==="back_forward")y=+sessionStorage.getItem(K)||0}catch(e){}if(location.hash&&!y)return;scrollTo(0,y);if(y)setTimeout(function(){scrollTo(0,y)},350)});</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plate It Right — Nikita Bangia</title>
+<meta name="description" content="An exploration in augmented reality made with Kivicube. Scanning a plate image brings up a 3D balanced plate, split into vegetables and fruits, carbs " />
+<meta name="theme-color" content="#F7F2E6" />
+<meta property="og:title" content="Plate It Right — Nikita Bangia" />
+<meta property="og:description" content="An exploration in augmented reality made with Kivicube. Scanning a plate image brings up a 3D balanced plate, split into vegetables and fruits, carbs " />
+<meta property="og:image" content="/img/plate-it-right-poster.webp" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23F7F2E6%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2221%22%20fill%3D%22none%22%20stroke%3D%22%23F21317%22%20stroke-width%3D%224%22%2F%3E%3Cpath%20d%3D%22M23%2035c2%205%2016%205%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23F21317%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2227%22%20r%3D%222.6%22%20fill%3D%22%23F21317%22%2F%3E%3Ccircle%20cx%3D%2239%22%20cy%3D%2227%22%20r%3D%222.6%22%20fill%3D%22%23F21317%22%2F%3E%3C%2Fsvg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css?v=rw26" />
+</head>
+<body class="project-page">
+
+<header class="nav">
+  <a class="logo" href="/" aria-label="Nikita Bangia — home">Nikita Bangia</a>
+  <nav class="nav-links" aria-label="Main">
+    <a class="pill" href="/projects">Work</a>
+    <a class="pill" href="/about">About</a>
+    <a class="pill" href="#connect" data-connect>Connect</a>
+  </nav>
+</header>
+<main>
+
+
+<div class="proj-wrap">
+<section class="proj-head">
+  <div class="proj-left">
+    <h1 class="h-xxl" data-chars>Plate It Right</h1>
+    <p class="proj-desc" data-reveal>An exploration in augmented reality made with Kivicube. Scanning a plate image brings up a 3D balanced plate, split into vegetables and fruits, carbs and protein.</p>
+  </div>
+  <dl class="proj-meta" data-reveal>
+    <div><dt>Type</dt><dd><span>AR Exploration</span></dd></div><div><dt>Tools Used</dt><dd><span>Kivicube (WebAR)</span></dd></div><div><dt>Focus</dt><dd><span>Augmented Reality</span><span>Image Tracking</span></dd></div>
+  </dl>
+</section>
+
+<div class="vr">
+
+<section class="vr-sec ar-top" data-reveal>
+  <div class="ar-split">
+    <video class="ar-video" controls autoplay muted loop playsinline preload="metadata" poster="/img/plate-it-right-poster.webp" aria-label="Screen recording of the Plate It Right AR experience">
+      <source src="/video/plate-it-right.mp4" type="video/mp4" />
+    </video>
+    <div>
+      <div class="vr-lab">An exploration</div>
+      <h2 class="vr-h">A first try at augmented reality.</h2>
+      <p class="vr-p">This was an exploration, not a finished product: a short exercise to learn how AR works by building one with Kivicube, a browser-based WebAR tool. The result runs straight from a link on a phone, with no app to install.</p>
+      <p class="vr-p">Pointing the camera at a printed plate image brings up “Plate It Right”: a 3D plate that splits into food groups, showing what a balanced meal looks like. Half the plate is vegetables and fruits, a quarter is carbs and a quarter is protein.</p>
+      <p class="vr-cap">Screen recording on a phone (about 25 seconds).</p>
+    </div>
+  </div>
+</section>
+
+<section class="vr-sec" data-reveal>
+  <div class="vr-split">
+    <div><div class="vr-lab">What I explored</div><h2 class="vr-h">Image tracking and placing content in space.</h2></div>
+    <p class="vr-p">The exercise was about the basics of AR: setting up an image marker for the camera to recognise, anchoring 3D content to it, and labelling it so it can be read at a glance while the phone moves.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="back-bottom"><a class="pill pill-lg" href="/projects">All featured Work</a></div>
+<div class="back-dock"><a class="pill back-fixed" href="/projects" aria-label="Back to all work">← Back</a></div>
+</div>
+</main>
+
+<footer class="footer" id="connect">
+  <div class="footer-top">
+    <div>
+      <h3 class="footer-title" data-lines>Get in touch today to discuss how I can bring thoughtful design to your next product.</h3>
+    </div>
+    <div class="footer-photo" data-reveal><img src="/img/footer-portrait.webp" alt="Nikita Bangia" loading="lazy" /></div>
+  </div>
+  <hr class="footer-rule" />
+  <div class="footer-cols">
+    <div class="footer-mail">
+      <div class="mail-row"><a class="serif-link big" href="mailto:bangia.nikita@gmail.com">bangia.nikita@gmail.com</a><button class="copy-btn" type="button" data-copy="bangia.nikita@gmail.com" aria-label="Copy email address"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="copy-tip" role="status">Copied!</span></button></div>
+    </div>
+    <div>
+      <a class="serif-link" href="https://www.instagram.com/kitta.ni.kitta/" target="_blank" rel="noopener">Instagram</a>
+      <a class="serif-link" href="https://www.linkedin.com/in/nikitabangia" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="serif-link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</footer>
+<script>(function(){var h=location.hash;if(h.indexOf("#p-")!==0)return;var e=document.getElementById(h.slice(1));if(!e)return;var y=e.getBoundingClientRect().top+scrollY-innerHeight*0.22;window.scrollTo({top:y,behavior:"instant"});})();</script>
+<script src="/js/main.js?v=rw4" defer></script>
+</body>
+</html>
