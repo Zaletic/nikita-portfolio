@@ -26,4 +26,16 @@ export const arDoc = `
   </div>
 </section>
 
+<section class="vr-sec" data-reveal>
+  <div class="vr-split">
+    <div>${lab("Try it yourself")}<h2 class="vr-h">See it on your own phone.</h2></div>
+    <p class="vr-p">The experience runs in the phone browser. Scan the QR code with your camera, wait for the scene to load, then point the camera at the plate image (on another screen or printed).</p>
+  </div>
+  <div class="ar-try">
+    <figure><span class="ar-n">1</span><img src="/img/plate-it-right-qr.png" alt="QR code that opens the Plate It Right AR scene" class="ar-qr" /><figcaption><b>Scan the code</b> with your phone camera</figcaption></figure>
+    <figure><span class="ar-n">2</span><div class="ar-wait">Loading scene…</div><figcaption><b>Wait for the scene</b> to load in the browser</figcaption></figure>
+    <figure><span class="ar-n">3</span><img src="/img/plate-it-right-target.webp" alt="The elephant plate used as the AR target image" class="ar-tgt" /><figcaption><b>Point the camera</b> at this plate</figcaption></figure>
+  </div>
+</section>
+
 </div>`;
