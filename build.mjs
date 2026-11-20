@@ -140,6 +140,7 @@ const allProjects = [
   },
   {
     slug: "vr-tattoo-studio",
+    explore: true,
     fig: "tap",
     homeImg: "/img/vr-tattoo-card2.webp",
     homeVideo: "/video/vr-tattoo-loop-v2.mp4",
@@ -156,6 +157,7 @@ const allProjects = [
   },
   {
     slug: "plate-it-right",
+    explore: true,
     homeOff: true,
     fig: "tap",
     homeImg: "/img/plate-it-right-card.webp",
@@ -172,6 +174,11 @@ const allProjects = [
     gallery: [],
   },
 ];
+const workTile = (p) => `
+  <a class="card tile" id="p-${p.slug}" href="/projects/${p.slug}" data-reveal="scale">
+    <span class="card-img">${p.homeVideo ? `<video src="${p.homeVideo}" poster="${p.homeImg}" autoplay muted loop playsinline preload="auto" aria-label="${p.title}"></video>` : `<img src="${p.homeImg || p.cover}" alt="${p.title}" loading="lazy" />`}</span>
+    <span class="card-title">${p.homeTitle || p.title}</span>
+  </a>`;
 const projects = allProjects.filter((p) => !p.hidden);
 
 const nav = (active) => `
@@ -338,16 +345,12 @@ const projectsPage = page({
   bodyClass: "work-page",
   body: `
 <section class="work-hero"><h1 class="mega" data-fit>Selected Work</h1></section>
+<section class="grid2 grid-main">
+  ${projects.filter((p) => !p.explore).map(workTile).join("")}
+</section>
+<h2 class="work-sub" data-reveal>AR/VR Explorations</h2>
 <section class="grid2">
-  ${projects
-    .map(
-      (p) => `
-  <a class="card tile" id="p-${p.slug}" href="/projects/${p.slug}" data-reveal="scale">
-    <span class="card-img">${p.homeVideo ? `<video src="${p.homeVideo}" poster="${p.homeImg}" autoplay muted loop playsinline preload="auto" aria-label="${p.title}"></video>` : `<img src="${p.homeImg || p.cover}" alt="${p.title}" loading="lazy" />`}</span>
-    <span class="card-title">${p.homeTitle || p.title}</span>
-  </a>`
-    )
-    .join("")}
+  ${projects.filter((p) => p.explore).map(workTile).join("")}
 </section>`,
 });
 

@@ -896,3 +896,7 @@ html:has(.gallery.tight) { scroll-snap-type: y proximity; }
 .ar-video { display: block; width: 100%; height: auto; aspect-ratio: 392 / 758; border-radius: 22px; background: #000; }
 .ar-split .vr-p + .vr-p { margin-top: 16px; }
 @media (max-width: 760px) { .ar-split { grid-template-columns: 1fr; gap: 28px; } .ar-video { max-width: 320px; margin: 0 auto; } }
+
+/* Work page: sub-heading above the AR/VR explorations */
+.work-sub { font: 400 clamp(40px, 6vw, 88px)/1 var(--serif); color: var(--red); text-align: center; margin: 0 var(--pad) clamp(32px, 4vw, 56px); }
+.grid-main { padding-bottom: clamp(72px, 9vw, 120px); }
